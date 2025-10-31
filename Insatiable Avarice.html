@@ -1,0 +1,3130 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>19331</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.30</td>
+      <td>64.52</td>
+      <td>11.22</td>
+      <td>248</td>
+      <td>53.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90418" target="_blank" rel="noopener noreferrer"><img src="img/Stop_Cold.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Stop Cold.html" target="_blank" rel="noopener noreferrer">Stop Cold</a></td>
+      <td>9.62</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12014</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.80</td>
+      <td>66.67</td>
+      <td>10.87</td>
+      <td>114</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90391" target="_blank" rel="noopener noreferrer"><img src="img/Duelist_of_the_Mind.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Duelist of the Mind.html" target="_blank" rel="noopener noreferrer">Duelist of the Mind</a></td>
+      <td>2.84</td>
+      <td>U</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>15266</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.65</td>
+      <td>64.82</td>
+      <td>10.17</td>
+      <td>199</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90403" target="_blank" rel="noopener noreferrer"><img src="img/Metamorphic_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Metamorphic Blast.html" target="_blank" rel="noopener noreferrer">Metamorphic Blast</a></td>
+      <td>7.07</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>14724</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.75</td>
+      <td>63.04</td>
+      <td>9.29</td>
+      <td>349</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90401" target="_blank" rel="noopener noreferrer"><img src="img/Loan_Shark.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Loan Shark.html" target="_blank" rel="noopener noreferrer">Loan Shark</a></td>
+      <td>7.98</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>11472</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>51.65</td>
+      <td>59.84</td>
+      <td>8.19</td>
+      <td>122</td>
+      <td>50.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90389" target="_blank" rel="noopener noreferrer"><img src="img/Djinn_of_Fool's_Fall.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Djinn of Fool's Fall.html" target="_blank" rel="noopener noreferrer">Djinn of Fool's Fall</a></td>
+      <td>10.85</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>10659</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.85</td>
+      <td>61.79</td>
+      <td>7.94</td>
+      <td>212</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90386" target="_blank" rel="noopener noreferrer"><img src="img/Canyon_Crab.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Canyon Crab.html" target="_blank" rel="noopener noreferrer">Canyon Crab</a></td>
+      <td>6.72</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>62149</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.55</td>
+      <td>61.31</td>
+      <td>7.76</td>
+      <td>137</td>
+      <td>53.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90576" target="_blank" rel="noopener noreferrer"><img src="img/Satoru,_the_Infiltrator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Satoru, the Infiltrator.html" target="_blank" rel="noopener noreferrer">Satoru, the Infiltrator</a></td>
+      <td>5.02</td>
+      <td>UB</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>19602</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.50</td>
+      <td>61.82</td>
+      <td>7.32</td>
+      <td>385</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90419" target="_blank" rel="noopener noreferrer"><img src="img/Take_the_Fall.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Take the Fall.html" target="_blank" rel="noopener noreferrer">Take the Fall</a></td>
+      <td>9.45</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>17163</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.35</td>
+      <td>60.62</td>
+      <td>7.27</td>
+      <td>226</td>
+      <td>53.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90410" target="_blank" rel="noopener noreferrer"><img src="img/Seize_the_Secrets.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Seize the Secrets.html" target="_blank" rel="noopener noreferrer">Seize the Secrets</a></td>
+      <td>10.49</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>4155</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.10</td>
+      <td>62.35</td>
+      <td>7.25</td>
+      <td>255</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90362" target="_blank" rel="noopener noreferrer"><img src="img/Holy_Cow.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Holy Cow.html" target="_blank" rel="noopener noreferrer">Holy Cow</a></td>
+      <td>6.62</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>11201</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.90</td>
+      <td>59.80</td>
+      <td>6.90</td>
+      <td>204</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90388" target="_blank" rel="noopener noreferrer"><img src="img/Deepmuck_Desperado.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deepmuck Desperado.html" target="_blank" rel="noopener noreferrer">Deepmuck Desperado</a></td>
+      <td>6.52</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>29629</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.25</td>
+      <td>60.00</td>
+      <td>6.75</td>
+      <td>570</td>
+      <td>53.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90456" target="_blank" rel="noopener noreferrer"><img src="img/Treasure_Dredger.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Treasure Dredger.html" target="_blank" rel="noopener noreferrer">Treasure Dredger</a></td>
+      <td>6.42</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>40469</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.25</td>
+      <td>59.77</td>
+      <td>6.52</td>
+      <td>266</td>
+      <td>53.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90496" target="_blank" rel="noopener noreferrer"><img src="img/Thunder_Salvo.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Thunder Salvo.html" target="_blank" rel="noopener noreferrer">Thunder Salvo</a></td>
+      <td>7.40</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>14182</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.65</td>
+      <td>61.15</td>
+      <td>6.50</td>
+      <td>260</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90399" target="_blank" rel="noopener noreferrer"><img src="img/Jailbreak_Scheme.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Jailbreak Scheme.html" target="_blank" rel="noopener noreferrer">Jailbreak Scheme</a></td>
+      <td>9.98</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>39114</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.95</td>
+      <td>60.29</td>
+      <td>6.34</td>
+      <td>136</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90491" target="_blank" rel="noopener noreferrer"><img src="img/Scorching_Shot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scorching Shot.html" target="_blank" rel="noopener noreferrer">Scorching Shot</a></td>
+      <td>5.04</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>49141</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>56.85</td>
+      <td>63.01</td>
+      <td>6.16</td>
+      <td>219</td>
+      <td>60.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90528" target="_blank" rel="noopener noreferrer"><img src="img/Spinewoods_Armadillo.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Spinewoods Armadillo.html" target="_blank" rel="noopener noreferrer">Spinewoods Armadillo</a></td>
+      <td>2.57</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>7407</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>56.20</td>
+      <td>62.16</td>
+      <td>5.96</td>
+      <td>185</td>
+      <td>59.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90374" target="_blank" rel="noopener noreferrer"><img src="img/Shepherd_of_the_Clouds.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shepherd of the Clouds.html" target="_blank" rel="noopener noreferrer">Shepherd of the Clouds</a></td>
+      <td>2.97</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>28274</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.00</td>
+      <td>60.51</td>
+      <td>5.51</td>
+      <td>661</td>
+      <td>56.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90451" target="_blank" rel="noopener noreferrer"><img src="img/Servant_of_the_Stinger.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Servant of the Stinger.html" target="_blank" rel="noopener noreferrer">Servant of the Stinger</a></td>
+      <td>4.64</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>17976</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.45</td>
+      <td>59.94</td>
+      <td>5.49</td>
+      <td>312</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90413" target="_blank" rel="noopener noreferrer"><img src="img/Slickshot_Lockpicker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Slickshot Lockpicker.html" target="_blank" rel="noopener noreferrer">Slickshot Lockpicker</a></td>
+      <td>4.70</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>13640</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.40</td>
+      <td>57.53</td>
+      <td>5.13</td>
+      <td>186</td>
+      <td>51.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90397" target="_blank" rel="noopener noreferrer"><img src="img/Geyser_Drake.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Geyser Drake.html" target="_blank" rel="noopener noreferrer">Geyser Drake</a></td>
+      <td>9.51</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>35320</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.60</td>
+      <td>57.72</td>
+      <td>5.12</td>
+      <td>149</td>
+      <td>52.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90477" target="_blank" rel="noopener noreferrer"><img src="img/Iron-Fist_Pulverizer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Iron-Fist Pulverizer.html" target="_blank" rel="noopener noreferrer">Iron-Fist Pulverizer</a></td>
+      <td>10.79</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>16350</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.95</td>
+      <td>60.00</td>
+      <td>5.05</td>
+      <td>400</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90407" target="_blank" rel="noopener noreferrer"><img src="img/Phantom_Interference.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Phantom Interference.html" target="_blank" rel="noopener noreferrer">Phantom Interference</a></td>
+      <td>8.30</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12285</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.90</td>
+      <td>57.93</td>
+      <td>5.03</td>
+      <td>145</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90392" target="_blank" rel="noopener noreferrer"><img src="img/Emergent_Haunting.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Emergent Haunting.html" target="_blank" rel="noopener noreferrer">Emergent Haunting</a></td>
+      <td>7.28</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>72176</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.40</td>
+      <td>58.33</td>
+      <td>4.93</td>
+      <td>168</td>
+      <td>53.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90613" target="_blank" rel="noopener noreferrer"><img src="img/Blooming_Marsh.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Blooming Marsh.html" target="_blank" rel="noopener noreferrer">Blooming Marsh</a></td>
+      <td>5.37</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>9846</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.75</td>
+      <td>58.51</td>
+      <td>4.76</td>
+      <td>188</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90383" target="_blank" rel="noopener noreferrer"><img src="img/Vengeful_Townsfolk.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vengeful Townsfolk.html" target="_blank" rel="noopener noreferrer">Vengeful Townsfolk</a></td>
+      <td>9.35</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>16892</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>51.95</td>
+      <td>56.55</td>
+      <td>4.60</td>
+      <td>145</td>
+      <td>50.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90409" target="_blank" rel="noopener noreferrer"><img src="img/Razzle-Dazzler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Razzle-Dazzler.html" target="_blank" rel="noopener noreferrer">Razzle-Dazzler</a></td>
+      <td>10.16</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>70279</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.05</td>
+      <td>58.43</td>
+      <td>4.38</td>
+      <td>255</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90606" target="_blank" rel="noopener noreferrer"><img src="img/Lonely_Arroyo.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lonely Arroyo.html" target="_blank" rel="noopener noreferrer">Lonely Arroyo</a></td>
+      <td>7.28</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>14995</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.55</td>
+      <td>59.84</td>
+      <td>4.29</td>
+      <td>244</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90402" target="_blank" rel="noopener noreferrer"><img src="img/Marauding_Sphinx.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Marauding Sphinx.html" target="_blank" rel="noopener noreferrer">Marauding Sphinx</a></td>
+      <td>3.99</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>28545</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.50</td>
+      <td>59.70</td>
+      <td>4.20</td>
+      <td>670</td>
+      <td>57.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90452" target="_blank" rel="noopener noreferrer"><img src="img/Shoot_the_Sheriff.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shoot the Sheriff.html" target="_blank" rel="noopener noreferrer">Shoot the Sheriff</a></td>
+      <td>3.53</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>12556</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.35</td>
+      <td>57.45</td>
+      <td>4.10</td>
+      <td>235</td>
+      <td>53.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90393" target="_blank" rel="noopener noreferrer"><img src="img/Failed_Fording.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Failed Fording.html" target="_blank" rel="noopener noreferrer">Failed Fording</a></td>
+      <td>10.49</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>28003</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>56.70</td>
+      <td>60.69</td>
+      <td>3.99</td>
+      <td>262</td>
+      <td>60.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90450" target="_blank" rel="noopener noreferrer"><img src="img/Rush_of_Dread.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rush of Dread.html" target="_blank" rel="noopener noreferrer">Rush of Dread</a></td>
+      <td>2.32</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>30442</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.55</td>
+      <td>59.50</td>
+      <td>3.95</td>
+      <td>279</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90459" target="_blank" rel="noopener noreferrer"><img src="img/Vadmir,_New_Blood.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vadmir, New Blood.html" target="_blank" rel="noopener noreferrer">Vadmir, New Blood</a></td>
+      <td>1.84</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>46431</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>57.25</td>
+      <td>61.09</td>
+      <td>3.84</td>
+      <td>239</td>
+      <td>61.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90518" target="_blank" rel="noopener noreferrer"><img src="img/Outcaster_Greenblade.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Outcaster Greenblade.html" target="_blank" rel="noopener noreferrer">Outcaster Greenblade</a></td>
+      <td>2.69</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>6052</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.30</td>
+      <td>58.05</td>
+      <td>3.75</td>
+      <td>329</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90369" target="_blank" rel="noopener noreferrer"><img src="img/Outlaw_Medic.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Outlaw Medic.html" target="_blank" rel="noopener noreferrer">Outlaw Medic</a></td>
+      <td>8.54</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>69737</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.60</td>
+      <td>58.29</td>
+      <td>3.69</td>
+      <td>645</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90604" target="_blank" rel="noopener noreferrer"><img src="img/Forlorn_Flats.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Forlorn Flats.html" target="_blank" rel="noopener noreferrer">Forlorn Flats</a></td>
+      <td>6.63</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>69195</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.00</td>
+      <td>57.55</td>
+      <td>3.55</td>
+      <td>351</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90602" target="_blank" rel="noopener noreferrer"><img src="img/Eroded_Canyon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eroded Canyon.html" target="_blank" rel="noopener noreferrer">Eroded Canyon</a></td>
+      <td>7.18</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>5510</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.90</td>
+      <td>57.41</td>
+      <td>3.51</td>
+      <td>108</td>
+      <td>54.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90367" target="_blank" rel="noopener noreferrer"><img src="img/Omenport_Vigilante.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Omenport Vigilante.html" target="_blank" rel="noopener noreferrer">Omenport Vigilante</a></td>
+      <td>6.63</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>46973</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.95</td>
+      <td>58.43</td>
+      <td>3.48</td>
+      <td>510</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90520" target="_blank" rel="noopener noreferrer"><img src="img/Patient_Naturalist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Patient Naturalist.html" target="_blank" rel="noopener noreferrer">Patient Naturalist</a></td>
+      <td>6.04</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>18518</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>51.70</td>
+      <td>55.15</td>
+      <td>3.45</td>
+      <td>194</td>
+      <td>50.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90415" target="_blank" rel="noopener noreferrer"><img src="img/Spring_Splasher.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Spring Splasher.html" target="_blank" rel="noopener noreferrer">Spring Splasher</a></td>
+      <td>10.92</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>16621</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.05</td>
+      <td>58.28</td>
+      <td>3.23</td>
+      <td>163</td>
+      <td>56.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90408" target="_blank" rel="noopener noreferrer"><img src="img/Plan_the_Heist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Plan the Heist.html" target="_blank" rel="noopener noreferrer">Plan the Heist</a></td>
+      <td>7.88</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>55916</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.80</td>
+      <td>58.92</td>
+      <td>3.12</td>
+      <td>443</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90553" target="_blank" rel="noopener noreferrer"><img src="img/Honest_Rutstein.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Honest Rutstein.html" target="_blank" rel="noopener noreferrer">Honest Rutstein</a></td>
+      <td>3.57</td>
+      <td>BG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>26919</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.90</td>
+      <td>56.98</td>
+      <td>3.08</td>
+      <td>516</td>
+      <td>54.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90446" target="_blank" rel="noopener noreferrer"><img src="img/Rattleback_Apothecary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rattleback Apothecary.html" target="_blank" rel="noopener noreferrer">Rattleback Apothecary</a></td>
+      <td>5.06</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>22583</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.90</td>
+      <td>55.95</td>
+      <td>3.05</td>
+      <td>336</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90430" target="_blank" rel="noopener noreferrer"><img src="img/Corrupted_Conviction.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Corrupted Conviction.html" target="_blank" rel="noopener noreferrer">Corrupted Conviction</a></td>
+      <td>11.38</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>23125</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.10</td>
+      <td>58.10</td>
+      <td>3.00</td>
+      <td>1556</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90432" target="_blank" rel="noopener noreferrer"><img src="img/Desperate_Bloodseeker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Desperate Bloodseeker.html" target="_blank" rel="noopener noreferrer">Desperate Bloodseeker</a></td>
+      <td>6.27</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>48870</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.20</td>
+      <td>58.10</td>
+      <td>2.90</td>
+      <td>284</td>
+      <td>57.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90527" target="_blank" rel="noopener noreferrer"><img src="img/Snakeskin_Veil.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Snakeskin Veil.html" target="_blank" rel="noopener noreferrer">Snakeskin Veil</a></td>
+      <td>6.64</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>55645</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>56.55</td>
+      <td>59.41</td>
+      <td>2.86</td>
+      <td>101</td>
+      <td>59.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90552" target="_blank" rel="noopener noreferrer"><img src="img/The_Gitrog,_Ravenous_Ride.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//The Gitrog, Ravenous Ride.html" target="_blank" rel="noopener noreferrer">The Gitrog, Ravenous Ride</a></td>
+      <td>1.50</td>
+      <td>BG</td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>36404</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.45</td>
+      <td>55.27</td>
+      <td>2.82</td>
+      <td>313</td>
+      <td>51.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90481" target="_blank" rel="noopener noreferrer"><img src="img/Mine_Raider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mine Raider.html" target="_blank" rel="noopener noreferrer">Mine Raider</a></td>
+      <td>9.32</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>29900</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.25</td>
+      <td>57.99</td>
+      <td>2.74</td>
+      <td>695</td>
+      <td>57.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90457" target="_blank" rel="noopener noreferrer"><img src="img/Unfortunate_Accident.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Unfortunate Accident.html" target="_blank" rel="noopener noreferrer">Unfortunate Accident</a></td>
+      <td>3.63</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>22854</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.40</td>
+      <td>58.12</td>
+      <td>2.72</td>
+      <td>1497</td>
+      <td>57.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90431" target="_blank" rel="noopener noreferrer"><img src="img/Desert's_Due.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Desert's Due.html" target="_blank" rel="noopener noreferrer">Desert's Due</a></td>
+      <td>4.76</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>16079</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.05</td>
+      <td>56.76</td>
+      <td>2.71</td>
+      <td>148</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90406" target="_blank" rel="noopener noreferrer"><img src="img/Peerless_Ropemaster.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Peerless Ropemaster.html" target="_blank" rel="noopener noreferrer">Peerless Ropemaster</a></td>
+      <td>11.43</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>13911</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.85</td>
+      <td>55.56</td>
+      <td>2.71</td>
+      <td>162</td>
+      <td>52.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90398" target="_blank" rel="noopener noreferrer"><img src="img/Harrier_Strix.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Harrier Strix.html" target="_blank" rel="noopener noreferrer">Harrier Strix</a></td>
+      <td>11.06</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>20957</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.05</td>
+      <td>56.67</td>
+      <td>2.62</td>
+      <td>450</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90424" target="_blank" rel="noopener noreferrer"><img src="img/Binding_Negotiation.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Binding Negotiation.html" target="_blank" rel="noopener noreferrer">Binding Negotiation</a></td>
+      <td>8.02</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>49954</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>56.05</td>
+      <td>58.52</td>
+      <td>2.47</td>
+      <td>352</td>
+      <td>58.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90531" target="_blank" rel="noopener noreferrer"><img src="img/Throw_from_the_Saddle.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Throw from the Saddle.html" target="_blank" rel="noopener noreferrer">Throw from the Saddle</a></td>
+      <td>3.96</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>66756</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.10</td>
+      <td>56.48</td>
+      <td>2.38</td>
+      <td>216</td>
+      <td>55.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90593" target="_blank" rel="noopener noreferrer"><img src="img/Redrock_Sentinel.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Redrock Sentinel.html" target="_blank" rel="noopener noreferrer">Redrock Sentinel</a></td>
+      <td>9.37</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>25293</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.85</td>
+      <td>57.18</td>
+      <td>2.33</td>
+      <td>1093</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90440" target="_blank" rel="noopener noreferrer"><img src="img/Mourner's_Surprise.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mourner's Surprise.html" target="_blank" rel="noopener noreferrer">Mourner's Surprise</a></td>
+      <td>8.03</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>3613</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.90</td>
+      <td>58.20</td>
+      <td>2.30</td>
+      <td>189</td>
+      <td>58.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90360" target="_blank" rel="noopener noreferrer"><img src="img/Getaway_Glamer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Getaway Glamer.html" target="_blank" rel="noopener noreferrer">Getaway Glamer</a></td>
+      <td>4.78</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>24751</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.60</td>
+      <td>54.89</td>
+      <td>2.29</td>
+      <td>317</td>
+      <td>52.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90438" target="_blank" rel="noopener noreferrer"><img src="img/Kaervek,_the_Punisher.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kaervek, the Punisher.html" target="_blank" rel="noopener noreferrer">Kaervek, the Punisher</a></td>
+      <td>2.50</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>30713</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.50</td>
+      <td>57.74</td>
+      <td>2.24</td>
+      <td>1602</td>
+      <td>57.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90460" target="_blank" rel="noopener noreferrer"><img src="img/Vault_Plunderer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vault Plunderer.html" target="_blank" rel="noopener noreferrer">Vault Plunderer</a></td>
+      <td>5.40</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>49683</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.55</td>
+      <td>57.79</td>
+      <td>2.24</td>
+      <td>244</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90530" target="_blank" rel="noopener noreferrer"><img src="img/Stubborn_Burrowfiend.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Stubborn Burrowfiend.html" target="_blank" rel="noopener noreferrer">Stubborn Burrowfiend</a></td>
+      <td>3.75</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>68653</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.60</td>
+      <td>56.83</td>
+      <td>2.23</td>
+      <td>820</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90600" target="_blank" rel="noopener noreferrer"><img src="img/Conduit_Pylons.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Conduit Pylons.html" target="_blank" rel="noopener noreferrer">Conduit Pylons</a></td>
+      <td>7.05</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>1716</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.60</td>
+      <td>55.80</td>
+      <td>2.20</td>
+      <td>138</td>
+      <td>54.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90353" target="_blank" rel="noopener noreferrer"><img src="img/Bridled_Bighorn.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bridled Bighorn.html" target="_blank" rel="noopener noreferrer">Bridled Bighorn</a></td>
+      <td>8.47</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>71363</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.75</td>
+      <td>56.91</td>
+      <td>2.16</td>
+      <td>731</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90610" target="_blank" rel="noopener noreferrer"><img src="img/Soured_Springs.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Soured Springs.html" target="_blank" rel="noopener noreferrer">Soured Springs</a></td>
+      <td>6.22</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>63504</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.75</td>
+      <td>55.89</td>
+      <td>2.14</td>
+      <td>297</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90581" target="_blank" rel="noopener noreferrer"><img src="img/Vial_Smasher,_Gleeful_Grenadier.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vial Smasher, Gleeful Grenadier.html" target="_blank" rel="noopener noreferrer">Vial Smasher, Gleeful Grenadier</a></td>
+      <td>6.00</td>
+      <td>BR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>8762</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.75</td>
+      <td>56.74</td>
+      <td>1.99</td>
+      <td>178</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90379" target="_blank" rel="noopener noreferrer"><img src="img/Sterling_Supplier.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sterling Supplier.html" target="_blank" rel="noopener noreferrer">Sterling Supplier</a></td>
+      <td>9.13</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>44534</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.45</td>
+      <td>56.39</td>
+      <td>1.94</td>
+      <td>321</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90511" target="_blank" rel="noopener noreferrer"><img src="img/Giant_Beaver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Giant Beaver.html" target="_blank" rel="noopener noreferrer">Giant Beaver</a></td>
+      <td>5.48</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>15808</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.50</td>
+      <td>55.43</td>
+      <td>1.93</td>
+      <td>175</td>
+      <td>53.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90405" target="_blank" rel="noopener noreferrer"><img src="img/Outlaw_Stitcher.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Outlaw Stitcher.html" target="_blank" rel="noopener noreferrer">Outlaw Stitcher</a></td>
+      <td>4.85</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>22312</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.55</td>
+      <td>57.23</td>
+      <td>1.68</td>
+      <td>1583</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90429" target="_blank" rel="noopener noreferrer"><img src="img/Consuming_Ashes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Consuming Ashes.html" target="_blank" rel="noopener noreferrer">Consuming Ashes</a></td>
+      <td>4.32</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>66485</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.75</td>
+      <td>55.41</td>
+      <td>1.66</td>
+      <td>462</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90592" target="_blank" rel="noopener noreferrer"><img src="img/Oasis_Gardener.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Oasis Gardener.html" target="_blank" rel="noopener noreferrer">Oasis Gardener</a></td>
+      <td>8.85</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>43721</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.15</td>
+      <td>54.75</td>
+      <td>1.60</td>
+      <td>316</td>
+      <td>53.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90508" target="_blank" rel="noopener noreferrer"><img src="img/Freestrider_Commando.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Freestrider Commando.html" target="_blank" rel="noopener noreferrer">Freestrider Commando</a></td>
+      <td>7.43</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>22041</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>56.10</td>
+      <td>57.70</td>
+      <td>1.60</td>
+      <td>305</td>
+      <td>59.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90428" target="_blank" rel="noopener noreferrer"><img src="img/Caustic_Bronco.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Caustic Bronco.html" target="_blank" rel="noopener noreferrer">Caustic Bronco</a></td>
+      <td>1.88</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>20144</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.75</td>
+      <td>57.28</td>
+      <td>1.53</td>
+      <td>103</td>
+      <td>58.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90421" target="_blank" rel="noopener noreferrer"><img src="img/Three_Steps_Ahead.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Three Steps Ahead.html" target="_blank" rel="noopener noreferrer">Three Steps Ahead</a></td>
+      <td>2.87</td>
+      <td>U</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>32068</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.25</td>
+      <td>53.71</td>
+      <td>1.46</td>
+      <td>404</td>
+      <td>51.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90465" target="_blank" rel="noopener noreferrer"><img src="img/Deadeye_Duelist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deadeye Duelist.html" target="_blank" rel="noopener noreferrer">Deadeye Duelist</a></td>
+      <td>8.41</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>56187</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.00</td>
+      <td>55.45</td>
+      <td>1.45</td>
+      <td>404</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90554" target="_blank" rel="noopener noreferrer"><img src="img/Intimidation_Campaign.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Intimidation Campaign.html" target="_blank" rel="noopener noreferrer">Intimidation Campaign</a></td>
+      <td>5.70</td>
+      <td>UB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>67298</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.55</td>
+      <td>54.91</td>
+      <td>1.36</td>
+      <td>326</td>
+      <td>53.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90595" target="_blank" rel="noopener noreferrer"><img src="img/Sterling_Hound.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sterling Hound.html" target="_blank" rel="noopener noreferrer">Sterling Hound</a></td>
+      <td>10.69</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>2529</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.15</td>
+      <td>54.50</td>
+      <td>1.35</td>
+      <td>189</td>
+      <td>53.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90356" target="_blank" rel="noopener noreferrer"><img src="img/Eriette's_Lullaby.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eriette's Lullaby.html" target="_blank" rel="noopener noreferrer">Eriette's Lullaby</a></td>
+      <td>8.64</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>21228</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>51.90</td>
+      <td>53.24</td>
+      <td>1.34</td>
+      <td>556</td>
+      <td>50.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90425" target="_blank" rel="noopener noreferrer"><img src="img/Blacksnag_Buzzard.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Blacksnag Buzzard.html" target="_blank" rel="noopener noreferrer">Blacksnag Buzzard</a></td>
+      <td>10.38</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>24209</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>56.40</td>
+      <td>57.60</td>
+      <td>1.20</td>
+      <td>651</td>
+      <td>59.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90436" target="_blank" rel="noopener noreferrer"><img src="img/Hollow_Marauder.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hollow Marauder.html" target="_blank" rel="noopener noreferrer">Hollow Marauder</a></td>
+      <td>3.46</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>50225</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.70</td>
+      <td>56.86</td>
+      <td>1.16</td>
+      <td>153</td>
+      <td>58.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90532" target="_blank" rel="noopener noreferrer"><img src="img/Trash_the_Town.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Trash the Town.html" target="_blank" rel="noopener noreferrer">Trash the Town</a></td>
+      <td>4.20</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>49412</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.25</td>
+      <td>56.38</td>
+      <td>1.13</td>
+      <td>447</td>
+      <td>57.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90529" target="_blank" rel="noopener noreferrer"><img src="img/Spinewoods_Paladin.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Spinewoods Paladin.html" target="_blank" rel="noopener noreferrer">Spinewoods Paladin</a></td>
+      <td>4.92</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>61878</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.70</td>
+      <td>56.74</td>
+      <td>1.04</td>
+      <td>423</td>
+      <td>58.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90575" target="_blank" rel="noopener noreferrer"><img src="img/Ruthless_Lawbringer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ruthless Lawbringer.html" target="_blank" rel="noopener noreferrer">Ruthless Lawbringer</a></td>
+      <td>5.76</td>
+      <td>WB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>9575</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.25</td>
+      <td>56.18</td>
+      <td>0.93</td>
+      <td>251</td>
+      <td>57.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90382" target="_blank" rel="noopener noreferrer"><img src="img/Trained_Arynx.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Trained Arynx.html" target="_blank" rel="noopener noreferrer">Trained Arynx</a></td>
+      <td>5.43</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>32881</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.00</td>
+      <td>54.91</td>
+      <td>0.91</td>
+      <td>377</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90468" target="_blank" rel="noopener noreferrer"><img src="img/Explosive_Derailment.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Explosive Derailment.html" target="_blank" rel="noopener noreferrer">Explosive Derailment</a></td>
+      <td>5.80</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>25564</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.80</td>
+      <td>53.70</td>
+      <td>0.90</td>
+      <td>108</td>
+      <td>52.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90441" target="_blank" rel="noopener noreferrer"><img src="img/Neutralize_the_Guards.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Neutralize the Guards.html" target="_blank" rel="noopener noreferrer">Neutralize the Guards</a></td>
+      <td>10.83</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>35591</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.05</td>
+      <td>55.94</td>
+      <td>0.89</td>
+      <td>202</td>
+      <td>56.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90478" target="_blank" rel="noopener noreferrer"><img src="img/Longhorn_Sharpshooter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Longhorn Sharpshooter.html" target="_blank" rel="noopener noreferrer">Longhorn Sharpshooter</a></td>
+      <td>3.78</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>66214</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.75</td>
+      <td>55.63</td>
+      <td>0.88</td>
+      <td>142</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90591" target="_blank" rel="noopener noreferrer"><img src="img/Mobile_Homestead.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mobile Homestead.html" target="_blank" rel="noopener noreferrer">Mobile Homestead</a></td>
+      <td>6.26</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>64859</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.75</td>
+      <td>54.62</td>
+      <td>0.87</td>
+      <td>249</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90586" target="_blank" rel="noopener noreferrer"><img src="img/Bandit's_Haul.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bandit's Haul.html" target="_blank" rel="noopener noreferrer">Bandit's Haul</a></td>
+      <td>7.13</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>71092</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.90</td>
+      <td>54.62</td>
+      <td>0.72</td>
+      <td>130</td>
+      <td>54.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90609" target="_blank" rel="noopener noreferrer"><img src="img/Sandstorm_Verge.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sandstorm Verge.html" target="_blank" rel="noopener noreferrer">Sandstorm Verge</a></td>
+      <td>10.25</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>69466</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.85</td>
+      <td>55.57</td>
+      <td>0.72</td>
+      <td>637</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90603" target="_blank" rel="noopener noreferrer"><img src="img/Festering_Gulch.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Festering Gulch.html" target="_blank" rel="noopener noreferrer">Festering Gulch</a></td>
+      <td>5.84</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>58355</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.95</td>
+      <td>54.55</td>
+      <td>0.60</td>
+      <td>363</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90562" target="_blank" rel="noopener noreferrer"><img src="img/Lazav,_Familiar_Stranger.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lazav, Familiar Stranger.html" target="_blank" rel="noopener noreferrer">Lazav, Familiar Stranger</a></td>
+      <td>5.70</td>
+      <td>UB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>45347</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.50</td>
+      <td>55.07</td>
+      <td>0.57</td>
+      <td>365</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90514" target="_blank" rel="noopener noreferrer"><img src="img/Hardbristle_Bandit.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hardbristle Bandit.html" target="_blank" rel="noopener noreferrer">Hardbristle Bandit</a></td>
+      <td>4.54</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>23667</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.80</td>
+      <td>54.32</td>
+      <td>0.52</td>
+      <td>451</td>
+      <td>54.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90434" target="_blank" rel="noopener noreferrer"><img src="img/Forsaken_Miner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Forsaken Miner.html" target="_blank" rel="noopener noreferrer">Forsaken Miner</a></td>
+      <td>6.28</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>31797</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.90</td>
+      <td>54.33</td>
+      <td>0.43</td>
+      <td>127</td>
+      <td>54.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90464" target="_blank" rel="noopener noreferrer"><img src="img/Cunning_Coyote.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cunning Coyote.html" target="_blank" rel="noopener noreferrer">Cunning Coyote</a></td>
+      <td>5.82</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>41553</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.90</td>
+      <td>56.29</td>
+      <td>0.39</td>
+      <td>167</td>
+      <td>58.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90500" target="_blank" rel="noopener noreferrer"><img src="img/Beastbond_Outcaster.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Beastbond Outcaster.html" target="_blank" rel="noopener noreferrer">Beastbond Outcaster</a></td>
+      <td>3.58</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>30171</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.85</td>
+      <td>54.19</td>
+      <td>0.34</td>
+      <td>633</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90458" target="_blank" rel="noopener noreferrer"><img src="img/Unscrupulous_Contractor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Unscrupulous Contractor.html" target="_blank" rel="noopener noreferrer">Unscrupulous Contractor</a></td>
+      <td>5.89</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>40740</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.60</td>
+      <td>52.94</td>
+      <td>0.34</td>
+      <td>136</td>
+      <td>52.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90497" target="_blank" rel="noopener noreferrer"><img src="img/Trick_Shot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Trick Shot.html" target="_blank" rel="noopener noreferrer">Trick Shot</a></td>
+      <td>10.74</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>70008</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.30</td>
+      <td>54.63</td>
+      <td>0.33</td>
+      <td>734</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90605" target="_blank" rel="noopener noreferrer"><img src="img/Jagged_Barrens.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Jagged Barrens.html" target="_blank" rel="noopener noreferrer">Jagged Barrens</a></td>
+      <td>6.24</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>42637</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.90</td>
+      <td>55.20</td>
+      <td>0.30</td>
+      <td>375</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90504" target="_blank" rel="noopener noreferrer"><img src="img/Cactarantula.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cactarantula.html" target="_blank" rel="noopener noreferrer">Cactarantula</a></td>
+      <td>4.82</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>57000</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.50</td>
+      <td>54.76</td>
+      <td>0.26</td>
+      <td>168</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90557" target="_blank" rel="noopener noreferrer"><img src="img/Kambal,_Profiteering_Mayor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kambal, Profiteering Mayor.html" target="_blank" rel="noopener noreferrer">Kambal, Profiteering Mayor</a></td>
+      <td>4.36</td>
+      <td>WB</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>4697</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>57.15</td>
+      <td>57.40</td>
+      <td>0.25</td>
+      <td>223</td>
+      <td>61.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90364" target="_blank" rel="noopener noreferrer"><img src="img/Lassoed_by_the_Law.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lassoed by the Law.html" target="_blank" rel="noopener noreferrer">Lassoed by the Law</a></td>
+      <td>2.76</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>27732</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.25</td>
+      <td>54.50</td>
+      <td>0.25</td>
+      <td>1033</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90449" target="_blank" rel="noopener noreferrer"><img src="img/Rooftop_Assassin.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rooftop Assassin.html" target="_blank" rel="noopener noreferrer">Rooftop Assassin</a></td>
+      <td>8.45</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27190</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.70</td>
+      <td>53.93</td>
+      <td>0.23</td>
+      <td>1131</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90447" target="_blank" rel="noopener noreferrer"><img src="img/Raven_of_Fell_Omens.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Raven of Fell Omens.html" target="_blank" rel="noopener noreferrer">Raven of Fell Omens</a></td>
+      <td>7.26</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>23938</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>57.35</td>
+      <td>57.43</td>
+      <td>0.08</td>
+      <td>148</td>
+      <td>61.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90435" target="_blank" rel="noopener noreferrer"><img src="img/Gisa,_the_Hellraiser.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Gisa, the Hellraiser.html" target="_blank" rel="noopener noreferrer">Gisa, the Hellraiser</a></td>
+      <td>1.26</td>
+      <td>B</td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>48328</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.70</td>
+      <td>53.70</td>
+      <td>0.00</td>
+      <td>162</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90525" target="_blank" rel="noopener noreferrer"><img src="img/Rise_of_the_Varmints.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rise of the Varmints.html" target="_blank" rel="noopener noreferrer">Rise of the Varmints</a></td>
+      <td>7.70</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>70821</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.95</td>
+      <td>53.91</td>
+      <td>-0.04</td>
+      <td>742</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90608" target="_blank" rel="noopener noreferrer"><img src="img/Mirage_Mesa.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mirage Mesa.html" target="_blank" rel="noopener noreferrer">Mirage Mesa</a></td>
+      <td>5.99</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>25835</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.30</td>
+      <td>54.19</td>
+      <td>-0.11</td>
+      <td>716</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90442" target="_blank" rel="noopener noreferrer"><img src="img/Nezumi_Linkbreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nezumi Linkbreaker.html" target="_blank" rel="noopener noreferrer">Nezumi Linkbreaker</a></td>
+      <td>9.89</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>24480</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.20</td>
+      <td>52.98</td>
+      <td>-0.22</td>
+      <td>6634</td>
+      <td>53.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td>6.23</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>52393</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.75</td>
+      <td>54.52</td>
+      <td>-0.23</td>
+      <td>409</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90540" target="_blank" rel="noopener noreferrer"><img src="img/Badlands_Revival.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Badlands Revival.html" target="_blank" rel="noopener noreferrer">Badlands Revival</a></td>
+      <td>5.16</td>
+      <td>BG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>15537</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.60</td>
+      <td>53.36</td>
+      <td>-0.24</td>
+      <td>238</td>
+      <td>54.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90404" target="_blank" rel="noopener noreferrer"><img src="img/Nimble_Brigand.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nimble Brigand.html" target="_blank" rel="noopener noreferrer">Nimble Brigand</a></td>
+      <td>5.11</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>4968</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.05</td>
+      <td>54.71</td>
+      <td>-0.34</td>
+      <td>382</td>
+      <td>56.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90365" target="_blank" rel="noopener noreferrer"><img src="img/Mystical_Tether.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mystical Tether.html" target="_blank" rel="noopener noreferrer">Mystical Tether</a></td>
+      <td>4.31</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>42095</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.15</td>
+      <td>53.79</td>
+      <td>-0.36</td>
+      <td>277</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90502" target="_blank" rel="noopener noreferrer"><img src="img/Bristlepack_Sentry.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bristlepack Sentry.html" target="_blank" rel="noopener noreferrer">Bristlepack Sentry</a></td>
+      <td>7.81</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>28816</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.15</td>
+      <td>52.75</td>
+      <td>-0.40</td>
+      <td>781</td>
+      <td>53.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90453" target="_blank" rel="noopener noreferrer"><img src="img/Skulduggery.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Skulduggery.html" target="_blank" rel="noopener noreferrer">Skulduggery</a></td>
+      <td>9.18</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>25022</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.85</td>
+      <td>54.37</td>
+      <td>-0.48</td>
+      <td>480</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90439" target="_blank" rel="noopener noreferrer"><img src="img/Lively_Dirge.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lively Dirge.html" target="_blank" rel="noopener noreferrer">Lively Dirge</a></td>
+      <td>7.07</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>26648</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.00</td>
+      <td>51.34</td>
+      <td>-0.66</td>
+      <td>335</td>
+      <td>50.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90445" target="_blank" rel="noopener noreferrer"><img src="img/Rakish_Crew.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rakish Crew.html" target="_blank" rel="noopener noreferrer">Rakish Crew</a></td>
+      <td>7.57</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>7949</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.45</td>
+      <td>53.78</td>
+      <td>-0.67</td>
+      <td>119</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90376" target="_blank" rel="noopener noreferrer"><img src="img/Stagecoach_Security.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Stagecoach Security.html" target="_blank" rel="noopener noreferrer">Stagecoach Security</a></td>
+      <td>9.54</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>60523</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.00</td>
+      <td>53.28</td>
+      <td>-0.72</td>
+      <td>137</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90570" target="_blank" rel="noopener noreferrer"><img src="img/Pillage_the_Bog.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Pillage the Bog.html" target="_blank" rel="noopener noreferrer">Pillage the Bog</a></td>
+      <td>6.58</td>
+      <td>BG</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>59439</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.70</td>
+      <td>52.90</td>
+      <td>-0.80</td>
+      <td>138</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90566" target="_blank" rel="noopener noreferrer"><img src="img/Marchesa,_Dealer_of_Death.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Marchesa, Dealer of Death.html" target="_blank" rel="noopener noreferrer">Marchesa, Dealer of Death</a></td>
+      <td>4.06</td>
+      <td>UBR</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>67840</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.00</td>
+      <td>53.17</td>
+      <td>-0.83</td>
+      <td>205</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90597" target="_blank" rel="noopener noreferrer"><img src="img/Abraded_Bluffs.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Abraded Bluffs.html" target="_blank" rel="noopener noreferrer">Abraded Bluffs</a></td>
+      <td>7.04</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>9033</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.35</td>
+      <td>54.29</td>
+      <td>-1.06</td>
+      <td>210</td>
+      <td>57.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90380" target="_blank" rel="noopener noreferrer"><img src="img/Take_Up_the_Shield.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Take Up the Shield.html" target="_blank" rel="noopener noreferrer">Take Up the Shield</a></td>
+      <td>7.41</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>20686</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.95</td>
+      <td>53.87</td>
+      <td>-1.08</td>
+      <td>1034</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90423" target="_blank" rel="noopener noreferrer"><img src="img/Ambush_Gigapede.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ambush Gigapede.html" target="_blank" rel="noopener noreferrer">Ambush Gigapede</a></td>
+      <td>8.85</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>67027</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>51.80</td>
+      <td>50.51</td>
+      <td>-1.29</td>
+      <td>297</td>
+      <td>50.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90594" target="_blank" rel="noopener noreferrer"><img src="img/Silver_Deputy.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Silver Deputy.html" target="_blank" rel="noopener noreferrer">Silver Deputy</a></td>
+      <td>10.08</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>23396</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.25</td>
+      <td>52.40</td>
+      <td>-1.85</td>
+      <td>521</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90433" target="_blank" rel="noopener noreferrer"><img src="img/Fake_Your_Own_Death.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fake Your Own Death.html" target="_blank" rel="noopener noreferrer">Fake Your Own Death</a></td>
+      <td>10.33</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>68924</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.65</td>
+      <td>52.80</td>
+      <td>-1.85</td>
+      <td>214</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90601" target="_blank" rel="noopener noreferrer"><img src="img/Creosote_Heath.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Creosote Heath.html" target="_blank" rel="noopener noreferrer">Creosote Heath</a></td>
+      <td>5.95</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>45618</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.10</td>
+      <td>53.23</td>
+      <td>-1.87</td>
+      <td>124</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90515" target="_blank" rel="noopener noreferrer"><img src="img/Intrepid_Stablemaster.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Intrepid Stablemaster.html" target="_blank" rel="noopener noreferrer">Intrepid Stablemaster</a></td>
+      <td>3.63</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>32610</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.50</td>
+      <td>51.42</td>
+      <td>-2.08</td>
+      <td>282</td>
+      <td>53.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90467" target="_blank" rel="noopener noreferrer"><img src="img/Discerning_Peddler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Discerning Peddler.html" target="_blank" rel="noopener noreferrer">Discerning Peddler</a></td>
+      <td>9.29</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>21499</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.60</td>
+      <td>52.34</td>
+      <td>-2.26</td>
+      <td>642</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90426" target="_blank" rel="noopener noreferrer"><img src="img/Blood_Hustler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Blood Hustler.html" target="_blank" rel="noopener noreferrer">Blood Hustler</a></td>
+      <td>3.32</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>41282</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.65</td>
+      <td>51.38</td>
+      <td>-2.27</td>
+      <td>290</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90499" target="_blank" rel="noopener noreferrer"><img src="img/Ankle_Biter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ankle Biter.html" target="_blank" rel="noopener noreferrer">Ankle Biter</a></td>
+      <td>8.80</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>43179</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.95</td>
+      <td>52.56</td>
+      <td>-2.39</td>
+      <td>430</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90506" target="_blank" rel="noopener noreferrer"><img src="img/Dance_of_the_Tumbleweeds.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Dance of the Tumbleweeds.html" target="_blank" rel="noopener noreferrer">Dance of the Tumbleweeds</a></td>
+      <td>5.56</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>18247</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>51.10</td>
+      <td>48.65</td>
+      <td>-2.45</td>
+      <td>148</td>
+      <td>49.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90414" target="_blank" rel="noopener noreferrer"><img src="img/Slickshot_Vault-Buster.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Slickshot Vault-Buster.html" target="_blank" rel="noopener noreferrer">Slickshot Vault-Buster</a></td>
+      <td>11.83</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>68382</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.30</td>
+      <td>51.78</td>
+      <td>-2.52</td>
+      <td>253</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90599" target="_blank" rel="noopener noreferrer"><img src="img/Bristling_Backwoods.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bristling Backwoods.html" target="_blank" rel="noopener noreferrer">Bristling Backwoods</a></td>
+      <td>6.39</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>6323</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.10</td>
+      <td>52.50</td>
+      <td>-2.60</td>
+      <td>120</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90370" target="_blank" rel="noopener noreferrer"><img src="img/Prairie_Dog.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Prairie Dog.html" target="_blank" rel="noopener noreferrer">Prairie Dog</a></td>
+      <td>3.60</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>65401</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.90</td>
+      <td>50.00</td>
+      <td>-2.90</td>
+      <td>116</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90588" target="_blank" rel="noopener noreferrer"><img src="img/Gold_Pan.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Gold Pan.html" target="_blank" rel="noopener noreferrer">Gold Pan</a></td>
+      <td>10.95</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>20415</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.90</td>
+      <td>50.00</td>
+      <td>-2.90</td>
+      <td>150</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90422" target="_blank" rel="noopener noreferrer"><img src="img/Visage_Bandit.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Visage Bandit.html" target="_blank" rel="noopener noreferrer">Visage Bandit</a></td>
+      <td>6.85</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>34236</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.70</td>
+      <td>50.68</td>
+      <td>-3.02</td>
+      <td>146</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90473" target="_blank" rel="noopener noreferrer"><img src="img/Hellspur_Brute.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hellspur Brute.html" target="_blank" rel="noopener noreferrer">Hellspur Brute</a></td>
+      <td>6.07</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>36946</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.85</td>
+      <td>50.83</td>
+      <td>-3.02</td>
+      <td>360</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90483" target="_blank" rel="noopener noreferrer"><img src="img/Prickly_Pair.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Prickly Pair.html" target="_blank" rel="noopener noreferrer">Prickly Pair</a></td>
+      <td>6.94</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>35049</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.70</td>
+      <td>49.56</td>
+      <td>-3.14</td>
+      <td>226</td>
+      <td>52.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90476" target="_blank" rel="noopener noreferrer"><img src="img/Irascible_Wolverine.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Irascible Wolverine.html" target="_blank" rel="noopener noreferrer">Irascible Wolverine</a></td>
+      <td>8.71</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27461</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.00</td>
+      <td>50.85</td>
+      <td>-3.15</td>
+      <td>472</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90448" target="_blank" rel="noopener noreferrer"><img src="img/Rictus_Robber.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rictus Robber.html" target="_blank" rel="noopener noreferrer">Rictus Robber</a></td>
+      <td>5.14</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>50496</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.50</td>
+      <td>51.26</td>
+      <td>-3.24</td>
+      <td>199</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90533" target="_blank" rel="noopener noreferrer"><img src="img/Tumbleweed_Rising.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tumbleweed Rising.html" target="_blank" rel="noopener noreferrer">Tumbleweed Rising</a></td>
+      <td>8.67</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>8491</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.30</td>
+      <td>51.04</td>
+      <td>-3.26</td>
+      <td>288</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90378" target="_blank" rel="noopener noreferrer"><img src="img/Sterling_Keykeeper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sterling Keykeeper.html" target="_blank" rel="noopener noreferrer">Sterling Keykeeper</a></td>
+      <td>8.49</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>72718</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.75</td>
+      <td>50.45</td>
+      <td>-3.30</td>
+      <td>111</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90615" target="_blank" rel="noopener noreferrer"><img src="img/Concealed_Courtyard.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Concealed Courtyard.html" target="_blank" rel="noopener noreferrer">Concealed Courtyard</a></td>
+      <td>5.95</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>6594</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.50</td>
+      <td>52.10</td>
+      <td>-3.40</td>
+      <td>167</td>
+      <td>57.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90371" target="_blank" rel="noopener noreferrer"><img src="img/Prosperity_Tycoon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Prosperity Tycoon.html" target="_blank" rel="noopener noreferrer">Prosperity Tycoon</a></td>
+      <td>4.98</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>50767</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.00</td>
+      <td>50.58</td>
+      <td>-3.42</td>
+      <td>344</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90534" target="_blank" rel="noopener noreferrer"><img src="img/Voracious_Varmint.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Voracious Varmint.html" target="_blank" rel="noopener noreferrer">Voracious Varmint</a></td>
+      <td>7.59</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>21770</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.15</td>
+      <td>48.64</td>
+      <td>-3.51</td>
+      <td>479</td>
+      <td>51.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90427" target="_blank" rel="noopener noreferrer"><img src="img/Boneyard_Desecrator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Boneyard Desecrator.html" target="_blank" rel="noopener noreferrer">Boneyard Desecrator</a></td>
+      <td>10.70</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>34778</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.60</td>
+      <td>48.98</td>
+      <td>-3.62</td>
+      <td>147</td>
+      <td>52.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90475" target="_blank" rel="noopener noreferrer"><img src="img/Highway_Robbery.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Highway Robbery.html" target="_blank" rel="noopener noreferrer">Highway Robbery</a></td>
+      <td>10.66</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>58084</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.90</td>
+      <td>52.17</td>
+      <td>-3.73</td>
+      <td>207</td>
+      <td>58.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90561" target="_blank" rel="noopener noreferrer"><img src="img/Laughing_Jasper_Flint.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Laughing Jasper Flint.html" target="_blank" rel="noopener noreferrer">Laughing Jasper Flint</a></td>
+      <td>1.80</td>
+      <td>BR</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>10117</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.05</td>
+      <td>50.32</td>
+      <td>-3.73</td>
+      <td>155</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90384" target="_blank" rel="noopener noreferrer"><img src="img/Wanted_Griffin.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wanted Griffin.html" target="_blank" rel="noopener noreferrer">Wanted Griffin</a></td>
+      <td>9.63</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>37759</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.85</td>
+      <td>49.09</td>
+      <td>-3.76</td>
+      <td>220</td>
+      <td>52.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90486" target="_blank" rel="noopener noreferrer"><img src="img/Reckless_Lackey.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Reckless Lackey.html" target="_blank" rel="noopener noreferrer">Reckless Lackey</a></td>
+      <td>9.98</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>61065</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>58.70</td>
+      <td>54.86</td>
+      <td>-3.84</td>
+      <td>144</td>
+      <td>64.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90572" target="_blank" rel="noopener noreferrer"><img src="img/Rakdos,_the_Muscle.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rakdos, the Muscle.html" target="_blank" rel="noopener noreferrer">Rakdos, the Muscle</a></td>
+      <td>1.59</td>
+      <td>BR</td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>70550</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.65</td>
+      <td>50.65</td>
+      <td>-4.00</td>
+      <td>306</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90607" target="_blank" rel="noopener noreferrer"><img src="img/Lush_Oasis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lush Oasis.html" target="_blank" rel="noopener noreferrer">Lush Oasis</a></td>
+      <td>6.45</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>41824</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.80</td>
+      <td>50.70</td>
+      <td>-4.10</td>
+      <td>142</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90501" target="_blank" rel="noopener noreferrer"><img src="img/Betrayal_at_the_Vault.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Betrayal at the Vault.html" target="_blank" rel="noopener noreferrer">Betrayal at the Vault</a></td>
+      <td>6.20</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>26106</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>51.60</td>
+      <td>47.24</td>
+      <td>-4.36</td>
+      <td>489</td>
+      <td>50.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90443" target="_blank" rel="noopener noreferrer"><img src="img/Overzealous_Muscle.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Overzealous Muscle.html" target="_blank" rel="noopener noreferrer">Overzealous Muscle</a></td>
+      <td>11.07</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>19873</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.80</td>
+      <td>49.38</td>
+      <td>-4.42</td>
+      <td>162</td>
+      <td>54.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90420" target="_blank" rel="noopener noreferrer"><img src="img/This_Town_Ain't_Big_Enough.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//This Town Ain't Big Enough.html" target="_blank" rel="noopener noreferrer">This Town Ain't Big Enough</a></td>
+      <td>7.26</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>41011</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.35</td>
+      <td>50.88</td>
+      <td>-4.47</td>
+      <td>171</td>
+      <td>57.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90498" target="_blank" rel="noopener noreferrer"><img src="img/Aloe_Alchemist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Aloe Alchemist.html" target="_blank" rel="noopener noreferrer">Aloe Alchemist</a></td>
+      <td>3.51</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>43450</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.10</td>
+      <td>49.29</td>
+      <td>-4.81</td>
+      <td>282</td>
+      <td>55.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90507" target="_blank" rel="noopener noreferrer"><img src="img/Drover_Grizzly.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Drover Grizzly.html" target="_blank" rel="noopener noreferrer">Drover Grizzly</a></td>
+      <td>6.84</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>68111</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.25</td>
+      <td>47.42</td>
+      <td>-4.83</td>
+      <td>194</td>
+      <td>51.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90598" target="_blank" rel="noopener noreferrer"><img src="img/Arid_Archway.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Arid Archway.html" target="_blank" rel="noopener noreferrer">Arid Archway</a></td>
+      <td>8.89</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>52664</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.60</td>
+      <td>48.40</td>
+      <td>-5.20</td>
+      <td>281</td>
+      <td>54.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90541" target="_blank" rel="noopener noreferrer"><img src="img/Baron_Bertram_Graywater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Baron Bertram Graywater.html" target="_blank" rel="noopener noreferrer">Baron Bertram Graywater</a></td>
+      <td>6.93</td>
+      <td>WB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>52122</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>51.90</td>
+      <td>45.99</td>
+      <td>-5.91</td>
+      <td>274</td>
+      <td>50.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90539" target="_blank" rel="noopener noreferrer"><img src="img/At_Knifepoint.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//At Knifepoint.html" target="_blank" rel="noopener noreferrer">At Knifepoint</a></td>
+      <td>6.82</td>
+      <td>BR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>38843</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.40</td>
+      <td>46.53</td>
+      <td>-7.87</td>
+      <td>101</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90490" target="_blank" rel="noopener noreferrer"><img src="img/Scalestorm_Summoner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scalestorm Summoner.html" target="_blank" rel="noopener noreferrer">Scalestorm Summoner</a></td>
+      <td>4.94</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>37488</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.40</td>
+      <td>44.23</td>
+      <td>-8.17</td>
+      <td>104</td>
+      <td>51.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90485" target="_blank" rel="noopener noreferrer"><img src="img/Quilled_Charger.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Quilled Charger.html" target="_blank" rel="noopener noreferrer">Quilled Charger</a></td>
+      <td>10.31</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>60794</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.45</td>
+      <td>44.86</td>
+      <td>-8.59</td>
+      <td>107</td>
+      <td>53.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90571" target="_blank" rel="noopener noreferrer"><img src="img/Rakdos_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rakdos Joins Up.html" target="_blank" rel="noopener noreferrer">Rakdos Joins Up</a></td>
+      <td>4.94</td>
+      <td>BR</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>51038</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.55</td>
+      <td>44.25</td>
+      <td>-9.30</td>
+      <td>174</td>
+      <td>53.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90535" target="_blank" rel="noopener noreferrer"><img src="img/Akul_the_Unrepentant.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Akul the Unrepentant.html" target="_blank" rel="noopener noreferrer">Akul the Unrepentant</a></td>
+      <td>4.26</td>
+      <td>BR</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>47515</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>6.23</td>
+      <td><a href=".//Insatiable Avarice.html" target="_blank" rel="noopener noreferrer">Insatiable Avarice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90437" target="_blank" rel="noopener noreferrer"><img src="img/Insatiable_Avarice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.95</td>
+      <td>44.44</td>
+      <td>-9.51</td>
+      <td>126</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90522" target="_blank" rel="noopener noreferrer"><img src="img/Rambling_Possum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rambling Possum.html" target="_blank" rel="noopener noreferrer">Rambling Possum</a></td>
+      <td>4.69</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+  </tbody>
+</table>

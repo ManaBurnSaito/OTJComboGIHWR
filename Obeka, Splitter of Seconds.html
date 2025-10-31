@@ -1,0 +1,109 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>60112</th>
+      <td>rare</td>
+      <td>UBR</td>
+      <td>9.49</td>
+      <td><a href=".//Obeka, Splitter of Seconds.html" target="_blank" rel="noopener noreferrer">Obeka, Splitter of Seconds</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90568" target="_blank" rel="noopener noreferrer"><img src="img/Obeka,_Splitter_of_Seconds.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>36.14</td>
+      <td>36.14</td>
+      <td>415</td>
+      <td>0.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90568" target="_blank" rel="noopener noreferrer"><img src="img/Obeka,_Splitter_of_Seconds.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Obeka, Splitter of Seconds.html" target="_blank" rel="noopener noreferrer">Obeka, Splitter of Seconds</a></td>
+      <td>9.49</td>
+      <td>UBR</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>70139</th>
+      <td>rare</td>
+      <td>UBR</td>
+      <td>9.49</td>
+      <td><a href=".//Obeka, Splitter of Seconds.html" target="_blank" rel="noopener noreferrer">Obeka, Splitter of Seconds</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90568" target="_blank" rel="noopener noreferrer"><img src="img/Obeka,_Splitter_of_Seconds.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>0.0</td>
+      <td>27.7</td>
+      <td>36.00</td>
+      <td>8.30</td>
+      <td>100</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90605" target="_blank" rel="noopener noreferrer"><img src="img/Jagged_Barrens.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Jagged Barrens.html" target="_blank" rel="noopener noreferrer">Jagged Barrens</a></td>
+      <td>6.24</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+  </tbody>
+</table>

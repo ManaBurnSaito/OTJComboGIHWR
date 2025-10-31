@@ -1,0 +1,2921 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>61733</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>58.70</td>
+      <td>71.01</td>
+      <td>12.31</td>
+      <td>138</td>
+      <td>64.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90574" target="_blank" rel="noopener noreferrer"><img src="img/Roxanne,_Starfall_Savant.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Roxanne, Starfall Savant.html" target="_blank" rel="noopener noreferrer">Roxanne, Starfall Savant</a></td>
+      <td>1.63</td>
+      <td>RG</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>22167</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>56.15</td>
+      <td>67.65</td>
+      <td>11.50</td>
+      <td>102</td>
+      <td>59.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90428" target="_blank" rel="noopener noreferrer"><img src="img/Caustic_Bronco.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Caustic Bronco.html" target="_blank" rel="noopener noreferrer">Caustic Bronco</a></td>
+      <td>1.88</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>28671</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>55.55</td>
+      <td>65.25</td>
+      <td>9.70</td>
+      <td>236</td>
+      <td>57.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90452" target="_blank" rel="noopener noreferrer"><img src="img/Shoot_the_Sheriff.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shoot the Sheriff.html" target="_blank" rel="noopener noreferrer">Shoot the Sheriff</a></td>
+      <td>3.53</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>46557</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>57.30</td>
+      <td>66.89</td>
+      <td>9.59</td>
+      <td>148</td>
+      <td>61.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90518" target="_blank" rel="noopener noreferrer"><img src="img/Outcaster_Greenblade.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Outcaster Greenblade.html" target="_blank" rel="noopener noreferrer">Outcaster Greenblade</a></td>
+      <td>2.69</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>49267</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>56.90</td>
+      <td>65.45</td>
+      <td>8.55</td>
+      <td>110</td>
+      <td>60.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90528" target="_blank" rel="noopener noreferrer"><img src="img/Spinewoods_Armadillo.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Spinewoods Armadillo.html" target="_blank" rel="noopener noreferrer">Spinewoods Armadillo</a></td>
+      <td>2.57</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>53061</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>59.85</td>
+      <td>67.88</td>
+      <td>8.03</td>
+      <td>193</td>
+      <td>66.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90542" target="_blank" rel="noopener noreferrer"><img src="img/Bonny_Pall,_Clearcutter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bonny Pall, Clearcutter.html" target="_blank" rel="noopener noreferrer">Bonny Pall, Clearcutter</a></td>
+      <td>1.58</td>
+      <td>UG</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>50893</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.05</td>
+      <td>60.78</td>
+      <td>6.73</td>
+      <td>102</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90534" target="_blank" rel="noopener noreferrer"><img src="img/Voracious_Varmint.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Voracious Varmint.html" target="_blank" rel="noopener noreferrer">Voracious Varmint</a></td>
+      <td>7.59</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>13495</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>55.10</td>
+      <td>61.50</td>
+      <td>6.40</td>
+      <td>226</td>
+      <td>56.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90396" target="_blank" rel="noopener noreferrer"><img src="img/Geralf,_the_Fleshwright.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Geralf, the Fleshwright.html" target="_blank" rel="noopener noreferrer">Geralf, the Fleshwright</a></td>
+      <td>1.69</td>
+      <td>U</td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>52519</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.80</td>
+      <td>60.78</td>
+      <td>5.98</td>
+      <td>102</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90540" target="_blank" rel="noopener noreferrer"><img src="img/Badlands_Revival.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Badlands Revival.html" target="_blank" rel="noopener noreferrer">Badlands Revival</a></td>
+      <td>5.16</td>
+      <td>BG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>58210</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>55.95</td>
+      <td>61.83</td>
+      <td>5.88</td>
+      <td>186</td>
+      <td>58.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90561" target="_blank" rel="noopener noreferrer"><img src="img/Laughing_Jasper_Flint.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Laughing Jasper Flint.html" target="_blank" rel="noopener noreferrer">Laughing Jasper Flint</a></td>
+      <td>1.80</td>
+      <td>BR</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>64985</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>53.80</td>
+      <td>59.63</td>
+      <td>5.83</td>
+      <td>535</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90586" target="_blank" rel="noopener noreferrer"><img src="img/Bandit's_Haul.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bandit's Haul.html" target="_blank" rel="noopener noreferrer">Bandit's Haul</a></td>
+      <td>7.13</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>40324</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>56.60</td>
+      <td>62.20</td>
+      <td>5.60</td>
+      <td>127</td>
+      <td>59.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90495" target="_blank" rel="noopener noreferrer"><img src="img/Terror_of_the_Peaks.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Terror of the Peaks.html" target="_blank" rel="noopener noreferrer">Terror of the Peaks</a></td>
+      <td>1.27</td>
+      <td>R</td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>50080</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>56.10</td>
+      <td>61.69</td>
+      <td>5.59</td>
+      <td>154</td>
+      <td>58.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90531" target="_blank" rel="noopener noreferrer"><img src="img/Throw_from_the_Saddle.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Throw from the Saddle.html" target="_blank" rel="noopener noreferrer">Throw from the Saddle</a></td>
+      <td>3.96</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>48996</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>55.25</td>
+      <td>60.78</td>
+      <td>5.53</td>
+      <td>102</td>
+      <td>57.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90527" target="_blank" rel="noopener noreferrer"><img src="img/Snakeskin_Veil.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Snakeskin Veil.html" target="_blank" rel="noopener noreferrer">Snakeskin Veil</a></td>
+      <td>6.64</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>43305</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>55.00</td>
+      <td>60.27</td>
+      <td>5.27</td>
+      <td>297</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90506" target="_blank" rel="noopener noreferrer"><img src="img/Dance_of_the_Tumbleweeds.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Dance of the Tumbleweeds.html" target="_blank" rel="noopener noreferrer">Dance of the Tumbleweeds</a></td>
+      <td>5.56</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27045</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>53.95</td>
+      <td>59.06</td>
+      <td>5.11</td>
+      <td>149</td>
+      <td>54.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90446" target="_blank" rel="noopener noreferrer"><img src="img/Rattleback_Apothecary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rattleback Apothecary.html" target="_blank" rel="noopener noreferrer">Rattleback Apothecary</a></td>
+      <td>5.06</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>45473</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.55</td>
+      <td>59.61</td>
+      <td>5.06</td>
+      <td>255</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90514" target="_blank" rel="noopener noreferrer"><img src="img/Hardbristle_Bandit.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hardbristle Bandit.html" target="_blank" rel="noopener noreferrer">Hardbristle Bandit</a></td>
+      <td>4.54</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>53603</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>57.25</td>
+      <td>62.28</td>
+      <td>5.03</td>
+      <td>114</td>
+      <td>61.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90544" target="_blank" rel="noopener noreferrer"><img src="img/Bruse_Tarl,_Roving_Rancher.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bruse Tarl, Roving Rancher.html" target="_blank" rel="noopener noreferrer">Bruse Tarl, Roving Rancher</a></td>
+      <td>2.14</td>
+      <td>WR</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>63088</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.45</td>
+      <td>59.46</td>
+      <td>5.01</td>
+      <td>2141</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90579" target="_blank" rel="noopener noreferrer"><img src="img/Slick_Sequence.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Slick Sequence.html" target="_blank" rel="noopener noreferrer">Slick Sequence</a></td>
+      <td>8.14</td>
+      <td>UR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>66882</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.15</td>
+      <td>59.05</td>
+      <td>4.90</td>
+      <td>232</td>
+      <td>55.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90593" target="_blank" rel="noopener noreferrer"><img src="img/Redrock_Sentinel.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Redrock Sentinel.html" target="_blank" rel="noopener noreferrer">Redrock Sentinel</a></td>
+      <td>9.37</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>22980</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>55.45</td>
+      <td>60.06</td>
+      <td>4.61</td>
+      <td>646</td>
+      <td>57.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90431" target="_blank" rel="noopener noreferrer"><img src="img/Desert's_Due.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Desert's Due.html" target="_blank" rel="noopener noreferrer">Desert's Due</a></td>
+      <td>4.76</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>59023</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.55</td>
+      <td>59.14</td>
+      <td>4.59</td>
+      <td>421</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90564" target="_blank" rel="noopener noreferrer"><img src="img/Make_Your_Own_Luck.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Make Your Own Luck.html" target="_blank" rel="noopener noreferrer">Make Your Own Luck</a></td>
+      <td>6.36</td>
+      <td>UG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>35988</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.45</td>
+      <td>58.89</td>
+      <td>4.44</td>
+      <td>377</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90479" target="_blank" rel="noopener noreferrer"><img src="img/Magda,_the_Hoardmaster.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Magda, the Hoardmaster.html" target="_blank" rel="noopener noreferrer">Magda, the Hoardmaster</a></td>
+      <td>1.89</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>5094</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>55.10</td>
+      <td>59.18</td>
+      <td>4.08</td>
+      <td>147</td>
+      <td>56.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90365" target="_blank" rel="noopener noreferrer"><img src="img/Mystical_Tether.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mystical Tether.html" target="_blank" rel="noopener noreferrer">Mystical Tether</a></td>
+      <td>4.31</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>67153</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>51.85</td>
+      <td>55.80</td>
+      <td>3.95</td>
+      <td>457</td>
+      <td>50.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90594" target="_blank" rel="noopener noreferrer"><img src="img/Silver_Deputy.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Silver Deputy.html" target="_blank" rel="noopener noreferrer">Silver Deputy</a></td>
+      <td>10.08</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>73386</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>52.85</td>
+      <td>56.80</td>
+      <td>3.95</td>
+      <td>588</td>
+      <td>52.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90617" target="_blank" rel="noopener noreferrer"><img src="img/Spirebluff_Canal.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Spirebluff Canal.html" target="_blank" rel="noopener noreferrer">Spirebluff Canal</a></td>
+      <td>6.27</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>34633</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>57.50</td>
+      <td>61.44</td>
+      <td>3.94</td>
+      <td>236</td>
+      <td>61.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90474" target="_blank" rel="noopener noreferrer"><img src="img/Hellspur_Posse_Boss.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hellspur Posse Boss.html" target="_blank" rel="noopener noreferrer">Hellspur Posse Boss</a></td>
+      <td>1.95</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>35717</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>55.10</td>
+      <td>59.03</td>
+      <td>3.93</td>
+      <td>808</td>
+      <td>56.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90478" target="_blank" rel="noopener noreferrer"><img src="img/Longhorn_Sharpshooter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Longhorn Sharpshooter.html" target="_blank" rel="noopener noreferrer">Longhorn Sharpshooter</a></td>
+      <td>3.78</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>57939</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>53.80</td>
+      <td>57.72</td>
+      <td>3.92</td>
+      <td>1762</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90560" target="_blank" rel="noopener noreferrer"><img src="img/Kraum,_Violent_Cacophony.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kraum, Violent Cacophony.html" target="_blank" rel="noopener noreferrer">Kraum, Violent Cacophony</a></td>
+      <td>6.74</td>
+      <td>UR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>68779</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.65</td>
+      <td>58.55</td>
+      <td>3.90</td>
+      <td>1141</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90600" target="_blank" rel="noopener noreferrer"><img src="img/Conduit_Pylons.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Conduit Pylons.html" target="_blank" rel="noopener noreferrer">Conduit Pylons</a></td>
+      <td>7.05</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>54958</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.65</td>
+      <td>58.49</td>
+      <td>3.84</td>
+      <td>106</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90549" target="_blank" rel="noopener noreferrer"><img src="img/Ertha_Jo,_Frontier_Mentor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ertha Jo, Frontier Mentor.html" target="_blank" rel="noopener noreferrer">Ertha Jo, Frontier Mentor</a></td>
+      <td>6.25</td>
+      <td>WR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>65527</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>52.95</td>
+      <td>56.67</td>
+      <td>3.72</td>
+      <td>210</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90588" target="_blank" rel="noopener noreferrer"><img src="img/Gold_Pan.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Gold Pan.html" target="_blank" rel="noopener noreferrer">Gold Pan</a></td>
+      <td>10.95</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>62275</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>53.60</td>
+      <td>57.27</td>
+      <td>3.67</td>
+      <td>110</td>
+      <td>53.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90576" target="_blank" rel="noopener noreferrer"><img src="img/Satoru,_the_Infiltrator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Satoru, the Infiltrator.html" target="_blank" rel="noopener noreferrer">Satoru, the Infiltrator</a></td>
+      <td>5.02</td>
+      <td>UB</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>70947</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.00</td>
+      <td>57.62</td>
+      <td>3.62</td>
+      <td>1175</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90608" target="_blank" rel="noopener noreferrer"><img src="img/Mirage_Mesa.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mirage Mesa.html" target="_blank" rel="noopener noreferrer">Mirage Mesa</a></td>
+      <td>5.99</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>28400</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>55.05</td>
+      <td>58.58</td>
+      <td>3.53</td>
+      <td>239</td>
+      <td>56.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90451" target="_blank" rel="noopener noreferrer"><img src="img/Servant_of_the_Stinger.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Servant of the Stinger.html" target="_blank" rel="noopener noreferrer">Servant of the Stinger</a></td>
+      <td>4.64</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>22438</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>55.60</td>
+      <td>59.02</td>
+      <td>3.42</td>
+      <td>427</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90429" target="_blank" rel="noopener noreferrer"><img src="img/Consuming_Ashes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Consuming Ashes.html" target="_blank" rel="noopener noreferrer">Consuming Ashes</a></td>
+      <td>4.32</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>32736</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>53.55</td>
+      <td>56.69</td>
+      <td>3.14</td>
+      <td>1016</td>
+      <td>53.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90467" target="_blank" rel="noopener noreferrer"><img src="img/Discerning_Peddler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Discerning Peddler.html" target="_blank" rel="noopener noreferrer">Discerning Peddler</a></td>
+      <td>9.29</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>69321</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.05</td>
+      <td>57.16</td>
+      <td>3.11</td>
+      <td>2129</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90602" target="_blank" rel="noopener noreferrer"><img src="img/Eroded_Canyon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eroded Canyon.html" target="_blank" rel="noopener noreferrer">Eroded Canyon</a></td>
+      <td>7.18</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>53874</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>55.45</td>
+      <td>58.47</td>
+      <td>3.02</td>
+      <td>118</td>
+      <td>57.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90545" target="_blank" rel="noopener noreferrer"><img src="img/Cactusfolk_Sureshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cactusfolk Sureshot.html" target="_blank" rel="noopener noreferrer">Cactusfolk Sureshot</a></td>
+      <td>5.07</td>
+      <td>RG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>34904</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>52.65</td>
+      <td>55.66</td>
+      <td>3.01</td>
+      <td>1211</td>
+      <td>52.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90475" target="_blank" rel="noopener noreferrer"><img src="img/Highway_Robbery.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Highway Robbery.html" target="_blank" rel="noopener noreferrer">Highway Robbery</a></td>
+      <td>10.66</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>56313</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.05</td>
+      <td>56.99</td>
+      <td>2.94</td>
+      <td>472</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90554" target="_blank" rel="noopener noreferrer"><img src="img/Intimidation_Campaign.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Intimidation Campaign.html" target="_blank" rel="noopener noreferrer">Intimidation Campaign</a></td>
+      <td>5.70</td>
+      <td>UB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>70134</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.35</td>
+      <td>57.19</td>
+      <td>2.84</td>
+      <td>946</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90605" target="_blank" rel="noopener noreferrer"><img src="img/Jagged_Barrens.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Jagged Barrens.html" target="_blank" rel="noopener noreferrer">Jagged Barrens</a></td>
+      <td>6.24</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>31652</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>50.95</td>
+      <td>53.67</td>
+      <td>2.72</td>
+      <td>218</td>
+      <td>48.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90463" target="_blank" rel="noopener noreferrer"><img src="img/Caught_in_the_Crossfire.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Caught in the Crossfire.html" target="_blank" rel="noopener noreferrer">Caught in the Crossfire</a></td>
+      <td>10.17</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>41408</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>53.70</td>
+      <td>56.41</td>
+      <td>2.71</td>
+      <td>117</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90499" target="_blank" rel="noopener noreferrer"><img src="img/Ankle_Biter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ankle Biter.html" target="_blank" rel="noopener noreferrer">Ankle Biter</a></td>
+      <td>8.80</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>18102</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.50</td>
+      <td>57.18</td>
+      <td>2.68</td>
+      <td>1079</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90413" target="_blank" rel="noopener noreferrer"><img src="img/Slickshot_Lockpicker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Slickshot Lockpicker.html" target="_blank" rel="noopener noreferrer">Slickshot Lockpicker</a></td>
+      <td>4.70</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>39511</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>52.70</td>
+      <td>55.12</td>
+      <td>2.42</td>
+      <td>303</td>
+      <td>52.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90492" target="_blank" rel="noopener noreferrer"><img src="img/Slickshot_Show-Off.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Slickshot Show-Off.html" target="_blank" rel="noopener noreferrer">Slickshot Show-Off</a></td>
+      <td>2.92</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>60920</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>53.50</td>
+      <td>55.86</td>
+      <td>2.36</td>
+      <td>111</td>
+      <td>53.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90571" target="_blank" rel="noopener noreferrer"><img src="img/Rakdos_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rakdos Joins Up.html" target="_blank" rel="noopener noreferrer">Rakdos Joins Up</a></td>
+      <td>4.94</td>
+      <td>BR</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>56584</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>52.50</td>
+      <td>54.86</td>
+      <td>2.36</td>
+      <td>175</td>
+      <td>51.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90555" target="_blank" rel="noopener noreferrer"><img src="img/Jem_Lightfoote,_Sky_Explorer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Jem Lightfoote, Sky Explorer.html" target="_blank" rel="noopener noreferrer">Jem Lightfoote, Sky Explorer</a></td>
+      <td>6.90</td>
+      <td>WU</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>69592</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.90</td>
+      <td>57.24</td>
+      <td>2.34</td>
+      <td>283</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90603" target="_blank" rel="noopener noreferrer"><img src="img/Festering_Gulch.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Festering Gulch.html" target="_blank" rel="noopener noreferrer">Festering Gulch</a></td>
+      <td>5.84</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>70676</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.70</td>
+      <td>57.03</td>
+      <td>2.33</td>
+      <td>612</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90607" target="_blank" rel="noopener noreferrer"><img src="img/Lush_Oasis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lush Oasis.html" target="_blank" rel="noopener noreferrer">Lush Oasis</a></td>
+      <td>6.45</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>19728</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.55</td>
+      <td>56.88</td>
+      <td>2.33</td>
+      <td>1918</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90419" target="_blank" rel="noopener noreferrer"><img src="img/Take_the_Fall.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Take the Fall.html" target="_blank" rel="noopener noreferrer">Take the Fall</a></td>
+      <td>9.45</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>47099</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>55.00</td>
+      <td>57.29</td>
+      <td>2.29</td>
+      <td>192</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90520" target="_blank" rel="noopener noreferrer"><img src="img/Patient_Naturalist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Patient Naturalist.html" target="_blank" rel="noopener noreferrer">Patient Naturalist</a></td>
+      <td>6.04</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12682</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>53.40</td>
+      <td>55.67</td>
+      <td>2.27</td>
+      <td>934</td>
+      <td>53.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90393" target="_blank" rel="noopener noreferrer"><img src="img/Failed_Fording.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Failed Fording.html" target="_blank" rel="noopener noreferrer">Failed Fording</a></td>
+      <td>10.49</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>59294</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.80</td>
+      <td>57.07</td>
+      <td>2.27</td>
+      <td>827</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90565" target="_blank" rel="noopener noreferrer"><img src="img/Malcolm,_the_Eyes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Malcolm, the Eyes.html" target="_blank" rel="noopener noreferrer">Malcolm, the Eyes</a></td>
+      <td>4.88</td>
+      <td>UR</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>15392</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.70</td>
+      <td>56.95</td>
+      <td>2.25</td>
+      <td>741</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90403" target="_blank" rel="noopener noreferrer"><img src="img/Metamorphic_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Metamorphic Blast.html" target="_blank" rel="noopener noreferrer">Metamorphic Blast</a></td>
+      <td>7.07</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>54416</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>53.05</td>
+      <td>55.28</td>
+      <td>2.23</td>
+      <td>123</td>
+      <td>52.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90547" target="_blank" rel="noopener noreferrer"><img src="img/Doc_Aurlock,_Grizzled_Genius.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Doc Aurlock, Grizzled Genius.html" target="_blank" rel="noopener noreferrer">Doc Aurlock, Grizzled Genius</a></td>
+      <td>7.96</td>
+      <td>UG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>16747</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>55.10</td>
+      <td>57.16</td>
+      <td>2.06</td>
+      <td>670</td>
+      <td>56.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90408" target="_blank" rel="noopener noreferrer"><img src="img/Plan_the_Heist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Plan the Heist.html" target="_blank" rel="noopener noreferrer">Plan the Heist</a></td>
+      <td>7.88</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>35175</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>52.75</td>
+      <td>54.81</td>
+      <td>2.06</td>
+      <td>1299</td>
+      <td>52.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90476" target="_blank" rel="noopener noreferrer"><img src="img/Irascible_Wolverine.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Irascible Wolverine.html" target="_blank" rel="noopener noreferrer">Irascible Wolverine</a></td>
+      <td>8.71</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>14850</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>53.80</td>
+      <td>55.80</td>
+      <td>2.00</td>
+      <td>1889</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90401" target="_blank" rel="noopener noreferrer"><img src="img/Loan_Shark.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Loan Shark.html" target="_blank" rel="noopener noreferrer">Loan Shark</a></td>
+      <td>7.98</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>31381</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.40</td>
+      <td>56.40</td>
+      <td>2.00</td>
+      <td>250</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90462" target="_blank" rel="noopener noreferrer"><img src="img/Calamity,_Galloping_Inferno.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Calamity, Galloping Inferno.html" target="_blank" rel="noopener noreferrer">Calamity, Galloping Inferno</a></td>
+      <td>1.65</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>34362</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>53.75</td>
+      <td>55.73</td>
+      <td>1.98</td>
+      <td>314</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90473" target="_blank" rel="noopener noreferrer"><img src="img/Hellspur_Brute.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hellspur Brute.html" target="_blank" rel="noopener noreferrer">Hellspur Brute</a></td>
+      <td>6.07</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>14037</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>52.90</td>
+      <td>54.82</td>
+      <td>1.92</td>
+      <td>591</td>
+      <td>52.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90398" target="_blank" rel="noopener noreferrer"><img src="img/Harrier_Strix.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Harrier Strix.html" target="_blank" rel="noopener noreferrer">Harrier Strix</a></td>
+      <td>11.06</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>15934</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>53.55</td>
+      <td>55.43</td>
+      <td>1.88</td>
+      <td>949</td>
+      <td>53.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90405" target="_blank" rel="noopener noreferrer"><img src="img/Outlaw_Stitcher.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Outlaw Stitcher.html" target="_blank" rel="noopener noreferrer">Outlaw Stitcher</a></td>
+      <td>4.85</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>69050</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.70</td>
+      <td>56.56</td>
+      <td>1.86</td>
+      <td>122</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90601" target="_blank" rel="noopener noreferrer"><img src="img/Creosote_Heath.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Creosote Heath.html" target="_blank" rel="noopener noreferrer">Creosote Heath</a></td>
+      <td>5.95</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>19999</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>53.85</td>
+      <td>55.70</td>
+      <td>1.85</td>
+      <td>754</td>
+      <td>54.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90420" target="_blank" rel="noopener noreferrer"><img src="img/This_Town_Ain't_Big_Enough.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//This Town Ain't Big Enough.html" target="_blank" rel="noopener noreferrer">This Town Ain't Big Enough</a></td>
+      <td>7.26</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>39240</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.00</td>
+      <td>55.80</td>
+      <td>1.80</td>
+      <td>767</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90491" target="_blank" rel="noopener noreferrer"><img src="img/Scorching_Shot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scorching Shot.html" target="_blank" rel="noopener noreferrer">Scorching Shot</a></td>
+      <td>5.04</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>64443</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>52.05</td>
+      <td>53.85</td>
+      <td>1.80</td>
+      <td>130</td>
+      <td>50.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90584" target="_blank" rel="noopener noreferrer"><img src="img/Wrangler_of_the_Damned.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wrangler of the Damned.html" target="_blank" rel="noopener noreferrer">Wrangler of the Damned</a></td>
+      <td>7.20</td>
+      <td>WU</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>71489</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.80</td>
+      <td>56.49</td>
+      <td>1.69</td>
+      <td>979</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90610" target="_blank" rel="noopener noreferrer"><img src="img/Soured_Springs.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Soured Springs.html" target="_blank" rel="noopener noreferrer">Soured Springs</a></td>
+      <td>6.22</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>30026</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>55.30</td>
+      <td>56.96</td>
+      <td>1.66</td>
+      <td>230</td>
+      <td>57.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90457" target="_blank" rel="noopener noreferrer"><img src="img/Unfortunate_Accident.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Unfortunate Accident.html" target="_blank" rel="noopener noreferrer">Unfortunate Accident</a></td>
+      <td>3.63</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>35446</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>52.65</td>
+      <td>54.30</td>
+      <td>1.65</td>
+      <td>803</td>
+      <td>52.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90477" target="_blank" rel="noopener noreferrer"><img src="img/Iron-Fist_Pulverizer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Iron-Fist Pulverizer.html" target="_blank" rel="noopener noreferrer">Iron-Fist Pulverizer</a></td>
+      <td>10.79</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>10785</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>53.90</td>
+      <td>55.42</td>
+      <td>1.52</td>
+      <td>895</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90386" target="_blank" rel="noopener noreferrer"><img src="img/Canyon_Crab.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Canyon Crab.html" target="_blank" rel="noopener noreferrer">Canyon Crab</a></td>
+      <td>6.72</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>25419</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.90</td>
+      <td>56.39</td>
+      <td>1.49</td>
+      <td>227</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90440" target="_blank" rel="noopener noreferrer"><img src="img/Mourner's_Surprise.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mourner's Surprise.html" target="_blank" rel="noopener noreferrer">Mourner's Surprise</a></td>
+      <td>8.03</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>67424</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>53.60</td>
+      <td>55.07</td>
+      <td>1.47</td>
+      <td>138</td>
+      <td>53.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90595" target="_blank" rel="noopener noreferrer"><img src="img/Sterling_Hound.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sterling Hound.html" target="_blank" rel="noopener noreferrer">Sterling Hound</a></td>
+      <td>10.69</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>66611</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>53.80</td>
+      <td>55.23</td>
+      <td>1.43</td>
+      <td>621</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90592" target="_blank" rel="noopener noreferrer"><img src="img/Oasis_Gardener.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Oasis Gardener.html" target="_blank" rel="noopener noreferrer">Oasis Gardener</a></td>
+      <td>8.85</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>53332</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>51.65</td>
+      <td>53.04</td>
+      <td>1.39</td>
+      <td>460</td>
+      <td>50.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td>6.95</td>
+      <td>UR</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>20541</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>52.95</td>
+      <td>54.26</td>
+      <td>1.31</td>
+      <td>540</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90422" target="_blank" rel="noopener noreferrer"><img src="img/Visage_Bandit.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Visage Bandit.html" target="_blank" rel="noopener noreferrer">Visage Bandit</a></td>
+      <td>6.85</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>40866</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>52.65</td>
+      <td>53.95</td>
+      <td>1.30</td>
+      <td>443</td>
+      <td>52.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90497" target="_blank" rel="noopener noreferrer"><img src="img/Trick_Shot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Trick Shot.html" target="_blank" rel="noopener noreferrer">Trick Shot</a></td>
+      <td>10.74</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>14308</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.70</td>
+      <td>55.97</td>
+      <td>1.27</td>
+      <td>1190</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90399" target="_blank" rel="noopener noreferrer"><img src="img/Jailbreak_Scheme.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Jailbreak Scheme.html" target="_blank" rel="noopener noreferrer">Jailbreak Scheme</a></td>
+      <td>9.98</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>42763</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.95</td>
+      <td>56.14</td>
+      <td>1.19</td>
+      <td>114</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90504" target="_blank" rel="noopener noreferrer"><img src="img/Cactarantula.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cactarantula.html" target="_blank" rel="noopener noreferrer">Cactarantula</a></td>
+      <td>4.82</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>16476</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>55.00</td>
+      <td>56.18</td>
+      <td>1.18</td>
+      <td>1520</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90407" target="_blank" rel="noopener noreferrer"><img src="img/Phantom_Interference.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Phantom Interference.html" target="_blank" rel="noopener noreferrer">Phantom Interference</a></td>
+      <td>8.30</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>33007</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.05</td>
+      <td>55.22</td>
+      <td>1.17</td>
+      <td>1771</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90468" target="_blank" rel="noopener noreferrer"><img src="img/Explosive_Derailment.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Explosive Derailment.html" target="_blank" rel="noopener noreferrer">Explosive Derailment</a></td>
+      <td>5.80</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>58481</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.00</td>
+      <td>55.16</td>
+      <td>1.16</td>
+      <td>426</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90562" target="_blank" rel="noopener noreferrer"><img src="img/Lazav,_Familiar_Stranger.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lazav, Familiar Stranger.html" target="_blank" rel="noopener noreferrer">Lazav, Familiar Stranger</a></td>
+      <td>5.70</td>
+      <td>UB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>32465</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>53.20</td>
+      <td>54.24</td>
+      <td>1.04</td>
+      <td>354</td>
+      <td>53.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90466" target="_blank" rel="noopener noreferrer"><img src="img/Demonic_Ruckus.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Demonic Ruckus.html" target="_blank" rel="noopener noreferrer">Demonic Ruckus</a></td>
+      <td>8.18</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>20812</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>55.00</td>
+      <td>55.85</td>
+      <td>0.85</td>
+      <td>188</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90423" target="_blank" rel="noopener noreferrer"><img src="img/Ambush_Gigapede.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ambush Gigapede.html" target="_blank" rel="noopener noreferrer">Ambush Gigapede</a></td>
+      <td>8.85</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>23251</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>55.15</td>
+      <td>55.98</td>
+      <td>0.83</td>
+      <td>343</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90432" target="_blank" rel="noopener noreferrer"><img src="img/Desperate_Bloodseeker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Desperate Bloodseeker.html" target="_blank" rel="noopener noreferrer">Desperate Bloodseeker</a></td>
+      <td>6.27</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>69863</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.65</td>
+      <td>55.45</td>
+      <td>0.80</td>
+      <td>211</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90604" target="_blank" rel="noopener noreferrer"><img src="img/Forlorn_Flats.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Forlorn Flats.html" target="_blank" rel="noopener noreferrer">Forlorn Flats</a></td>
+      <td>6.63</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>29755</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>53.30</td>
+      <td>54.05</td>
+      <td>0.75</td>
+      <td>185</td>
+      <td>53.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90456" target="_blank" rel="noopener noreferrer"><img src="img/Treasure_Dredger.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Treasure Dredger.html" target="_blank" rel="noopener noreferrer">Treasure Dredger</a></td>
+      <td>6.42</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>68508</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.35</td>
+      <td>55.09</td>
+      <td>0.74</td>
+      <td>530</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90599" target="_blank" rel="noopener noreferrer"><img src="img/Bristling_Backwoods.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bristling Backwoods.html" target="_blank" rel="noopener noreferrer">Bristling Backwoods</a></td>
+      <td>6.39</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>21083</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.10</td>
+      <td>54.81</td>
+      <td>0.71</td>
+      <td>135</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90424" target="_blank" rel="noopener noreferrer"><img src="img/Binding_Negotiation.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Binding Negotiation.html" target="_blank" rel="noopener noreferrer">Binding Negotiation</a></td>
+      <td>8.02</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>11056</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>51.95</td>
+      <td>52.54</td>
+      <td>0.59</td>
+      <td>295</td>
+      <td>50.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90387" target="_blank" rel="noopener noreferrer"><img src="img/Daring_Thunder-Thief.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Daring Thunder-Thief.html" target="_blank" rel="noopener noreferrer">Daring Thunder-Thief</a></td>
+      <td>11.53</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>38969</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.45</td>
+      <td>54.94</td>
+      <td>0.49</td>
+      <td>253</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90490" target="_blank" rel="noopener noreferrer"><img src="img/Scalestorm_Summoner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scalestorm Summoner.html" target="_blank" rel="noopener noreferrer">Scalestorm Summoner</a></td>
+      <td>4.94</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>12411</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>52.95</td>
+      <td>53.44</td>
+      <td>0.49</td>
+      <td>610</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90392" target="_blank" rel="noopener noreferrer"><img src="img/Emergent_Haunting.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Emergent Haunting.html" target="_blank" rel="noopener noreferrer">Emergent Haunting</a></td>
+      <td>7.28</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>17289</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>53.40</td>
+      <td>53.63</td>
+      <td>0.23</td>
+      <td>1005</td>
+      <td>53.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90410" target="_blank" rel="noopener noreferrer"><img src="img/Seize_the_Secrets.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Seize the Secrets.html" target="_blank" rel="noopener noreferrer">Seize the Secrets</a></td>
+      <td>10.49</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>34091</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>52.45</td>
+      <td>52.62</td>
+      <td>0.17</td>
+      <td>344</td>
+      <td>51.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90472" target="_blank" rel="noopener noreferrer"><img src="img/Hell_to_Pay.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hell to Pay.html" target="_blank" rel="noopener noreferrer">Hell to Pay</a></td>
+      <td>3.64</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>49538</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>55.30</td>
+      <td>55.43</td>
+      <td>0.13</td>
+      <td>184</td>
+      <td>57.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90529" target="_blank" rel="noopener noreferrer"><img src="img/Spinewoods_Paladin.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Spinewoods Paladin.html" target="_blank" rel="noopener noreferrer">Spinewoods Paladin</a></td>
+      <td>4.92</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>40595</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>53.30</td>
+      <td>53.38</td>
+      <td>0.08</td>
+      <td>1847</td>
+      <td>53.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90496" target="_blank" rel="noopener noreferrer"><img src="img/Thunder_Salvo.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Thunder Salvo.html" target="_blank" rel="noopener noreferrer">Thunder Salvo</a></td>
+      <td>7.40</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>30839</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>55.55</td>
+      <td>55.51</td>
+      <td>-0.04</td>
+      <td>490</td>
+      <td>57.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90460" target="_blank" rel="noopener noreferrer"><img src="img/Vault_Plunderer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vault Plunderer.html" target="_blank" rel="noopener noreferrer">Vault Plunderer</a></td>
+      <td>5.40</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12140</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>55.85</td>
+      <td>55.77</td>
+      <td>-0.08</td>
+      <td>520</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90391" target="_blank" rel="noopener noreferrer"><img src="img/Duelist_of_the_Mind.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Duelist of the Mind.html" target="_blank" rel="noopener noreferrer">Duelist of the Mind</a></td>
+      <td>2.84</td>
+      <td>U</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>38427</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>50.80</td>
+      <td>50.70</td>
+      <td>-0.10</td>
+      <td>213</td>
+      <td>48.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90488" target="_blank" rel="noopener noreferrer"><img src="img/Return_the_Favor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Return the Favor.html" target="_blank" rel="noopener noreferrer">Return the Favor</a></td>
+      <td>10.60</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>56855</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.85</td>
+      <td>54.74</td>
+      <td>-0.11</td>
+      <td>137</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90556" target="_blank" rel="noopener noreferrer"><img src="img/Jolene,_Plundering_Pugilist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Jolene, Plundering Pugilist.html" target="_blank" rel="noopener noreferrer">Jolene, Plundering Pugilist</a></td>
+      <td>5.43</td>
+      <td>RG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>63630</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>53.80</td>
+      <td>53.65</td>
+      <td>-0.15</td>
+      <td>192</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90581" target="_blank" rel="noopener noreferrer"><img src="img/Vial_Smasher,_Gleeful_Grenadier.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vial Smasher, Gleeful Grenadier.html" target="_blank" rel="noopener noreferrer">Vial Smasher, Gleeful Grenadier</a></td>
+      <td>6.00</td>
+      <td>BR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>20270</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>55.80</td>
+      <td>55.63</td>
+      <td>-0.17</td>
+      <td>444</td>
+      <td>58.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90421" target="_blank" rel="noopener noreferrer"><img src="img/Three_Steps_Ahead.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Three Steps Ahead.html" target="_blank" rel="noopener noreferrer">Three Steps Ahead</a></td>
+      <td>2.87</td>
+      <td>U</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>31110</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>50.55</td>
+      <td>50.33</td>
+      <td>-0.22</td>
+      <td>449</td>
+      <td>47.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90461" target="_blank" rel="noopener noreferrer"><img src="img/Brimstone_Roundup.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Brimstone Roundup.html" target="_blank" rel="noopener noreferrer">Brimstone Roundup</a></td>
+      <td>9.62</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>17018</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>52.00</td>
+      <td>51.76</td>
+      <td>-0.24</td>
+      <td>1588</td>
+      <td>50.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90409" target="_blank" rel="noopener noreferrer"><img src="img/Razzle-Dazzler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Razzle-Dazzler.html" target="_blank" rel="noopener noreferrer">Razzle-Dazzler</a></td>
+      <td>10.16</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>31923</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>53.95</td>
+      <td>53.67</td>
+      <td>-0.28</td>
+      <td>559</td>
+      <td>54.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90464" target="_blank" rel="noopener noreferrer"><img src="img/Cunning_Coyote.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cunning Coyote.html" target="_blank" rel="noopener noreferrer">Cunning Coyote</a></td>
+      <td>5.82</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>19457</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>53.35</td>
+      <td>53.04</td>
+      <td>-0.31</td>
+      <td>822</td>
+      <td>53.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90418" target="_blank" rel="noopener noreferrer"><img src="img/Stop_Cold.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Stop Cold.html" target="_blank" rel="noopener noreferrer">Stop Cold</a></td>
+      <td>9.62</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>58752</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>53.30</td>
+      <td>52.98</td>
+      <td>-0.32</td>
+      <td>8577</td>
+      <td>53.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td>6.37</td>
+      <td>UR</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>15663</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>53.65</td>
+      <td>53.30</td>
+      <td>-0.35</td>
+      <td>908</td>
+      <td>54.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90404" target="_blank" rel="noopener noreferrer"><img src="img/Nimble_Brigand.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nimble Brigand.html" target="_blank" rel="noopener noreferrer">Nimble Brigand</a></td>
+      <td>5.11</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>19186</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>56.85</td>
+      <td>56.46</td>
+      <td>-0.39</td>
+      <td>395</td>
+      <td>60.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90417" target="_blank" rel="noopener noreferrer"><img src="img/Stoic_Sphinx.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Stoic Sphinx.html" target="_blank" rel="noopener noreferrer">Stoic Sphinx</a></td>
+      <td>1.99</td>
+      <td>U</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>38156</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>53.50</td>
+      <td>53.03</td>
+      <td>-0.47</td>
+      <td>396</td>
+      <td>53.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90487" target="_blank" rel="noopener noreferrer"><img src="img/Resilient_Roadrunner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Resilient Roadrunner.html" target="_blank" rel="noopener noreferrer">Resilient Roadrunner</a></td>
+      <td>7.24</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>66340</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.80</td>
+      <td>54.33</td>
+      <td>-0.47</td>
+      <td>127</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90591" target="_blank" rel="noopener noreferrer"><img src="img/Mobile_Homestead.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mobile Homestead.html" target="_blank" rel="noopener noreferrer">Mobile Homestead</a></td>
+      <td>6.26</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>24335</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>56.45</td>
+      <td>55.84</td>
+      <td>-0.61</td>
+      <td>231</td>
+      <td>59.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90436" target="_blank" rel="noopener noreferrer"><img src="img/Hollow_Marauder.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hollow Marauder.html" target="_blank" rel="noopener noreferrer">Hollow Marauder</a></td>
+      <td>3.46</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>15121</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>55.60</td>
+      <td>54.97</td>
+      <td>-0.63</td>
+      <td>935</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90402" target="_blank" rel="noopener noreferrer"><img src="img/Marauding_Sphinx.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Marauding Sphinx.html" target="_blank" rel="noopener noreferrer">Marauding Sphinx</a></td>
+      <td>3.99</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>13766</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>52.45</td>
+      <td>51.80</td>
+      <td>-0.65</td>
+      <td>1056</td>
+      <td>51.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90397" target="_blank" rel="noopener noreferrer"><img src="img/Geyser_Drake.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Geyser Drake.html" target="_blank" rel="noopener noreferrer">Geyser Drake</a></td>
+      <td>9.51</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>52248</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>51.95</td>
+      <td>51.24</td>
+      <td>-0.71</td>
+      <td>201</td>
+      <td>50.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90539" target="_blank" rel="noopener noreferrer"><img src="img/At_Knifepoint.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//At Knifepoint.html" target="_blank" rel="noopener noreferrer">At Knifepoint</a></td>
+      <td>6.82</td>
+      <td>BR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>71760</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>52.25</td>
+      <td>51.28</td>
+      <td>-0.97</td>
+      <td>195</td>
+      <td>51.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90611" target="_blank" rel="noopener noreferrer"><img src="img/Jace_Reawakened.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Jace Reawakened.html" target="_blank" rel="noopener noreferrer">Jace Reawakened</a></td>
+      <td>2.34</td>
+      <td>U</td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>32194</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>52.30</td>
+      <td>51.17</td>
+      <td>-1.13</td>
+      <td>1112</td>
+      <td>51.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90465" target="_blank" rel="noopener noreferrer"><img src="img/Deadeye_Duelist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deadeye Duelist.html" target="_blank" rel="noopener noreferrer">Deadeye Duelist</a></td>
+      <td>8.41</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>11598</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>51.70</td>
+      <td>50.54</td>
+      <td>-1.16</td>
+      <td>560</td>
+      <td>50.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90389" target="_blank" rel="noopener noreferrer"><img src="img/Djinn_of_Fool's_Fall.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Djinn of Fool's Fall.html" target="_blank" rel="noopener noreferrer">Djinn of Fool's Fall</a></td>
+      <td>10.85</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>38698</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>50.55</td>
+      <td>49.37</td>
+      <td>-1.18</td>
+      <td>476</td>
+      <td>47.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90489" target="_blank" rel="noopener noreferrer"><img src="img/Rodeo_Pyromancers.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rodeo Pyromancers.html" target="_blank" rel="noopener noreferrer">Rodeo Pyromancers</a></td>
+      <td>11.59</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>33549</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>53.40</td>
+      <td>52.14</td>
+      <td>-1.26</td>
+      <td>443</td>
+      <td>53.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90470" target="_blank" rel="noopener noreferrer"><img src="img/Gila_Courser.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Gila Courser.html" target="_blank" rel="noopener noreferrer">Gila Courser</a></td>
+      <td>5.90</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>16205</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.10</td>
+      <td>52.69</td>
+      <td>-1.41</td>
+      <td>334</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90406" target="_blank" rel="noopener noreferrer"><img src="img/Peerless_Ropemaster.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Peerless Ropemaster.html" target="_blank" rel="noopener noreferrer">Peerless Ropemaster</a></td>
+      <td>11.43</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>72573</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>53.50</td>
+      <td>52.08</td>
+      <td>-1.42</td>
+      <td>144</td>
+      <td>53.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90614" target="_blank" rel="noopener noreferrer"><img src="img/Botanical_Sanctum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Botanical Sanctum.html" target="_blank" rel="noopener noreferrer">Botanical Sanctum</a></td>
+      <td>5.81</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>39782</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>56.20</td>
+      <td>54.75</td>
+      <td>-1.45</td>
+      <td>358</td>
+      <td>59.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90493" target="_blank" rel="noopener noreferrer"><img src="img/Stingerback_Terror.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Stingerback Terror.html" target="_blank" rel="noopener noreferrer">Stingerback Terror</a></td>
+      <td>1.70</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>10514</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>52.85</td>
+      <td>51.38</td>
+      <td>-1.47</td>
+      <td>399</td>
+      <td>52.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90385" target="_blank" rel="noopener noreferrer"><img src="img/Archmage's_Newt.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Archmage's Newt.html" target="_blank" rel="noopener noreferrer">Archmage's Newt</a></td>
+      <td>5.45</td>
+      <td>U</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>21625</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.65</td>
+      <td>53.14</td>
+      <td>-1.51</td>
+      <td>207</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90426" target="_blank" rel="noopener noreferrer"><img src="img/Blood_Hustler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Blood Hustler.html" target="_blank" rel="noopener noreferrer">Blood Hustler</a></td>
+      <td>3.32</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>37072</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>53.90</td>
+      <td>52.39</td>
+      <td>-1.51</td>
+      <td>1132</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90483" target="_blank" rel="noopener noreferrer"><img src="img/Prickly_Pair.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Prickly Pair.html" target="_blank" rel="noopener noreferrer">Prickly Pair</a></td>
+      <td>6.94</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>59565</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>53.75</td>
+      <td>52.16</td>
+      <td>-1.59</td>
+      <td>416</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90566" target="_blank" rel="noopener noreferrer"><img src="img/Marchesa,_Dealer_of_Death.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Marchesa, Dealer of Death.html" target="_blank" rel="noopener noreferrer">Marchesa, Dealer of Death</a></td>
+      <td>4.06</td>
+      <td>UBR</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>28942</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>53.20</td>
+      <td>51.61</td>
+      <td>-1.59</td>
+      <td>155</td>
+      <td>53.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90453" target="_blank" rel="noopener noreferrer"><img src="img/Skulduggery.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Skulduggery.html" target="_blank" rel="noopener noreferrer">Skulduggery</a></td>
+      <td>9.18</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>70405</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.10</td>
+      <td>52.47</td>
+      <td>-1.63</td>
+      <td>566</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90606" target="_blank" rel="noopener noreferrer"><img src="img/Lonely_Arroyo.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lonely Arroyo.html" target="_blank" rel="noopener noreferrer">Lonely Arroyo</a></td>
+      <td>7.28</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12953</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>50.45</td>
+      <td>48.74</td>
+      <td>-1.71</td>
+      <td>277</td>
+      <td>47.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90394" target="_blank" rel="noopener noreferrer"><img src="img/Fblthp,_Lost_on_the_Range.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fblthp, Lost on the Range.html" target="_blank" rel="noopener noreferrer">Fblthp, Lost on the Range</a></td>
+      <td>4.63</td>
+      <td>U</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>67966</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.05</td>
+      <td>52.12</td>
+      <td>-1.93</td>
+      <td>495</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90597" target="_blank" rel="noopener noreferrer"><img src="img/Abraded_Bluffs.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Abraded Bluffs.html" target="_blank" rel="noopener noreferrer">Abraded Bluffs</a></td>
+      <td>7.04</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>43847</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>53.20</td>
+      <td>51.16</td>
+      <td>-2.04</td>
+      <td>129</td>
+      <td>53.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90508" target="_blank" rel="noopener noreferrer"><img src="img/Freestrider_Commando.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Freestrider Commando.html" target="_blank" rel="noopener noreferrer">Freestrider Commando</a></td>
+      <td>7.43</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>33820</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>53.60</td>
+      <td>51.43</td>
+      <td>-2.17</td>
+      <td>140</td>
+      <td>53.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90471" target="_blank" rel="noopener noreferrer"><img src="img/Great_Train_Heist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Great Train Heist.html" target="_blank" rel="noopener noreferrer">Great Train Heist</a></td>
+      <td>3.52</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>11327</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>52.95</td>
+      <td>50.76</td>
+      <td>-2.19</td>
+      <td>524</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90388" target="_blank" rel="noopener noreferrer"><img src="img/Deepmuck_Desperado.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deepmuck Desperado.html" target="_blank" rel="noopener noreferrer">Deepmuck Desperado</a></td>
+      <td>6.52</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>17560</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>51.70</td>
+      <td>49.50</td>
+      <td>-2.20</td>
+      <td>501</td>
+      <td>50.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90411" target="_blank" rel="noopener noreferrer"><img src="img/Shackle_Slinger.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shackle Slinger.html" target="_blank" rel="noopener noreferrer">Shackle Slinger</a></td>
+      <td>9.47</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>36530</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>52.50</td>
+      <td>50.15</td>
+      <td>-2.35</td>
+      <td>668</td>
+      <td>51.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90481" target="_blank" rel="noopener noreferrer"><img src="img/Mine_Raider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mine Raider.html" target="_blank" rel="noopener noreferrer">Mine Raider</a></td>
+      <td>9.32</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>37885</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>52.90</td>
+      <td>50.22</td>
+      <td>-2.68</td>
+      <td>679</td>
+      <td>52.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90486" target="_blank" rel="noopener noreferrer"><img src="img/Reckless_Lackey.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Reckless Lackey.html" target="_blank" rel="noopener noreferrer">Reckless Lackey</a></td>
+      <td>9.98</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>68237</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>52.30</td>
+      <td>48.46</td>
+      <td>-3.84</td>
+      <td>227</td>
+      <td>51.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90598" target="_blank" rel="noopener noreferrer"><img src="img/Arid_Archway.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Arid Archway.html" target="_blank" rel="noopener noreferrer">Arid Archway</a></td>
+      <td>8.89</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>27316</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>53.75</td>
+      <td>49.61</td>
+      <td>-4.14</td>
+      <td>389</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90447" target="_blank" rel="noopener noreferrer"><img src="img/Raven_of_Fell_Omens.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Raven of Fell Omens.html" target="_blank" rel="noopener noreferrer">Raven of Fell Omens</a></td>
+      <td>7.26</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>40053</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>52.25</td>
+      <td>47.88</td>
+      <td>-4.37</td>
+      <td>165</td>
+      <td>51.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90494" target="_blank" rel="noopener noreferrer"><img src="img/Take_for_a_Ride.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Take for a Ride.html" target="_blank" rel="noopener noreferrer">Take for a Ride</a></td>
+      <td>9.69</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>61462</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>51.15</td>
+      <td>45.67</td>
+      <td>-5.48</td>
+      <td>127</td>
+      <td>49.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td>8.15</td>
+      <td>URG</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>18373</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>51.15</td>
+      <td>45.34</td>
+      <td>-5.81</td>
+      <td>322</td>
+      <td>49.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90414" target="_blank" rel="noopener noreferrer"><img src="img/Slickshot_Vault-Buster.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Slickshot Vault-Buster.html" target="_blank" rel="noopener noreferrer">Slickshot Vault-Buster</a></td>
+      <td>11.83</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27858</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.30</td>
+      <td>48.45</td>
+      <td>-5.85</td>
+      <td>161</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90449" target="_blank" rel="noopener noreferrer"><img src="img/Rooftop_Assassin.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rooftop Assassin.html" target="_blank" rel="noopener noreferrer">Rooftop Assassin</a></td>
+      <td>8.45</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27587</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>54.05</td>
+      <td>47.86</td>
+      <td>-6.19</td>
+      <td>140</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90448" target="_blank" rel="noopener noreferrer"><img src="img/Rictus_Robber.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rictus Robber.html" target="_blank" rel="noopener noreferrer">Rictus Robber</a></td>
+      <td>5.14</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>11869</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>53.80</td>
+      <td>47.17</td>
+      <td>-6.63</td>
+      <td>106</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90390" target="_blank" rel="noopener noreferrer"><img src="img/Double_Down.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Double Down.html" target="_blank" rel="noopener noreferrer">Double Down</a></td>
+      <td>3.72</td>
+      <td>U</td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>30297</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>53.90</td>
+      <td>47.17</td>
+      <td>-6.73</td>
+      <td>106</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90458" target="_blank" rel="noopener noreferrer"><img src="img/Unscrupulous_Contractor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Unscrupulous Contractor.html" target="_blank" rel="noopener noreferrer">Unscrupulous Contractor</a></td>
+      <td>5.89</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>18644</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>51.75</td>
+      <td>44.79</td>
+      <td>-6.96</td>
+      <td>518</td>
+      <td>50.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90415" target="_blank" rel="noopener noreferrer"><img src="img/Spring_Splasher.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Spring Splasher.html" target="_blank" rel="noopener noreferrer">Spring Splasher</a></td>
+      <td>10.92</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>37343</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>51.50</td>
+      <td>44.03</td>
+      <td>-7.47</td>
+      <td>159</td>
+      <td>49.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90484" target="_blank" rel="noopener noreferrer"><img src="img/Quick_Draw.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Quick Draw.html" target="_blank" rel="noopener noreferrer">Quick Draw</a></td>
+      <td>12.13</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>37614</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>52.45</td>
+      <td>43.83</td>
+      <td>-8.62</td>
+      <td>162</td>
+      <td>51.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90485" target="_blank" rel="noopener noreferrer"><img src="img/Quilled_Charger.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Quilled Charger.html" target="_blank" rel="noopener noreferrer">Quilled Charger</a></td>
+      <td>10.31</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>55229</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.37</td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.3</td>
+      <td>53.70</td>
+      <td>44.37</td>
+      <td>-9.33</td>
+      <td>142</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90550" target="_blank" rel="noopener noreferrer"><img src="img/Form_a_Posse.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Form a Posse.html" target="_blank" rel="noopener noreferrer">Form a Posse</a></td>
+      <td>7.80</td>
+      <td>WR</td>
+      <td>uncommon</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,394 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>54411</th>
+      <td>rare</td>
+      <td>WUG</td>
+      <td>9.35</td>
+      <td><a href=".//Kellan Joins Up.html" target="_blank" rel="noopener noreferrer">Kellan Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90558" target="_blank" rel="noopener noreferrer"><img src="img/Kellan_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>41.9</td>
+      <td>47.35</td>
+      <td>53.00</td>
+      <td>5.65</td>
+      <td>100</td>
+      <td>52.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90547" target="_blank" rel="noopener noreferrer"><img src="img/Doc_Aurlock,_Grizzled_Genius.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Doc Aurlock, Grizzled Genius.html" target="_blank" rel="noopener noreferrer">Doc Aurlock, Grizzled Genius</a></td>
+      <td>7.96</td>
+      <td>UG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>70942</th>
+      <td>rare</td>
+      <td>WUG</td>
+      <td>9.35</td>
+      <td><a href=".//Kellan Joins Up.html" target="_blank" rel="noopener noreferrer">Kellan Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90558" target="_blank" rel="noopener noreferrer"><img src="img/Kellan_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>41.9</td>
+      <td>48.30</td>
+      <td>49.67</td>
+      <td>1.37</td>
+      <td>153</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90608" target="_blank" rel="noopener noreferrer"><img src="img/Mirage_Mesa.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mirage Mesa.html" target="_blank" rel="noopener noreferrer">Mirage Mesa</a></td>
+      <td>5.99</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>57392</th>
+      <td>rare</td>
+      <td>WUG</td>
+      <td>9.35</td>
+      <td><a href=".//Kellan Joins Up.html" target="_blank" rel="noopener noreferrer">Kellan Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90558" target="_blank" rel="noopener noreferrer"><img src="img/Kellan_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>41.9</td>
+      <td>41.90</td>
+      <td>40.91</td>
+      <td>-0.99</td>
+      <td>946</td>
+      <td>41.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90558" target="_blank" rel="noopener noreferrer"><img src="img/Kellan_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kellan Joins Up.html" target="_blank" rel="noopener noreferrer">Kellan Joins Up</a></td>
+      <td>9.35</td>
+      <td>WUG</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>47094</th>
+      <td>rare</td>
+      <td>WUG</td>
+      <td>9.35</td>
+      <td><a href=".//Kellan Joins Up.html" target="_blank" rel="noopener noreferrer">Kellan Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90558" target="_blank" rel="noopener noreferrer"><img src="img/Kellan_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>41.9</td>
+      <td>49.30</td>
+      <td>47.32</td>
+      <td>-1.98</td>
+      <td>112</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90520" target="_blank" rel="noopener noreferrer"><img src="img/Patient_Naturalist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Patient Naturalist.html" target="_blank" rel="noopener noreferrer">Patient Naturalist</a></td>
+      <td>6.04</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>50075</th>
+      <td>rare</td>
+      <td>WUG</td>
+      <td>9.35</td>
+      <td><a href=".//Kellan Joins Up.html" target="_blank" rel="noopener noreferrer">Kellan Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90558" target="_blank" rel="noopener noreferrer"><img src="img/Kellan_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>41.9</td>
+      <td>50.40</td>
+      <td>47.75</td>
+      <td>-2.65</td>
+      <td>111</td>
+      <td>58.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90531" target="_blank" rel="noopener noreferrer"><img src="img/Throw_from_the_Saddle.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Throw from the Saddle.html" target="_blank" rel="noopener noreferrer">Throw from the Saddle</a></td>
+      <td>3.96</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>70400</th>
+      <td>rare</td>
+      <td>WUG</td>
+      <td>9.35</td>
+      <td><a href=".//Kellan Joins Up.html" target="_blank" rel="noopener noreferrer">Kellan Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90558" target="_blank" rel="noopener noreferrer"><img src="img/Kellan_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>41.9</td>
+      <td>48.40</td>
+      <td>44.85</td>
+      <td>-3.55</td>
+      <td>194</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90606" target="_blank" rel="noopener noreferrer"><img src="img/Lonely_Arroyo.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lonely Arroyo.html" target="_blank" rel="noopener noreferrer">Lonely Arroyo</a></td>
+      <td>7.28</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>42758</th>
+      <td>rare</td>
+      <td>WUG</td>
+      <td>9.35</td>
+      <td><a href=".//Kellan Joins Up.html" target="_blank" rel="noopener noreferrer">Kellan Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90558" target="_blank" rel="noopener noreferrer"><img src="img/Kellan_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>41.9</td>
+      <td>49.25</td>
+      <td>45.19</td>
+      <td>-4.06</td>
+      <td>104</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90504" target="_blank" rel="noopener noreferrer"><img src="img/Cactarantula.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cactarantula.html" target="_blank" rel="noopener noreferrer">Cactarantula</a></td>
+      <td>4.82</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>57663</th>
+      <td>rare</td>
+      <td>WUG</td>
+      <td>9.35</td>
+      <td><a href=".//Kellan Joins Up.html" target="_blank" rel="noopener noreferrer">Kellan Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90558" target="_blank" rel="noopener noreferrer"><img src="img/Kellan_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>41.9</td>
+      <td>48.55</td>
+      <td>44.12</td>
+      <td>-4.43</td>
+      <td>102</td>
+      <td>55.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90559" target="_blank" rel="noopener noreferrer"><img src="img/Kellan,_the_Kid.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kellan, the Kid.html" target="_blank" rel="noopener noreferrer">Kellan, the Kid</a></td>
+      <td>3.79</td>
+      <td>WUG</td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>45468</th>
+      <td>rare</td>
+      <td>WUG</td>
+      <td>9.35</td>
+      <td><a href=".//Kellan Joins Up.html" target="_blank" rel="noopener noreferrer">Kellan Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90558" target="_blank" rel="noopener noreferrer"><img src="img/Kellan_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>41.9</td>
+      <td>48.85</td>
+      <td>44.09</td>
+      <td>-4.76</td>
+      <td>127</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90514" target="_blank" rel="noopener noreferrer"><img src="img/Hardbristle_Bandit.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hardbristle Bandit.html" target="_blank" rel="noopener noreferrer">Hardbristle Bandit</a></td>
+      <td>4.54</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>70671</th>
+      <td>rare</td>
+      <td>WUG</td>
+      <td>9.35</td>
+      <td><a href=".//Kellan Joins Up.html" target="_blank" rel="noopener noreferrer">Kellan Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90558" target="_blank" rel="noopener noreferrer"><img src="img/Kellan_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>41.9</td>
+      <td>49.00</td>
+      <td>43.23</td>
+      <td>-5.77</td>
+      <td>192</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90607" target="_blank" rel="noopener noreferrer"><img src="img/Lush_Oasis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lush Oasis.html" target="_blank" rel="noopener noreferrer">Lush Oasis</a></td>
+      <td>6.45</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>68774</th>
+      <td>rare</td>
+      <td>WUG</td>
+      <td>9.35</td>
+      <td><a href=".//Kellan Joins Up.html" target="_blank" rel="noopener noreferrer">Kellan Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90558" target="_blank" rel="noopener noreferrer"><img src="img/Kellan_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>41.9</td>
+      <td>48.95</td>
+      <td>40.65</td>
+      <td>-8.30</td>
+      <td>155</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90600" target="_blank" rel="noopener noreferrer"><img src="img/Conduit_Pylons.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Conduit Pylons.html" target="_blank" rel="noopener noreferrer">Conduit Pylons</a></td>
+      <td>7.05</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>43300</th>
+      <td>rare</td>
+      <td>WUG</td>
+      <td>9.35</td>
+      <td><a href=".//Kellan Joins Up.html" target="_blank" rel="noopener noreferrer">Kellan Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90558" target="_blank" rel="noopener noreferrer"><img src="img/Kellan_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>41.9</td>
+      <td>49.30</td>
+      <td>40.72</td>
+      <td>-8.58</td>
+      <td>167</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90506" target="_blank" rel="noopener noreferrer"><img src="img/Dance_of_the_Tumbleweeds.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Dance of the Tumbleweeds.html" target="_blank" rel="noopener noreferrer">Dance of the Tumbleweeds</a></td>
+      <td>5.56</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>59018</th>
+      <td>rare</td>
+      <td>WUG</td>
+      <td>9.35</td>
+      <td><a href=".//Kellan Joins Up.html" target="_blank" rel="noopener noreferrer">Kellan Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90558" target="_blank" rel="noopener noreferrer"><img src="img/Kellan_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>41.9</td>
+      <td>48.85</td>
+      <td>40.19</td>
+      <td>-8.66</td>
+      <td>107</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90564" target="_blank" rel="noopener noreferrer"><img src="img/Make_Your_Own_Luck.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Make Your Own Luck.html" target="_blank" rel="noopener noreferrer">Make Your Own Luck</a></td>
+      <td>6.36</td>
+      <td>UG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>69045</th>
+      <td>rare</td>
+      <td>WUG</td>
+      <td>9.35</td>
+      <td><a href=".//Kellan Joins Up.html" target="_blank" rel="noopener noreferrer">Kellan Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90558" target="_blank" rel="noopener noreferrer"><img src="img/Kellan_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>41.9</td>
+      <td>49.00</td>
+      <td>39.60</td>
+      <td>-9.40</td>
+      <td>149</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90601" target="_blank" rel="noopener noreferrer"><img src="img/Creosote_Heath.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Creosote Heath.html" target="_blank" rel="noopener noreferrer">Creosote Heath</a></td>
+      <td>5.95</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>66606</th>
+      <td>rare</td>
+      <td>WUG</td>
+      <td>9.35</td>
+      <td><a href=".//Kellan Joins Up.html" target="_blank" rel="noopener noreferrer">Kellan Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90558" target="_blank" rel="noopener noreferrer"><img src="img/Kellan_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>41.9</td>
+      <td>48.10</td>
+      <td>37.27</td>
+      <td>-10.83</td>
+      <td>110</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90592" target="_blank" rel="noopener noreferrer"><img src="img/Oasis_Gardener.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Oasis Gardener.html" target="_blank" rel="noopener noreferrer">Oasis Gardener</a></td>
+      <td>8.85</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>56579</th>
+      <td>rare</td>
+      <td>WUG</td>
+      <td>9.35</td>
+      <td><a href=".//Kellan Joins Up.html" target="_blank" rel="noopener noreferrer">Kellan Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90558" target="_blank" rel="noopener noreferrer"><img src="img/Kellan_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>41.9</td>
+      <td>46.80</td>
+      <td>35.40</td>
+      <td>-11.40</td>
+      <td>113</td>
+      <td>51.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90555" target="_blank" rel="noopener noreferrer"><img src="img/Jem_Lightfoote,_Sky_Explorer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Jem Lightfoote, Sky Explorer.html" target="_blank" rel="noopener noreferrer">Jem Lightfoote, Sky Explorer</a></td>
+      <td>6.90</td>
+      <td>WU</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>5089</th>
+      <td>rare</td>
+      <td>WUG</td>
+      <td>9.35</td>
+      <td><a href=".//Kellan Joins Up.html" target="_blank" rel="noopener noreferrer">Kellan Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90558" target="_blank" rel="noopener noreferrer"><img src="img/Kellan_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>41.9</td>
+      <td>49.40</td>
+      <td>34.75</td>
+      <td>-14.65</td>
+      <td>118</td>
+      <td>56.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90365" target="_blank" rel="noopener noreferrer"><img src="img/Mystical_Tether.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mystical Tether.html" target="_blank" rel="noopener noreferrer">Mystical Tether</a></td>
+      <td>4.31</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+  </tbody>
+</table>

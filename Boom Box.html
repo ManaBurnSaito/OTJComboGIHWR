@@ -1,0 +1,2807 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>15958</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>52.80</td>
+      <td>66.42</td>
+      <td>13.62</td>
+      <td>134</td>
+      <td>53.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90405" target="_blank" rel="noopener noreferrer"><img src="img/Outlaw_Stitcher.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Outlaw Stitcher.html" target="_blank" rel="noopener noreferrer">Outlaw Stitcher</a></td>
+      <td>4.85</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>46581</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>56.55</td>
+      <td>66.32</td>
+      <td>9.77</td>
+      <td>285</td>
+      <td>61.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90518" target="_blank" rel="noopener noreferrer"><img src="img/Outcaster_Greenblade.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Outcaster Greenblade.html" target="_blank" rel="noopener noreferrer">Outcaster Greenblade</a></td>
+      <td>2.69</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>10809</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.15</td>
+      <td>62.01</td>
+      <td>8.86</td>
+      <td>179</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90386" target="_blank" rel="noopener noreferrer"><img src="img/Canyon_Crab.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Canyon Crab.html" target="_blank" rel="noopener noreferrer">Canyon Crab</a></td>
+      <td>6.72</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>17313</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>52.65</td>
+      <td>60.59</td>
+      <td>7.94</td>
+      <td>170</td>
+      <td>53.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90410" target="_blank" rel="noopener noreferrer"><img src="img/Seize_the_Secrets.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Seize the Secrets.html" target="_blank" rel="noopener noreferrer">Seize the Secrets</a></td>
+      <td>10.49</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>30863</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>54.80</td>
+      <td>62.01</td>
+      <td>7.21</td>
+      <td>358</td>
+      <td>57.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90460" target="_blank" rel="noopener noreferrer"><img src="img/Vault_Plunderer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vault Plunderer.html" target="_blank" rel="noopener noreferrer">Vault Plunderer</a></td>
+      <td>5.40</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>2408</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>56.50</td>
+      <td>63.33</td>
+      <td>6.83</td>
+      <td>120</td>
+      <td>61.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90355" target="_blank" rel="noopener noreferrer"><img src="img/Dust_Animus.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Dust Animus.html" target="_blank" rel="noopener noreferrer">Dust Animus</a></td>
+      <td>1.49</td>
+      <td>W</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>47123</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>54.25</td>
+      <td>60.35</td>
+      <td>6.10</td>
+      <td>459</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90520" target="_blank" rel="noopener noreferrer"><img src="img/Patient_Naturalist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Patient Naturalist.html" target="_blank" rel="noopener noreferrer">Patient Naturalist</a></td>
+      <td>6.04</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>49291</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>56.15</td>
+      <td>61.75</td>
+      <td>5.60</td>
+      <td>251</td>
+      <td>60.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90528" target="_blank" rel="noopener noreferrer"><img src="img/Spinewoods_Armadillo.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Spinewoods Armadillo.html" target="_blank" rel="noopener noreferrer">Spinewoods Armadillo</a></td>
+      <td>2.57</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>24359</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>55.70</td>
+      <td>61.19</td>
+      <td>5.49</td>
+      <td>219</td>
+      <td>59.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90436" target="_blank" rel="noopener noreferrer"><img src="img/Hollow_Marauder.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hollow Marauder.html" target="_blank" rel="noopener noreferrer">Hollow Marauder</a></td>
+      <td>3.46</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>16229</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.35</td>
+      <td>58.59</td>
+      <td>5.24</td>
+      <td>128</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90406" target="_blank" rel="noopener noreferrer"><img src="img/Peerless_Ropemaster.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Peerless Ropemaster.html" target="_blank" rel="noopener noreferrer">Peerless Ropemaster</a></td>
+      <td>11.43</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>66906</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.40</td>
+      <td>58.33</td>
+      <td>4.93</td>
+      <td>216</td>
+      <td>55.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90593" target="_blank" rel="noopener noreferrer"><img src="img/Redrock_Sentinel.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Redrock Sentinel.html" target="_blank" rel="noopener noreferrer">Redrock Sentinel</a></td>
+      <td>9.37</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>71242</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.20</td>
+      <td>58.00</td>
+      <td>4.80</td>
+      <td>100</td>
+      <td>54.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90609" target="_blank" rel="noopener noreferrer"><img src="img/Sandstorm_Verge.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sandstorm Verge.html" target="_blank" rel="noopener noreferrer">Sandstorm Verge</a></td>
+      <td>10.25</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>48207</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.65</td>
+      <td>58.44</td>
+      <td>4.79</td>
+      <td>154</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90524" target="_blank" rel="noopener noreferrer"><img src="img/Reach_for_the_Sky.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Reach for the Sky.html" target="_blank" rel="noopener noreferrer">Reach for the Sky</a></td>
+      <td>10.76</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>59047</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.80</td>
+      <td>58.52</td>
+      <td>4.72</td>
+      <td>176</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90564" target="_blank" rel="noopener noreferrer"><img src="img/Make_Your_Own_Luck.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Make Your Own Luck.html" target="_blank" rel="noopener noreferrer">Make Your Own Luck</a></td>
+      <td>6.36</td>
+      <td>UG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>14332</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.95</td>
+      <td>58.57</td>
+      <td>4.62</td>
+      <td>210</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90399" target="_blank" rel="noopener noreferrer"><img src="img/Jailbreak_Scheme.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Jailbreak Scheme.html" target="_blank" rel="noopener noreferrer">Jailbreak Scheme</a></td>
+      <td>9.98</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>6744</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>54.80</td>
+      <td>59.38</td>
+      <td>4.58</td>
+      <td>128</td>
+      <td>57.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90371" target="_blank" rel="noopener noreferrer"><img src="img/Prosperity_Tycoon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Prosperity Tycoon.html" target="_blank" rel="noopener noreferrer">Prosperity Tycoon</a></td>
+      <td>4.98</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>56066</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>55.10</td>
+      <td>59.68</td>
+      <td>4.58</td>
+      <td>253</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90553" target="_blank" rel="noopener noreferrer"><img src="img/Honest_Rutstein.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Honest Rutstein.html" target="_blank" rel="noopener noreferrer">Honest Rutstein</a></td>
+      <td>3.57</td>
+      <td>BG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>41703</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>55.20</td>
+      <td>59.70</td>
+      <td>4.50</td>
+      <td>201</td>
+      <td>58.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90500" target="_blank" rel="noopener noreferrer"><img src="img/Beastbond_Outcaster.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Beastbond Outcaster.html" target="_blank" rel="noopener noreferrer">Beastbond Outcaster</a></td>
+      <td>3.58</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>64467</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>51.30</td>
+      <td>55.73</td>
+      <td>4.43</td>
+      <td>131</td>
+      <td>50.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90584" target="_blank" rel="noopener noreferrer"><img src="img/Wrangler_of_the_Damned.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wrangler of the Damned.html" target="_blank" rel="noopener noreferrer">Wrangler of the Damned</a></td>
+      <td>7.20</td>
+      <td>WU</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>58505</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.25</td>
+      <td>57.66</td>
+      <td>4.41</td>
+      <td>137</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90562" target="_blank" rel="noopener noreferrer"><img src="img/Lazav,_Familiar_Stranger.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lazav, Familiar Stranger.html" target="_blank" rel="noopener noreferrer">Lazav, Familiar Stranger</a></td>
+      <td>5.70</td>
+      <td>UB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>21107</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.35</td>
+      <td>57.72</td>
+      <td>4.37</td>
+      <td>123</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90424" target="_blank" rel="noopener noreferrer"><img src="img/Binding_Negotiation.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Binding Negotiation.html" target="_blank" rel="noopener noreferrer">Binding Negotiation</a></td>
+      <td>8.02</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>15145</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>54.85</td>
+      <td>59.20</td>
+      <td>4.35</td>
+      <td>125</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90402" target="_blank" rel="noopener noreferrer"><img src="img/Marauding_Sphinx.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Marauding Sphinx.html" target="_blank" rel="noopener noreferrer">Marauding Sphinx</a></td>
+      <td>3.99</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>20023</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.10</td>
+      <td>57.38</td>
+      <td>4.28</td>
+      <td>122</td>
+      <td>54.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90420" target="_blank" rel="noopener noreferrer"><img src="img/This_Town_Ain't_Big_Enough.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//This Town Ain't Big Enough.html" target="_blank" rel="noopener noreferrer">This Town Ain't Big Enough</a></td>
+      <td>7.26</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>4847</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>56.45</td>
+      <td>60.47</td>
+      <td>4.02</td>
+      <td>172</td>
+      <td>61.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90364" target="_blank" rel="noopener noreferrer"><img src="img/Lassoed_by_the_Law.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lassoed by the Law.html" target="_blank" rel="noopener noreferrer">Lassoed by the Law</a></td>
+      <td>2.76</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>70700</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.95</td>
+      <td>57.88</td>
+      <td>3.93</td>
+      <td>349</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90607" target="_blank" rel="noopener noreferrer"><img src="img/Lush_Oasis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lush Oasis.html" target="_blank" rel="noopener noreferrer">Lush Oasis</a></td>
+      <td>6.45</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>43871</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>52.45</td>
+      <td>56.12</td>
+      <td>3.67</td>
+      <td>335</td>
+      <td>53.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90508" target="_blank" rel="noopener noreferrer"><img src="img/Freestrider_Commando.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Freestrider Commando.html" target="_blank" rel="noopener noreferrer">Freestrider Commando</a></td>
+      <td>7.43</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>49562</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>54.55</td>
+      <td>57.66</td>
+      <td>3.11</td>
+      <td>470</td>
+      <td>57.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90529" target="_blank" rel="noopener noreferrer"><img src="img/Spinewoods_Paladin.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Spinewoods Paladin.html" target="_blank" rel="noopener noreferrer">Spinewoods Paladin</a></td>
+      <td>4.92</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>40890</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>51.90</td>
+      <td>54.90</td>
+      <td>3.00</td>
+      <td>102</td>
+      <td>52.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90497" target="_blank" rel="noopener noreferrer"><img src="img/Trick_Shot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Trick Shot.html" target="_blank" rel="noopener noreferrer">Trick Shot</a></td>
+      <td>10.74</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>20565</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>52.20</td>
+      <td>55.20</td>
+      <td>3.00</td>
+      <td>125</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90422" target="_blank" rel="noopener noreferrer"><img src="img/Visage_Bandit.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Visage Bandit.html" target="_blank" rel="noopener noreferrer">Visage Bandit</a></td>
+      <td>6.85</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>28424</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>54.30</td>
+      <td>57.25</td>
+      <td>2.95</td>
+      <td>138</td>
+      <td>56.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90451" target="_blank" rel="noopener noreferrer"><img src="img/Servant_of_the_Stinger.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Servant of the Stinger.html" target="_blank" rel="noopener noreferrer">Servant of the Stinger</a></td>
+      <td>4.64</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>42787</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>54.20</td>
+      <td>56.96</td>
+      <td>2.76</td>
+      <td>481</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90504" target="_blank" rel="noopener noreferrer"><img src="img/Cactarantula.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cactarantula.html" target="_blank" rel="noopener noreferrer">Cactarantula</a></td>
+      <td>4.82</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>62028</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>55.00</td>
+      <td>57.72</td>
+      <td>2.72</td>
+      <td>123</td>
+      <td>58.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90575" target="_blank" rel="noopener noreferrer"><img src="img/Ruthless_Lawbringer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ruthless Lawbringer.html" target="_blank" rel="noopener noreferrer">Ruthless Lawbringer</a></td>
+      <td>5.76</td>
+      <td>WB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>50104</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>55.35</td>
+      <td>58.02</td>
+      <td>2.67</td>
+      <td>374</td>
+      <td>58.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90531" target="_blank" rel="noopener noreferrer"><img src="img/Throw_from_the_Saddle.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Throw from the Saddle.html" target="_blank" rel="noopener noreferrer">Throw from the Saddle</a></td>
+      <td>3.96</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>8912</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>54.05</td>
+      <td>56.52</td>
+      <td>2.47</td>
+      <td>184</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90379" target="_blank" rel="noopener noreferrer"><img src="img/Sterling_Supplier.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sterling Supplier.html" target="_blank" rel="noopener noreferrer">Sterling Supplier</a></td>
+      <td>9.13</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>6202</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.60</td>
+      <td>55.74</td>
+      <td>2.14</td>
+      <td>244</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90369" target="_blank" rel="noopener noreferrer"><img src="img/Outlaw_Medic.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Outlaw Medic.html" target="_blank" rel="noopener noreferrer">Outlaw Medic</a></td>
+      <td>8.54</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>68261</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>51.55</td>
+      <td>53.61</td>
+      <td>2.06</td>
+      <td>194</td>
+      <td>51.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90598" target="_blank" rel="noopener noreferrer"><img src="img/Arid_Archway.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Arid Archway.html" target="_blank" rel="noopener noreferrer">Arid Archway</a></td>
+      <td>8.89</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>70971</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.25</td>
+      <td>55.30</td>
+      <td>2.05</td>
+      <td>557</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90608" target="_blank" rel="noopener noreferrer"><img src="img/Mirage_Mesa.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mirage Mesa.html" target="_blank" rel="noopener noreferrer">Mirage Mesa</a></td>
+      <td>5.99</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>19752</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.80</td>
+      <td>55.81</td>
+      <td>2.01</td>
+      <td>215</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90419" target="_blank" rel="noopener noreferrer"><img src="img/Take_the_Fall.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Take the Fall.html" target="_blank" rel="noopener noreferrer">Take the Fall</a></td>
+      <td>9.45</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>45768</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>54.40</td>
+      <td>56.22</td>
+      <td>1.82</td>
+      <td>217</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90515" target="_blank" rel="noopener noreferrer"><img src="img/Intrepid_Stablemaster.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Intrepid Stablemaster.html" target="_blank" rel="noopener noreferrer">Intrepid Stablemaster</a></td>
+      <td>3.63</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>53898</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>54.70</td>
+      <td>56.52</td>
+      <td>1.82</td>
+      <td>115</td>
+      <td>57.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90545" target="_blank" rel="noopener noreferrer"><img src="img/Cactusfolk_Sureshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cactusfolk Sureshot.html" target="_blank" rel="noopener noreferrer">Cactusfolk Sureshot</a></td>
+      <td>5.07</td>
+      <td>RG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>44684</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.75</td>
+      <td>55.56</td>
+      <td>1.81</td>
+      <td>441</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90511" target="_blank" rel="noopener noreferrer"><img src="img/Giant_Beaver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Giant Beaver.html" target="_blank" rel="noopener noreferrer">Giant Beaver</a></td>
+      <td>5.48</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>18126</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.75</td>
+      <td>55.56</td>
+      <td>1.81</td>
+      <td>171</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90413" target="_blank" rel="noopener noreferrer"><img src="img/Slickshot_Lockpicker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Slickshot Lockpicker.html" target="_blank" rel="noopener noreferrer">Slickshot Lockpicker</a></td>
+      <td>4.70</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>68803</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.90</td>
+      <td>55.59</td>
+      <td>1.69</td>
+      <td>617</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90600" target="_blank" rel="noopener noreferrer"><img src="img/Conduit_Pylons.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Conduit Pylons.html" target="_blank" rel="noopener noreferrer">Conduit Pylons</a></td>
+      <td>7.05</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>23004</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>54.70</td>
+      <td>56.37</td>
+      <td>1.67</td>
+      <td>408</td>
+      <td>57.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90431" target="_blank" rel="noopener noreferrer"><img src="img/Desert's_Due.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Desert's Due.html" target="_blank" rel="noopener noreferrer">Desert's Due</a></td>
+      <td>4.76</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>11622</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>50.95</td>
+      <td>52.52</td>
+      <td>1.57</td>
+      <td>139</td>
+      <td>50.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90389" target="_blank" rel="noopener noreferrer"><img src="img/Djinn_of_Fool's_Fall.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Djinn of Fool's Fall.html" target="_blank" rel="noopener noreferrer">Djinn of Fool's Fall</a></td>
+      <td>10.85</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>35741</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>54.35</td>
+      <td>55.83</td>
+      <td>1.48</td>
+      <td>120</td>
+      <td>56.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90478" target="_blank" rel="noopener noreferrer"><img src="img/Longhorn_Sharpshooter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Longhorn Sharpshooter.html" target="_blank" rel="noopener noreferrer">Longhorn Sharpshooter</a></td>
+      <td>3.78</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>15416</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.95</td>
+      <td>55.42</td>
+      <td>1.47</td>
+      <td>166</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90403" target="_blank" rel="noopener noreferrer"><img src="img/Metamorphic_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Metamorphic Blast.html" target="_blank" rel="noopener noreferrer">Metamorphic Blast</a></td>
+      <td>7.07</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>13790</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>51.70</td>
+      <td>53.17</td>
+      <td>1.47</td>
+      <td>126</td>
+      <td>51.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90397" target="_blank" rel="noopener noreferrer"><img src="img/Geyser_Drake.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Geyser Drake.html" target="_blank" rel="noopener noreferrer">Geyser Drake</a></td>
+      <td>9.51</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>22462</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>54.85</td>
+      <td>56.30</td>
+      <td>1.45</td>
+      <td>373</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90429" target="_blank" rel="noopener noreferrer"><img src="img/Consuming_Ashes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Consuming Ashes.html" target="_blank" rel="noopener noreferrer">Consuming Ashes</a></td>
+      <td>4.32</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>16771</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>54.35</td>
+      <td>55.76</td>
+      <td>1.41</td>
+      <td>165</td>
+      <td>56.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90408" target="_blank" rel="noopener noreferrer"><img src="img/Plan_the_Heist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Plan the Heist.html" target="_blank" rel="noopener noreferrer">Plan the Heist</a></td>
+      <td>7.88</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>45497</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.80</td>
+      <td>55.21</td>
+      <td>1.41</td>
+      <td>480</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90514" target="_blank" rel="noopener noreferrer"><img src="img/Hardbristle_Bandit.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hardbristle Bandit.html" target="_blank" rel="noopener noreferrer">Hardbristle Bandit</a></td>
+      <td>4.54</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>46852</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>55.60</td>
+      <td>57.00</td>
+      <td>1.40</td>
+      <td>100</td>
+      <td>59.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90519" target="_blank" rel="noopener noreferrer"><img src="img/Outcaster_Trailblazer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Outcaster Trailblazer.html" target="_blank" rel="noopener noreferrer">Outcaster Trailblazer</a></td>
+      <td>1.66</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>5118</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>54.35</td>
+      <td>55.65</td>
+      <td>1.30</td>
+      <td>336</td>
+      <td>56.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90365" target="_blank" rel="noopener noreferrer"><img src="img/Mystical_Tether.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mystical Tether.html" target="_blank" rel="noopener noreferrer">Mystical Tether</a></td>
+      <td>4.31</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>41432</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>52.95</td>
+      <td>54.13</td>
+      <td>1.18</td>
+      <td>327</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90499" target="_blank" rel="noopener noreferrer"><img src="img/Ankle_Biter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ankle Biter.html" target="_blank" rel="noopener noreferrer">Ankle Biter</a></td>
+      <td>8.80</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>47665</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.25</td>
+      <td>54.41</td>
+      <td>1.16</td>
+      <td>136</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90522" target="_blank" rel="noopener noreferrer"><img src="img/Rambling_Possum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rambling Possum.html" target="_blank" rel="noopener noreferrer">Rambling Possum</a></td>
+      <td>4.69</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>69074</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.95</td>
+      <td>55.06</td>
+      <td>1.11</td>
+      <td>316</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90601" target="_blank" rel="noopener noreferrer"><img src="img/Creosote_Heath.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Creosote Heath.html" target="_blank" rel="noopener noreferrer">Creosote Heath</a></td>
+      <td>5.95</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>33031</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.30</td>
+      <td>54.40</td>
+      <td>1.10</td>
+      <td>193</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90468" target="_blank" rel="noopener noreferrer"><img src="img/Explosive_Derailment.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Explosive Derailment.html" target="_blank" rel="noopener noreferrer">Explosive Derailment</a></td>
+      <td>5.80</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>35470</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>51.90</td>
+      <td>52.94</td>
+      <td>1.04</td>
+      <td>102</td>
+      <td>52.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90477" target="_blank" rel="noopener noreferrer"><img src="img/Iron-Fist_Pulverizer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Iron-Fist Pulverizer.html" target="_blank" rel="noopener noreferrer">Iron-Fist Pulverizer</a></td>
+      <td>10.79</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>11351</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>52.20</td>
+      <td>53.24</td>
+      <td>1.04</td>
+      <td>139</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90388" target="_blank" rel="noopener noreferrer"><img src="img/Deepmuck_Desperado.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deepmuck Desperado.html" target="_blank" rel="noopener noreferrer">Deepmuck Desperado</a></td>
+      <td>6.52</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>20836</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>54.25</td>
+      <td>55.25</td>
+      <td>1.00</td>
+      <td>257</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90423" target="_blank" rel="noopener noreferrer"><img src="img/Ambush_Gigapede.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ambush Gigapede.html" target="_blank" rel="noopener noreferrer">Ambush Gigapede</a></td>
+      <td>8.85</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>10267</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.35</td>
+      <td>54.14</td>
+      <td>0.79</td>
+      <td>133</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90384" target="_blank" rel="noopener noreferrer"><img src="img/Wanted_Griffin.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wanted Griffin.html" target="_blank" rel="noopener noreferrer">Wanted Griffin</a></td>
+      <td>9.63</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>28695</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>54.80</td>
+      <td>55.56</td>
+      <td>0.76</td>
+      <td>117</td>
+      <td>57.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90452" target="_blank" rel="noopener noreferrer"><img src="img/Shoot_the_Sheriff.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shoot the Sheriff.html" target="_blank" rel="noopener noreferrer">Shoot the Sheriff</a></td>
+      <td>3.53</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>28966</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>52.45</td>
+      <td>53.18</td>
+      <td>0.73</td>
+      <td>173</td>
+      <td>53.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90453" target="_blank" rel="noopener noreferrer"><img src="img/Skulduggery.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Skulduggery.html" target="_blank" rel="noopener noreferrer">Skulduggery</a></td>
+      <td>9.18</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>25443</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>54.15</td>
+      <td>54.87</td>
+      <td>0.72</td>
+      <td>308</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90440" target="_blank" rel="noopener noreferrer"><img src="img/Mourner's_Surprise.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mourner's Surprise.html" target="_blank" rel="noopener noreferrer">Mourner's Surprise</a></td>
+      <td>8.03</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27882</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.55</td>
+      <td>54.20</td>
+      <td>0.65</td>
+      <td>238</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90449" target="_blank" rel="noopener noreferrer"><img src="img/Rooftop_Assassin.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rooftop Assassin.html" target="_blank" rel="noopener noreferrer">Rooftop Assassin</a></td>
+      <td>8.45</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>23275</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>54.40</td>
+      <td>55.04</td>
+      <td>0.64</td>
+      <td>407</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90432" target="_blank" rel="noopener noreferrer"><img src="img/Desperate_Bloodseeker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Desperate Bloodseeker.html" target="_blank" rel="noopener noreferrer">Desperate Bloodseeker</a></td>
+      <td>6.27</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>19481</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>52.60</td>
+      <td>53.20</td>
+      <td>0.60</td>
+      <td>203</td>
+      <td>53.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90418" target="_blank" rel="noopener noreferrer"><img src="img/Stop_Cold.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Stop Cold.html" target="_blank" rel="noopener noreferrer">Stop Cold</a></td>
+      <td>9.62</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>50375</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>55.00</td>
+      <td>55.56</td>
+      <td>0.56</td>
+      <td>171</td>
+      <td>58.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90532" target="_blank" rel="noopener noreferrer"><img src="img/Trash_the_Town.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Trash the Town.html" target="_blank" rel="noopener noreferrer">Trash the Town</a></td>
+      <td>4.20</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>1866</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>52.90</td>
+      <td>53.45</td>
+      <td>0.55</td>
+      <td>174</td>
+      <td>54.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90353" target="_blank" rel="noopener noreferrer"><img src="img/Bridled_Bighorn.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bridled Bighorn.html" target="_blank" rel="noopener noreferrer">Bridled Bighorn</a></td>
+      <td>8.47</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>52543</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>54.05</td>
+      <td>54.59</td>
+      <td>0.54</td>
+      <td>218</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90540" target="_blank" rel="noopener noreferrer"><img src="img/Badlands_Revival.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Badlands Revival.html" target="_blank" rel="noopener noreferrer">Badlands Revival</a></td>
+      <td>5.16</td>
+      <td>BG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>16500</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>54.25</td>
+      <td>54.62</td>
+      <td>0.37</td>
+      <td>238</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90407" target="_blank" rel="noopener noreferrer"><img src="img/Phantom_Interference.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Phantom Interference.html" target="_blank" rel="noopener noreferrer">Phantom Interference</a></td>
+      <td>8.30</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>43600</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.40</td>
+      <td>53.73</td>
+      <td>0.33</td>
+      <td>335</td>
+      <td>55.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90507" target="_blank" rel="noopener noreferrer"><img src="img/Drover_Grizzly.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Drover Grizzly.html" target="_blank" rel="noopener noreferrer">Drover Grizzly</a></td>
+      <td>6.84</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>42245</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.45</td>
+      <td>53.78</td>
+      <td>0.33</td>
+      <td>370</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90502" target="_blank" rel="noopener noreferrer"><img src="img/Bristlepack_Sentry.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bristlepack Sentry.html" target="_blank" rel="noopener noreferrer">Bristlepack Sentry</a></td>
+      <td>7.81</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>50646</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.80</td>
+      <td>54.03</td>
+      <td>0.23</td>
+      <td>248</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90533" target="_blank" rel="noopener noreferrer"><img src="img/Tumbleweed_Rising.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tumbleweed Rising.html" target="_blank" rel="noopener noreferrer">Tumbleweed Rising</a></td>
+      <td>8.67</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>15687</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>52.90</td>
+      <td>53.02</td>
+      <td>0.12</td>
+      <td>149</td>
+      <td>54.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90404" target="_blank" rel="noopener noreferrer"><img src="img/Nimble_Brigand.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nimble Brigand.html" target="_blank" rel="noopener noreferrer">Nimble Brigand</a></td>
+      <td>5.11</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>66635</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.05</td>
+      <td>53.15</td>
+      <td>0.10</td>
+      <td>397</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90592" target="_blank" rel="noopener noreferrer"><img src="img/Oasis_Gardener.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Oasis Gardener.html" target="_blank" rel="noopener noreferrer">Oasis Gardener</a></td>
+      <td>8.85</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>41974</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>54.10</td>
+      <td>54.17</td>
+      <td>0.07</td>
+      <td>144</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90501" target="_blank" rel="noopener noreferrer"><img src="img/Betrayal_at_the_Vault.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Betrayal at the Vault.html" target="_blank" rel="noopener noreferrer">Betrayal at the Vault</a></td>
+      <td>6.20</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>70429</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.35</td>
+      <td>53.36</td>
+      <td>0.01</td>
+      <td>283</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90606" target="_blank" rel="noopener noreferrer"><img src="img/Lonely_Arroyo.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lonely Arroyo.html" target="_blank" rel="noopener noreferrer">Lonely Arroyo</a></td>
+      <td>7.28</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>46039</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>50.95</td>
+      <td>50.89</td>
+      <td>-0.06</td>
+      <td>112</td>
+      <td>50.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90516" target="_blank" rel="noopener noreferrer"><img src="img/Map_the_Frontier.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Map the Frontier.html" target="_blank" rel="noopener noreferrer">Map the Frontier</a></td>
+      <td>9.67</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>56337</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.30</td>
+      <td>53.16</td>
+      <td>-0.14</td>
+      <td>158</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90554" target="_blank" rel="noopener noreferrer"><img src="img/Intimidation_Campaign.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Intimidation Campaign.html" target="_blank" rel="noopener noreferrer">Intimidation Campaign</a></td>
+      <td>5.70</td>
+      <td>UB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>8641</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.60</td>
+      <td>53.45</td>
+      <td>-0.15</td>
+      <td>275</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90378" target="_blank" rel="noopener noreferrer"><img src="img/Sterling_Keykeeper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sterling Keykeeper.html" target="_blank" rel="noopener noreferrer">Sterling Keykeeper</a></td>
+      <td>8.49</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>47936</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>52.15</td>
+      <td>51.85</td>
+      <td>-0.30</td>
+      <td>162</td>
+      <td>52.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90523" target="_blank" rel="noopener noreferrer"><img src="img/Raucous_Entertainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Raucous Entertainer.html" target="_blank" rel="noopener noreferrer">Raucous Entertainer</a></td>
+      <td>5.47</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>17042</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>51.25</td>
+      <td>50.94</td>
+      <td>-0.31</td>
+      <td>106</td>
+      <td>50.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90409" target="_blank" rel="noopener noreferrer"><img src="img/Razzle-Dazzler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Razzle-Dazzler.html" target="_blank" rel="noopener noreferrer">Razzle-Dazzler</a></td>
+      <td>10.16</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>65009</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.05</td>
+      <td>52.55</td>
+      <td>-0.50</td>
+      <td>274</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90586" target="_blank" rel="noopener noreferrer"><img src="img/Bandit's_Haul.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bandit's Haul.html" target="_blank" rel="noopener noreferrer">Bandit's Haul</a></td>
+      <td>7.13</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>41161</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>54.65</td>
+      <td>53.97</td>
+      <td>-0.68</td>
+      <td>189</td>
+      <td>57.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90498" target="_blank" rel="noopener noreferrer"><img src="img/Aloe_Alchemist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Aloe Alchemist.html" target="_blank" rel="noopener noreferrer">Aloe Alchemist</a></td>
+      <td>3.51</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>43329</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>54.25</td>
+      <td>53.57</td>
+      <td>-0.68</td>
+      <td>560</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90506" target="_blank" rel="noopener noreferrer"><img src="img/Dance_of_the_Tumbleweeds.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Dance of the Tumbleweeds.html" target="_blank" rel="noopener noreferrer">Dance of the Tumbleweeds</a></td>
+      <td>5.56</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>50917</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.30</td>
+      <td>52.59</td>
+      <td>-0.71</td>
+      <td>424</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90534" target="_blank" rel="noopener noreferrer"><img src="img/Voracious_Varmint.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Voracious Varmint.html" target="_blank" rel="noopener noreferrer">Voracious Varmint</a></td>
+      <td>7.59</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>65280</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>51.80</td>
+      <td>51.07</td>
+      <td>-0.73</td>
+      <td>3989</td>
+      <td>51.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td>11.34</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>69345</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.30</td>
+      <td>52.42</td>
+      <td>-0.88</td>
+      <td>227</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90602" target="_blank" rel="noopener noreferrer"><img src="img/Eroded_Canyon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eroded Canyon.html" target="_blank" rel="noopener noreferrer">Eroded Canyon</a></td>
+      <td>7.18</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>26256</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>50.90</td>
+      <td>50.00</td>
+      <td>-0.90</td>
+      <td>104</td>
+      <td>50.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90443" target="_blank" rel="noopener noreferrer"><img src="img/Overzealous_Muscle.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Overzealous Muscle.html" target="_blank" rel="noopener noreferrer">Overzealous Muscle</a></td>
+      <td>11.07</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>65551</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>52.20</td>
+      <td>51.30</td>
+      <td>-0.90</td>
+      <td>154</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90588" target="_blank" rel="noopener noreferrer"><img src="img/Gold_Pan.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Gold Pan.html" target="_blank" rel="noopener noreferrer">Gold Pan</a></td>
+      <td>10.95</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12706</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>52.65</td>
+      <td>51.74</td>
+      <td>-0.91</td>
+      <td>172</td>
+      <td>53.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90393" target="_blank" rel="noopener noreferrer"><img src="img/Failed_Fording.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Failed Fording.html" target="_blank" rel="noopener noreferrer">Failed Fording</a></td>
+      <td>10.49</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>2679</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>52.45</td>
+      <td>51.50</td>
+      <td>-0.95</td>
+      <td>200</td>
+      <td>53.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90356" target="_blank" rel="noopener noreferrer"><img src="img/Eriette's_Lullaby.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eriette's Lullaby.html" target="_blank" rel="noopener noreferrer">Eriette's Lullaby</a></td>
+      <td>8.64</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>14061</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>52.15</td>
+      <td>51.20</td>
+      <td>-0.95</td>
+      <td>125</td>
+      <td>52.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90398" target="_blank" rel="noopener noreferrer"><img src="img/Harrier_Strix.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Harrier Strix.html" target="_blank" rel="noopener noreferrer">Harrier Strix</a></td>
+      <td>11.06</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>59860</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>55.25</td>
+      <td>54.13</td>
+      <td>-1.12</td>
+      <td>109</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90567" target="_blank" rel="noopener noreferrer"><img src="img/Miriam,_Herd_Whisperer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Miriam, Herd Whisperer.html" target="_blank" rel="noopener noreferrer">Miriam, Herd Whisperer</a></td>
+      <td>4.12</td>
+      <td>WG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>49833</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>54.85</td>
+      <td>53.72</td>
+      <td>-1.13</td>
+      <td>188</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90530" target="_blank" rel="noopener noreferrer"><img src="img/Stubborn_Burrowfiend.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Stubborn Burrowfiend.html" target="_blank" rel="noopener noreferrer">Stubborn Burrowfiend</a></td>
+      <td>3.75</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>70158</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.60</td>
+      <td>52.23</td>
+      <td>-1.37</td>
+      <td>291</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90605" target="_blank" rel="noopener noreferrer"><img src="img/Jagged_Barrens.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Jagged Barrens.html" target="_blank" rel="noopener noreferrer">Jagged Barrens</a></td>
+      <td>6.24</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>71513</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>54.05</td>
+      <td>52.43</td>
+      <td>-1.62</td>
+      <td>309</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90610" target="_blank" rel="noopener noreferrer"><img src="img/Soured_Springs.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Soured Springs.html" target="_blank" rel="noopener noreferrer">Soured Springs</a></td>
+      <td>6.22</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>66364</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>54.05</td>
+      <td>52.43</td>
+      <td>-1.62</td>
+      <td>185</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90591" target="_blank" rel="noopener noreferrer"><img src="img/Mobile_Homestead.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mobile Homestead.html" target="_blank" rel="noopener noreferrer">Mobile Homestead</a></td>
+      <td>6.26</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>4305</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>54.40</td>
+      <td>52.73</td>
+      <td>-1.67</td>
+      <td>256</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90362" target="_blank" rel="noopener noreferrer"><img src="img/Holy_Cow.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Holy Cow.html" target="_blank" rel="noopener noreferrer">Holy Cow</a></td>
+      <td>6.62</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>1324</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.25</td>
+      <td>51.46</td>
+      <td>-1.79</td>
+      <td>103</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90351" target="_blank" rel="noopener noreferrer"><img src="img/Bounding_Felidar.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bounding Felidar.html" target="_blank" rel="noopener noreferrer">Bounding Felidar</a></td>
+      <td>5.51</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>29779</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>52.55</td>
+      <td>50.71</td>
+      <td>-1.84</td>
+      <td>140</td>
+      <td>53.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90456" target="_blank" rel="noopener noreferrer"><img src="img/Treasure_Dredger.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Treasure Dredger.html" target="_blank" rel="noopener noreferrer">Treasure Dredger</a></td>
+      <td>6.42</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>27069</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.20</td>
+      <td>51.28</td>
+      <td>-1.92</td>
+      <td>117</td>
+      <td>54.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90446" target="_blank" rel="noopener noreferrer"><img src="img/Rattleback_Apothecary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rattleback Apothecary.html" target="_blank" rel="noopener noreferrer">Rattleback Apothecary</a></td>
+      <td>5.06</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>56879</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>54.10</td>
+      <td>52.14</td>
+      <td>-1.96</td>
+      <td>117</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90556" target="_blank" rel="noopener noreferrer"><img src="img/Jolene,_Plundering_Pugilist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Jolene, Plundering Pugilist.html" target="_blank" rel="noopener noreferrer">Jolene, Plundering Pugilist</a></td>
+      <td>5.43</td>
+      <td>RG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>7557</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>55.50</td>
+      <td>53.51</td>
+      <td>-1.99</td>
+      <td>185</td>
+      <td>59.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90374" target="_blank" rel="noopener noreferrer"><img src="img/Shepherd_of_the_Clouds.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shepherd of the Clouds.html" target="_blank" rel="noopener noreferrer">Shepherd of the Clouds</a></td>
+      <td>2.97</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>54982</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.90</td>
+      <td>51.90</td>
+      <td>-2.00</td>
+      <td>158</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90549" target="_blank" rel="noopener noreferrer"><img src="img/Ertha_Jo,_Frontier_Mentor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ertha Jo, Frontier Mentor.html" target="_blank" rel="noopener noreferrer">Ertha Jo, Frontier Mentor</a></td>
+      <td>6.25</td>
+      <td>WR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>6473</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>54.40</td>
+      <td>52.32</td>
+      <td>-2.08</td>
+      <td>151</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90370" target="_blank" rel="noopener noreferrer"><img src="img/Prairie_Dog.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Prairie Dog.html" target="_blank" rel="noopener noreferrer">Prairie Dog</a></td>
+      <td>3.60</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>67448</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>52.85</td>
+      <td>50.73</td>
+      <td>-2.12</td>
+      <td>274</td>
+      <td>53.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90595" target="_blank" rel="noopener noreferrer"><img src="img/Sterling_Hound.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sterling Hound.html" target="_blank" rel="noopener noreferrer">Sterling Hound</a></td>
+      <td>10.69</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>49020</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>54.50</td>
+      <td>52.19</td>
+      <td>-2.31</td>
+      <td>366</td>
+      <td>57.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90527" target="_blank" rel="noopener noreferrer"><img src="img/Snakeskin_Veil.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Snakeskin Veil.html" target="_blank" rel="noopener noreferrer">Snakeskin Veil</a></td>
+      <td>6.64</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>69887</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.90</td>
+      <td>51.52</td>
+      <td>-2.38</td>
+      <td>297</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90604" target="_blank" rel="noopener noreferrer"><img src="img/Forlorn_Flats.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Forlorn Flats.html" target="_blank" rel="noopener noreferrer">Forlorn Flats</a></td>
+      <td>6.63</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>9183</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>54.65</td>
+      <td>52.26</td>
+      <td>-2.39</td>
+      <td>266</td>
+      <td>57.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90380" target="_blank" rel="noopener noreferrer"><img src="img/Take_Up_the_Shield.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Take Up the Shield.html" target="_blank" rel="noopener noreferrer">Take Up the Shield</a></td>
+      <td>7.41</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>35199</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>52.00</td>
+      <td>49.54</td>
+      <td>-2.46</td>
+      <td>109</td>
+      <td>52.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90476" target="_blank" rel="noopener noreferrer"><img src="img/Irascible_Wolverine.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Irascible Wolverine.html" target="_blank" rel="noopener noreferrer">Irascible Wolverine</a></td>
+      <td>8.71</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>21378</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>51.20</td>
+      <td>48.62</td>
+      <td>-2.58</td>
+      <td>109</td>
+      <td>50.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90425" target="_blank" rel="noopener noreferrer"><img src="img/Blacksnag_Buzzard.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Blacksnag Buzzard.html" target="_blank" rel="noopener noreferrer">Blacksnag Buzzard</a></td>
+      <td>10.38</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>69616</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>54.15</td>
+      <td>51.41</td>
+      <td>-2.74</td>
+      <td>319</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90603" target="_blank" rel="noopener noreferrer"><img src="img/Festering_Gulch.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Festering Gulch.html" target="_blank" rel="noopener noreferrer">Festering Gulch</a></td>
+      <td>5.84</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>23546</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.55</td>
+      <td>50.70</td>
+      <td>-2.85</td>
+      <td>142</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90433" target="_blank" rel="noopener noreferrer"><img src="img/Fake_Your_Own_Death.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fake Your Own Death.html" target="_blank" rel="noopener noreferrer">Fake Your Own Death</a></td>
+      <td>10.33</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>54169</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>54.85</td>
+      <td>51.95</td>
+      <td>-2.90</td>
+      <td>154</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90546" target="_blank" rel="noopener noreferrer"><img src="img/Congregation_Gryff.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Congregation Gryff.html" target="_blank" rel="noopener noreferrer">Congregation Gryff</a></td>
+      <td>4.06</td>
+      <td>WG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>48478</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.00</td>
+      <td>50.00</td>
+      <td>-3.00</td>
+      <td>114</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90525" target="_blank" rel="noopener noreferrer"><img src="img/Rise_of_the_Varmints.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rise of the Varmints.html" target="_blank" rel="noopener noreferrer">Rise of the Varmints</a></td>
+      <td>7.70</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>27340</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.00</td>
+      <td>50.00</td>
+      <td>-3.00</td>
+      <td>226</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90447" target="_blank" rel="noopener noreferrer"><img src="img/Raven_of_Fell_Omens.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Raven of Fell Omens.html" target="_blank" rel="noopener noreferrer">Raven of Fell Omens</a></td>
+      <td>7.26</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>67177</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>51.10</td>
+      <td>48.05</td>
+      <td>-3.05</td>
+      <td>231</td>
+      <td>50.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90594" target="_blank" rel="noopener noreferrer"><img src="img/Silver_Deputy.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Silver Deputy.html" target="_blank" rel="noopener noreferrer">Silver Deputy</a></td>
+      <td>10.08</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>46310</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>57.25</td>
+      <td>54.13</td>
+      <td>-3.12</td>
+      <td>109</td>
+      <td>62.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90517" target="_blank" rel="noopener noreferrer"><img src="img/Ornery_Tumblewagg.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ornery Tumblewagg.html" target="_blank" rel="noopener noreferrer">Ornery Tumblewagg</a></td>
+      <td>1.40</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>3763</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>55.20</td>
+      <td>52.07</td>
+      <td>-3.13</td>
+      <td>169</td>
+      <td>58.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90360" target="_blank" rel="noopener noreferrer"><img src="img/Getaway_Glamer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Getaway Glamer.html" target="_blank" rel="noopener noreferrer">Getaway Glamer</a></td>
+      <td>4.78</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>34928</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>51.90</td>
+      <td>47.97</td>
+      <td>-3.93</td>
+      <td>123</td>
+      <td>52.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90475" target="_blank" rel="noopener noreferrer"><img src="img/Highway_Robbery.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Highway Robbery.html" target="_blank" rel="noopener noreferrer">Highway Robbery</a></td>
+      <td>10.66</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>30321</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.15</td>
+      <td>49.17</td>
+      <td>-3.98</td>
+      <td>120</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90458" target="_blank" rel="noopener noreferrer"><img src="img/Unscrupulous_Contractor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Unscrupulous Contractor.html" target="_blank" rel="noopener noreferrer">Unscrupulous Contractor</a></td>
+      <td>5.89</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>9996</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.05</td>
+      <td>48.94</td>
+      <td>-4.11</td>
+      <td>141</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90383" target="_blank" rel="noopener noreferrer"><img src="img/Vengeful_Townsfolk.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vengeful Townsfolk.html" target="_blank" rel="noopener noreferrer">Vengeful Townsfolk</a></td>
+      <td>9.35</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>14874</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.05</td>
+      <td>48.87</td>
+      <td>-4.18</td>
+      <td>266</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90401" target="_blank" rel="noopener noreferrer"><img src="img/Loan_Shark.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Loan Shark.html" target="_blank" rel="noopener noreferrer">Loan Shark</a></td>
+      <td>7.98</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>9725</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>54.55</td>
+      <td>50.34</td>
+      <td>-4.21</td>
+      <td>296</td>
+      <td>57.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90382" target="_blank" rel="noopener noreferrer"><img src="img/Trained_Arynx.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Trained Arynx.html" target="_blank" rel="noopener noreferrer">Trained Arynx</a></td>
+      <td>5.43</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>37096</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.15</td>
+      <td>48.86</td>
+      <td>-4.29</td>
+      <td>176</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90483" target="_blank" rel="noopener noreferrer"><img src="img/Prickly_Pair.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Prickly Pair.html" target="_blank" rel="noopener noreferrer">Prickly Pair</a></td>
+      <td>6.94</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>25172</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>54.15</td>
+      <td>49.28</td>
+      <td>-4.87</td>
+      <td>138</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90439" target="_blank" rel="noopener noreferrer"><img src="img/Lively_Dirge.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lively Dirge.html" target="_blank" rel="noopener noreferrer">Lively Dirge</a></td>
+      <td>7.07</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>8370</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>52.70</td>
+      <td>47.77</td>
+      <td>-4.93</td>
+      <td>157</td>
+      <td>53.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90377" target="_blank" rel="noopener noreferrer"><img src="img/Steer_Clear.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Steer Clear.html" target="_blank" rel="noopener noreferrer">Steer Clear</a></td>
+      <td>9.61</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>21649</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.90</td>
+      <td>48.41</td>
+      <td>-5.49</td>
+      <td>126</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90426" target="_blank" rel="noopener noreferrer"><img src="img/Blood_Hustler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Blood Hustler.html" target="_blank" rel="noopener noreferrer">Blood Hustler</a></td>
+      <td>3.32</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>30050</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>54.55</td>
+      <td>49.04</td>
+      <td>-5.51</td>
+      <td>157</td>
+      <td>57.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90457" target="_blank" rel="noopener noreferrer"><img src="img/Unfortunate_Accident.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Unfortunate Accident.html" target="_blank" rel="noopener noreferrer">Unfortunate Accident</a></td>
+      <td>3.63</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>8099</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.75</td>
+      <td>48.00</td>
+      <td>-5.75</td>
+      <td>200</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90376" target="_blank" rel="noopener noreferrer"><img src="img/Stagecoach_Security.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Stagecoach Security.html" target="_blank" rel="noopener noreferrer">Stagecoach Security</a></td>
+      <td>9.54</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12435</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>52.20</td>
+      <td>46.36</td>
+      <td>-5.84</td>
+      <td>110</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90392" target="_blank" rel="noopener noreferrer"><img src="img/Emergent_Haunting.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Emergent Haunting.html" target="_blank" rel="noopener noreferrer">Emergent Haunting</a></td>
+      <td>7.28</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>43058</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>56.35</td>
+      <td>50.43</td>
+      <td>-5.92</td>
+      <td>115</td>
+      <td>60.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90505" target="_blank" rel="noopener noreferrer"><img src="img/Colossal_Rattlewurm.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Colossal Rattlewurm.html" target="_blank" rel="noopener noreferrer">Colossal Rattlewurm</a></td>
+      <td>1.49</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>32218</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>51.55</td>
+      <td>45.58</td>
+      <td>-5.97</td>
+      <td>147</td>
+      <td>51.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90465" target="_blank" rel="noopener noreferrer"><img src="img/Deadeye_Duelist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deadeye Duelist.html" target="_blank" rel="noopener noreferrer">Deadeye Duelist</a></td>
+      <td>8.41</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>25985</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.60</td>
+      <td>47.32</td>
+      <td>-6.28</td>
+      <td>112</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90442" target="_blank" rel="noopener noreferrer"><img src="img/Nezumi_Linkbreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nezumi Linkbreaker.html" target="_blank" rel="noopener noreferrer">Nezumi Linkbreaker</a></td>
+      <td>9.89</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>67990</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.30</td>
+      <td>46.77</td>
+      <td>-6.53</td>
+      <td>263</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90597" target="_blank" rel="noopener noreferrer"><img src="img/Abraded_Bluffs.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Abraded Bluffs.html" target="_blank" rel="noopener noreferrer">Abraded Bluffs</a></td>
+      <td>7.04</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>68532</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.60</td>
+      <td>46.81</td>
+      <td>-6.79</td>
+      <td>282</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90599" target="_blank" rel="noopener noreferrer"><img src="img/Bristling_Backwoods.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bristling Backwoods.html" target="_blank" rel="noopener noreferrer">Bristling Backwoods</a></td>
+      <td>6.39</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>40619</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>52.55</td>
+      <td>45.39</td>
+      <td>-7.16</td>
+      <td>152</td>
+      <td>53.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90496" target="_blank" rel="noopener noreferrer"><img src="img/Thunder_Salvo.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Thunder Salvo.html" target="_blank" rel="noopener noreferrer">Thunder Salvo</a></td>
+      <td>7.40</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>3492</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>54.75</td>
+      <td>47.50</td>
+      <td>-7.25</td>
+      <td>120</td>
+      <td>57.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90359" target="_blank" rel="noopener noreferrer"><img src="img/Frontier_Seeker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Frontier Seeker.html" target="_blank" rel="noopener noreferrer">Frontier Seeker</a></td>
+      <td>4.62</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>72055</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.95</td>
+      <td>46.61</td>
+      <td>-7.34</td>
+      <td>118</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90612" target="_blank" rel="noopener noreferrer"><img src="img/Bucolic_Ranch.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bucolic Ranch.html" target="_blank" rel="noopener noreferrer">Bucolic Ranch</a></td>
+      <td>8.64</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>36554</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>51.75</td>
+      <td>43.10</td>
+      <td>-8.65</td>
+      <td>116</td>
+      <td>51.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90481" target="_blank" rel="noopener noreferrer"><img src="img/Mine_Raider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mine Raider.html" target="_blank" rel="noopener noreferrer">Mine Raider</a></td>
+      <td>9.32</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>32760</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>52.80</td>
+      <td>42.50</td>
+      <td>-10.30</td>
+      <td>120</td>
+      <td>53.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90467" target="_blank" rel="noopener noreferrer"><img src="img/Discerning_Peddler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Discerning Peddler.html" target="_blank" rel="noopener noreferrer">Discerning Peddler</a></td>
+      <td>9.29</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27611</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.34</td>
+      <td><a href=".//Boom Box.html" target="_blank" rel="noopener noreferrer">Boom Box</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90587" target="_blank" rel="noopener noreferrer"><img src="img/Boom_Box.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.8</td>
+      <td>53.30</td>
+      <td>41.44</td>
+      <td>-11.86</td>
+      <td>111</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90448" target="_blank" rel="noopener noreferrer"><img src="img/Rictus_Robber.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rictus Robber.html" target="_blank" rel="noopener noreferrer">Rictus Robber</a></td>
+      <td>5.14</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+  </tbody>
+</table>

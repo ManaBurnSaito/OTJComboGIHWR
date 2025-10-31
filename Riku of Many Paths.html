@@ -1,0 +1,1667 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>39250</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>51.85</td>
+      <td>61.59</td>
+      <td>9.74</td>
+      <td>138</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90491" target="_blank" rel="noopener noreferrer"><img src="img/Scorching_Shot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scorching Shot.html" target="_blank" rel="noopener noreferrer">Scorching Shot</a></td>
+      <td>5.04</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>53071</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>57.70</td>
+      <td>64.60</td>
+      <td>6.90</td>
+      <td>161</td>
+      <td>66.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90542" target="_blank" rel="noopener noreferrer"><img src="img/Bonny_Pall,_Clearcutter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bonny Pall, Clearcutter.html" target="_blank" rel="noopener noreferrer">Bonny Pall, Clearcutter</a></td>
+      <td>1.58</td>
+      <td>UG</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>64995</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>51.65</td>
+      <td>56.35</td>
+      <td>4.70</td>
+      <td>126</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90586" target="_blank" rel="noopener noreferrer"><img src="img/Bandit's_Haul.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bandit's Haul.html" target="_blank" rel="noopener noreferrer">Bandit's Haul</a></td>
+      <td>7.13</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>16215</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>51.95</td>
+      <td>56.14</td>
+      <td>4.19</td>
+      <td>114</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90406" target="_blank" rel="noopener noreferrer"><img src="img/Peerless_Ropemaster.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Peerless Ropemaster.html" target="_blank" rel="noopener noreferrer">Peerless Ropemaster</a></td>
+      <td>11.43</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>50632</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>52.40</td>
+      <td>56.35</td>
+      <td>3.95</td>
+      <td>126</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90533" target="_blank" rel="noopener noreferrer"><img src="img/Tumbleweed_Rising.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tumbleweed Rising.html" target="_blank" rel="noopener noreferrer">Tumbleweed Rising</a></td>
+      <td>8.67</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>49277</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>54.75</td>
+      <td>58.45</td>
+      <td>3.70</td>
+      <td>219</td>
+      <td>60.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90528" target="_blank" rel="noopener noreferrer"><img src="img/Spinewoods_Armadillo.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Spinewoods Armadillo.html" target="_blank" rel="noopener noreferrer">Spinewoods Armadillo</a></td>
+      <td>2.57</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>67976</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>51.90</td>
+      <td>55.56</td>
+      <td>3.66</td>
+      <td>162</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90597" target="_blank" rel="noopener noreferrer"><img src="img/Abraded_Bluffs.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Abraded Bluffs.html" target="_blank" rel="noopener noreferrer">Abraded Bluffs</a></td>
+      <td>7.04</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>61743</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>56.55</td>
+      <td>59.76</td>
+      <td>3.21</td>
+      <td>169</td>
+      <td>64.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90574" target="_blank" rel="noopener noreferrer"><img src="img/Roxanne,_Starfall_Savant.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Roxanne, Starfall Savant.html" target="_blank" rel="noopener noreferrer">Roxanne, Starfall Savant</a></td>
+      <td>1.63</td>
+      <td>RG</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>69331</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>51.90</td>
+      <td>55.07</td>
+      <td>3.17</td>
+      <td>572</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90602" target="_blank" rel="noopener noreferrer"><img src="img/Eroded_Canyon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eroded Canyon.html" target="_blank" rel="noopener noreferrer">Eroded Canyon</a></td>
+      <td>7.18</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>18112</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>52.35</td>
+      <td>55.50</td>
+      <td>3.15</td>
+      <td>209</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90413" target="_blank" rel="noopener noreferrer"><img src="img/Slickshot_Lockpicker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Slickshot Lockpicker.html" target="_blank" rel="noopener noreferrer">Slickshot Lockpicker</a></td>
+      <td>4.70</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>14318</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>52.55</td>
+      <td>55.40</td>
+      <td>2.85</td>
+      <td>639</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90399" target="_blank" rel="noopener noreferrer"><img src="img/Jailbreak_Scheme.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Jailbreak Scheme.html" target="_blank" rel="noopener noreferrer">Jailbreak Scheme</a></td>
+      <td>9.98</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>46567</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>55.15</td>
+      <td>57.92</td>
+      <td>2.77</td>
+      <td>259</td>
+      <td>61.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90518" target="_blank" rel="noopener noreferrer"><img src="img/Outcaster_Greenblade.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Outcaster Greenblade.html" target="_blank" rel="noopener noreferrer">Outcaster Greenblade</a></td>
+      <td>2.69</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>15402</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>52.55</td>
+      <td>55.26</td>
+      <td>2.71</td>
+      <td>371</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90403" target="_blank" rel="noopener noreferrer"><img src="img/Metamorphic_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Metamorphic Blast.html" target="_blank" rel="noopener noreferrer">Metamorphic Blast</a></td>
+      <td>7.07</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>53342</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>49.50</td>
+      <td>51.96</td>
+      <td>2.46</td>
+      <td>102</td>
+      <td>50.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td>6.95</td>
+      <td>UR</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>38979</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>52.30</td>
+      <td>54.72</td>
+      <td>2.42</td>
+      <td>106</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90490" target="_blank" rel="noopener noreferrer"><img src="img/Scalestorm_Summoner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scalestorm Summoner.html" target="_blank" rel="noopener noreferrer">Scalestorm Summoner</a></td>
+      <td>4.94</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>35727</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>52.95</td>
+      <td>55.06</td>
+      <td>2.11</td>
+      <td>158</td>
+      <td>56.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90478" target="_blank" rel="noopener noreferrer"><img src="img/Longhorn_Sharpshooter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Longhorn Sharpshooter.html" target="_blank" rel="noopener noreferrer">Longhorn Sharpshooter</a></td>
+      <td>3.78</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>47109</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>52.85</td>
+      <td>54.93</td>
+      <td>2.08</td>
+      <td>335</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90520" target="_blank" rel="noopener noreferrer"><img src="img/Patient_Naturalist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Patient Naturalist.html" target="_blank" rel="noopener noreferrer">Patient Naturalist</a></td>
+      <td>6.04</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>19738</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>52.40</td>
+      <td>54.42</td>
+      <td>2.02</td>
+      <td>294</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90419" target="_blank" rel="noopener noreferrer"><img src="img/Take_the_Fall.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Take the Fall.html" target="_blank" rel="noopener noreferrer">Take the Fall</a></td>
+      <td>9.45</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>66621</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>51.65</td>
+      <td>53.63</td>
+      <td>1.98</td>
+      <td>317</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90592" target="_blank" rel="noopener noreferrer"><img src="img/Oasis_Gardener.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Oasis Gardener.html" target="_blank" rel="noopener noreferrer">Oasis Gardener</a></td>
+      <td>8.85</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>57949</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>51.65</td>
+      <td>53.57</td>
+      <td>1.92</td>
+      <td>280</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90560" target="_blank" rel="noopener noreferrer"><img src="img/Kraum,_Violent_Cacophony.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kraum, Violent Cacophony.html" target="_blank" rel="noopener noreferrer">Kraum, Violent Cacophony</a></td>
+      <td>6.74</td>
+      <td>UR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>53884</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>53.30</td>
+      <td>55.10</td>
+      <td>1.80</td>
+      <td>196</td>
+      <td>57.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90545" target="_blank" rel="noopener noreferrer"><img src="img/Cactusfolk_Sureshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cactusfolk Sureshot.html" target="_blank" rel="noopener noreferrer">Cactusfolk Sureshot</a></td>
+      <td>5.07</td>
+      <td>RG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>11608</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>49.55</td>
+      <td>51.33</td>
+      <td>1.78</td>
+      <td>150</td>
+      <td>50.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90389" target="_blank" rel="noopener noreferrer"><img src="img/Djinn_of_Fool's_Fall.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Djinn of Fool's Fall.html" target="_blank" rel="noopener noreferrer">Djinn of Fool's Fall</a></td>
+      <td>10.85</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12692</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>51.25</td>
+      <td>53.00</td>
+      <td>1.75</td>
+      <td>200</td>
+      <td>53.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90393" target="_blank" rel="noopener noreferrer"><img src="img/Failed_Fording.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Failed Fording.html" target="_blank" rel="noopener noreferrer">Failed Fording</a></td>
+      <td>10.49</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>15131</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>53.45</td>
+      <td>55.19</td>
+      <td>1.74</td>
+      <td>183</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90402" target="_blank" rel="noopener noreferrer"><img src="img/Marauding_Sphinx.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Marauding Sphinx.html" target="_blank" rel="noopener noreferrer">Marauding Sphinx</a></td>
+      <td>3.99</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>16486</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>52.85</td>
+      <td>54.53</td>
+      <td>1.68</td>
+      <td>651</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90407" target="_blank" rel="noopener noreferrer"><img src="img/Phantom_Interference.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Phantom Interference.html" target="_blank" rel="noopener noreferrer">Phantom Interference</a></td>
+      <td>8.30</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>63098</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>52.30</td>
+      <td>53.82</td>
+      <td>1.52</td>
+      <td>288</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90579" target="_blank" rel="noopener noreferrer"><img src="img/Slick_Sequence.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Slick Sequence.html" target="_blank" rel="noopener noreferrer">Slick Sequence</a></td>
+      <td>8.14</td>
+      <td>UR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>33017</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>51.90</td>
+      <td>53.30</td>
+      <td>1.40</td>
+      <td>576</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90468" target="_blank" rel="noopener noreferrer"><img src="img/Explosive_Derailment.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Explosive Derailment.html" target="_blank" rel="noopener noreferrer">Explosive Derailment</a></td>
+      <td>5.80</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>59033</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>52.40</td>
+      <td>53.73</td>
+      <td>1.33</td>
+      <td>335</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90564" target="_blank" rel="noopener noreferrer"><img src="img/Make_Your_Own_Luck.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Make Your Own Luck.html" target="_blank" rel="noopener noreferrer">Make Your Own Luck</a></td>
+      <td>6.36</td>
+      <td>UG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>70415</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>51.95</td>
+      <td>53.02</td>
+      <td>1.07</td>
+      <td>215</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90606" target="_blank" rel="noopener noreferrer"><img src="img/Lonely_Arroyo.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lonely Arroyo.html" target="_blank" rel="noopener noreferrer">Lonely Arroyo</a></td>
+      <td>7.28</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>35185</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>50.60</td>
+      <td>51.53</td>
+      <td>0.93</td>
+      <td>229</td>
+      <td>52.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90476" target="_blank" rel="noopener noreferrer"><img src="img/Irascible_Wolverine.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Irascible Wolverine.html" target="_blank" rel="noopener noreferrer">Irascible Wolverine</a></td>
+      <td>8.71</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>59304</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>52.65</td>
+      <td>53.38</td>
+      <td>0.73</td>
+      <td>133</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90565" target="_blank" rel="noopener noreferrer"><img src="img/Malcolm,_the_Eyes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Malcolm, the Eyes.html" target="_blank" rel="noopener noreferrer">Malcolm, the Eyes</a></td>
+      <td>4.88</td>
+      <td>UR</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>20280</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>53.65</td>
+      <td>54.19</td>
+      <td>0.54</td>
+      <td>155</td>
+      <td>58.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90421" target="_blank" rel="noopener noreferrer"><img src="img/Three_Steps_Ahead.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Three Steps Ahead.html" target="_blank" rel="noopener noreferrer">Three Steps Ahead</a></td>
+      <td>2.87</td>
+      <td>U</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>43315</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>52.85</td>
+      <td>53.20</td>
+      <td>0.35</td>
+      <td>656</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90506" target="_blank" rel="noopener noreferrer"><img src="img/Dance_of_the_Tumbleweeds.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Dance of the Tumbleweeds.html" target="_blank" rel="noopener noreferrer">Dance of the Tumbleweeds</a></td>
+      <td>5.56</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>61472</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>49.00</td>
+      <td>49.22</td>
+      <td>0.22</td>
+      <td>2828</td>
+      <td>49.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td>8.15</td>
+      <td>URG</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>56865</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>52.70</td>
+      <td>52.88</td>
+      <td>0.18</td>
+      <td>208</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90556" target="_blank" rel="noopener noreferrer"><img src="img/Jolene,_Plundering_Pugilist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Jolene, Plundering Pugilist.html" target="_blank" rel="noopener noreferrer">Jolene, Plundering Pugilist</a></td>
+      <td>5.43</td>
+      <td>RG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>41689</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>53.80</td>
+      <td>53.91</td>
+      <td>0.11</td>
+      <td>128</td>
+      <td>58.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90500" target="_blank" rel="noopener noreferrer"><img src="img/Beastbond_Outcaster.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Beastbond Outcaster.html" target="_blank" rel="noopener noreferrer">Beastbond Outcaster</a></td>
+      <td>3.58</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>13776</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>50.30</td>
+      <td>50.25</td>
+      <td>-0.05</td>
+      <td>201</td>
+      <td>51.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90397" target="_blank" rel="noopener noreferrer"><img src="img/Geyser_Drake.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Geyser Drake.html" target="_blank" rel="noopener noreferrer">Geyser Drake</a></td>
+      <td>9.51</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>68518</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>52.20</td>
+      <td>52.05</td>
+      <td>-0.15</td>
+      <td>513</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90599" target="_blank" rel="noopener noreferrer"><img src="img/Bristling_Backwoods.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bristling Backwoods.html" target="_blank" rel="noopener noreferrer">Bristling Backwoods</a></td>
+      <td>6.39</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>15944</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>51.40</td>
+      <td>51.06</td>
+      <td>-0.34</td>
+      <td>188</td>
+      <td>53.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90405" target="_blank" rel="noopener noreferrer"><img src="img/Outlaw_Stitcher.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Outlaw Stitcher.html" target="_blank" rel="noopener noreferrer">Outlaw Stitcher</a></td>
+      <td>4.85</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>40605</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>51.15</td>
+      <td>50.71</td>
+      <td>-0.44</td>
+      <td>280</td>
+      <td>53.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90496" target="_blank" rel="noopener noreferrer"><img src="img/Thunder_Salvo.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Thunder Salvo.html" target="_blank" rel="noopener noreferrer">Thunder Salvo</a></td>
+      <td>7.40</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>17028</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>49.85</td>
+      <td>49.37</td>
+      <td>-0.48</td>
+      <td>239</td>
+      <td>50.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90409" target="_blank" rel="noopener noreferrer"><img src="img/Razzle-Dazzler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Razzle-Dazzler.html" target="_blank" rel="noopener noreferrer">Razzle-Dazzler</a></td>
+      <td>10.16</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>50090</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>53.95</td>
+      <td>53.47</td>
+      <td>-0.48</td>
+      <td>331</td>
+      <td>58.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90531" target="_blank" rel="noopener noreferrer"><img src="img/Throw_from_the_Saddle.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Throw from the Saddle.html" target="_blank" rel="noopener noreferrer">Throw from the Saddle</a></td>
+      <td>3.96</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>20551</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>50.80</td>
+      <td>50.00</td>
+      <td>-0.80</td>
+      <td>156</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90422" target="_blank" rel="noopener noreferrer"><img src="img/Visage_Bandit.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Visage Bandit.html" target="_blank" rel="noopener noreferrer">Visage Bandit</a></td>
+      <td>6.85</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>42773</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>52.80</td>
+      <td>51.97</td>
+      <td>-0.83</td>
+      <td>304</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90504" target="_blank" rel="noopener noreferrer"><img src="img/Cactarantula.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cactarantula.html" target="_blank" rel="noopener noreferrer">Cactarantula</a></td>
+      <td>4.82</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>10795</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>51.75</td>
+      <td>50.75</td>
+      <td>-1.00</td>
+      <td>199</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90386" target="_blank" rel="noopener noreferrer"><img src="img/Canyon_Crab.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Canyon Crab.html" target="_blank" rel="noopener noreferrer">Canyon Crab</a></td>
+      <td>6.72</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>72583</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>51.35</td>
+      <td>50.34</td>
+      <td>-1.01</td>
+      <td>147</td>
+      <td>53.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90614" target="_blank" rel="noopener noreferrer"><img src="img/Botanical_Sanctum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Botanical Sanctum.html" target="_blank" rel="noopener noreferrer">Botanical Sanctum</a></td>
+      <td>5.81</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>73396</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>50.70</td>
+      <td>49.66</td>
+      <td>-1.04</td>
+      <td>147</td>
+      <td>52.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90617" target="_blank" rel="noopener noreferrer"><img src="img/Spirebluff_Canal.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Spirebluff Canal.html" target="_blank" rel="noopener noreferrer">Spirebluff Canal</a></td>
+      <td>6.27</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>47922</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>50.75</td>
+      <td>49.64</td>
+      <td>-1.11</td>
+      <td>139</td>
+      <td>52.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90523" target="_blank" rel="noopener noreferrer"><img src="img/Raucous_Entertainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Raucous Entertainer.html" target="_blank" rel="noopener noreferrer">Raucous Entertainer</a></td>
+      <td>5.47</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>45483</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>52.40</td>
+      <td>51.23</td>
+      <td>-1.17</td>
+      <td>447</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90514" target="_blank" rel="noopener noreferrer"><img src="img/Hardbristle_Bandit.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hardbristle Bandit.html" target="_blank" rel="noopener noreferrer">Hardbristle Bandit</a></td>
+      <td>4.54</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>42231</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>52.05</td>
+      <td>50.34</td>
+      <td>-1.71</td>
+      <td>292</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90502" target="_blank" rel="noopener noreferrer"><img src="img/Bristlepack_Sentry.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bristlepack Sentry.html" target="_blank" rel="noopener noreferrer">Bristlepack Sentry</a></td>
+      <td>7.81</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>19467</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>51.20</td>
+      <td>49.44</td>
+      <td>-1.76</td>
+      <td>269</td>
+      <td>53.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90418" target="_blank" rel="noopener noreferrer"><img src="img/Stop_Cold.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Stop Cold.html" target="_blank" rel="noopener noreferrer">Stop Cold</a></td>
+      <td>9.62</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>41418</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>51.55</td>
+      <td>49.53</td>
+      <td>-2.02</td>
+      <td>214</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90499" target="_blank" rel="noopener noreferrer"><img src="img/Ankle_Biter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ankle Biter.html" target="_blank" rel="noopener noreferrer">Ankle Biter</a></td>
+      <td>8.80</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>70686</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>52.55</td>
+      <td>50.35</td>
+      <td>-2.20</td>
+      <td>574</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90607" target="_blank" rel="noopener noreferrer"><img src="img/Lush_Oasis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lush Oasis.html" target="_blank" rel="noopener noreferrer">Lush Oasis</a></td>
+      <td>6.45</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>20009</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>51.70</td>
+      <td>49.35</td>
+      <td>-2.35</td>
+      <td>154</td>
+      <td>54.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90420" target="_blank" rel="noopener noreferrer"><img src="img/This_Town_Ain't_Big_Enough.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//This Town Ain't Big Enough.html" target="_blank" rel="noopener noreferrer">This Town Ain't Big Enough</a></td>
+      <td>7.26</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>68789</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>52.50</td>
+      <td>50.10</td>
+      <td>-2.40</td>
+      <td>493</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90600" target="_blank" rel="noopener noreferrer"><img src="img/Conduit_Pylons.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Conduit Pylons.html" target="_blank" rel="noopener noreferrer">Conduit Pylons</a></td>
+      <td>7.05</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>16757</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>52.95</td>
+      <td>50.38</td>
+      <td>-2.57</td>
+      <td>133</td>
+      <td>56.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90408" target="_blank" rel="noopener noreferrer"><img src="img/Plan_the_Heist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Plan the Heist.html" target="_blank" rel="noopener noreferrer">Plan the Heist</a></td>
+      <td>7.88</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>17299</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>51.25</td>
+      <td>48.65</td>
+      <td>-2.60</td>
+      <td>148</td>
+      <td>53.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90410" target="_blank" rel="noopener noreferrer"><img src="img/Seize_the_Secrets.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Seize the Secrets.html" target="_blank" rel="noopener noreferrer">Seize the Secrets</a></td>
+      <td>10.49</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>32746</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>51.40</td>
+      <td>48.80</td>
+      <td>-2.60</td>
+      <td>166</td>
+      <td>53.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90467" target="_blank" rel="noopener noreferrer"><img src="img/Discerning_Peddler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Discerning Peddler.html" target="_blank" rel="noopener noreferrer">Discerning Peddler</a></td>
+      <td>9.29</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>14860</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>51.65</td>
+      <td>48.91</td>
+      <td>-2.74</td>
+      <td>458</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90401" target="_blank" rel="noopener noreferrer"><img src="img/Loan_Shark.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Loan Shark.html" target="_blank" rel="noopener noreferrer">Loan Shark</a></td>
+      <td>7.98</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>43857</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>51.05</td>
+      <td>48.15</td>
+      <td>-2.90</td>
+      <td>243</td>
+      <td>53.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90508" target="_blank" rel="noopener noreferrer"><img src="img/Freestrider_Commando.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Freestrider Commando.html" target="_blank" rel="noopener noreferrer">Freestrider Commando</a></td>
+      <td>7.43</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>50361</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>53.60</td>
+      <td>50.61</td>
+      <td>-2.99</td>
+      <td>247</td>
+      <td>58.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90532" target="_blank" rel="noopener noreferrer"><img src="img/Trash_the_Town.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Trash the Town.html" target="_blank" rel="noopener noreferrer">Trash the Town</a></td>
+      <td>4.20</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>70957</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>51.85</td>
+      <td>48.76</td>
+      <td>-3.09</td>
+      <td>484</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90608" target="_blank" rel="noopener noreferrer"><img src="img/Mirage_Mesa.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mirage Mesa.html" target="_blank" rel="noopener noreferrer">Mirage Mesa</a></td>
+      <td>5.99</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>49006</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>53.10</td>
+      <td>49.78</td>
+      <td>-3.32</td>
+      <td>229</td>
+      <td>57.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90527" target="_blank" rel="noopener noreferrer"><img src="img/Snakeskin_Veil.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Snakeskin Veil.html" target="_blank" rel="noopener noreferrer">Snakeskin Veil</a></td>
+      <td>6.64</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>15673</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>51.50</td>
+      <td>48.08</td>
+      <td>-3.42</td>
+      <td>156</td>
+      <td>54.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90404" target="_blank" rel="noopener noreferrer"><img src="img/Nimble_Brigand.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nimble Brigand.html" target="_blank" rel="noopener noreferrer">Nimble Brigand</a></td>
+      <td>5.11</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>49548</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>53.15</td>
+      <td>49.70</td>
+      <td>-3.45</td>
+      <td>338</td>
+      <td>57.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90529" target="_blank" rel="noopener noreferrer"><img src="img/Spinewoods_Paladin.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Spinewoods Paladin.html" target="_blank" rel="noopener noreferrer">Spinewoods Paladin</a></td>
+      <td>4.92</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>43586</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>52.00</td>
+      <td>48.51</td>
+      <td>-3.49</td>
+      <td>134</td>
+      <td>55.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90507" target="_blank" rel="noopener noreferrer"><img src="img/Drover_Grizzly.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Drover Grizzly.html" target="_blank" rel="noopener noreferrer">Drover Grizzly</a></td>
+      <td>6.84</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>37082</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>51.75</td>
+      <td>48.13</td>
+      <td>-3.62</td>
+      <td>187</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90483" target="_blank" rel="noopener noreferrer"><img src="img/Prickly_Pair.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Prickly Pair.html" target="_blank" rel="noopener noreferrer">Prickly Pair</a></td>
+      <td>6.94</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>44670</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>52.35</td>
+      <td>48.62</td>
+      <td>-3.73</td>
+      <td>181</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90511" target="_blank" rel="noopener noreferrer"><img src="img/Giant_Beaver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Giant Beaver.html" target="_blank" rel="noopener noreferrer">Giant Beaver</a></td>
+      <td>5.48</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>69602</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>52.75</td>
+      <td>48.65</td>
+      <td>-4.10</td>
+      <td>148</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90603" target="_blank" rel="noopener noreferrer"><img src="img/Festering_Gulch.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Festering Gulch.html" target="_blank" rel="noopener noreferrer">Festering Gulch</a></td>
+      <td>5.84</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>67163</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>49.70</td>
+      <td>45.37</td>
+      <td>-4.33</td>
+      <td>205</td>
+      <td>50.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90594" target="_blank" rel="noopener noreferrer"><img src="img/Silver_Deputy.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Silver Deputy.html" target="_blank" rel="noopener noreferrer">Silver Deputy</a></td>
+      <td>10.08</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>35456</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>50.50</td>
+      <td>45.95</td>
+      <td>-4.55</td>
+      <td>111</td>
+      <td>52.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90477" target="_blank" rel="noopener noreferrer"><img src="img/Iron-Fist_Pulverizer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Iron-Fist Pulverizer.html" target="_blank" rel="noopener noreferrer">Iron-Fist Pulverizer</a></td>
+      <td>10.79</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>50903</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>51.90</td>
+      <td>47.33</td>
+      <td>-4.57</td>
+      <td>243</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90534" target="_blank" rel="noopener noreferrer"><img src="img/Voracious_Varmint.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Voracious Varmint.html" target="_blank" rel="noopener noreferrer">Voracious Varmint</a></td>
+      <td>7.59</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>32204</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>50.15</td>
+      <td>45.45</td>
+      <td>-4.70</td>
+      <td>143</td>
+      <td>51.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90465" target="_blank" rel="noopener noreferrer"><img src="img/Deadeye_Duelist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deadeye Duelist.html" target="_blank" rel="noopener noreferrer">Deadeye Duelist</a></td>
+      <td>8.41</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>54426</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>50.90</td>
+      <td>46.10</td>
+      <td>-4.80</td>
+      <td>269</td>
+      <td>52.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90547" target="_blank" rel="noopener noreferrer"><img src="img/Doc_Aurlock,_Grizzled_Genius.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Doc Aurlock, Grizzled Genius.html" target="_blank" rel="noopener noreferrer">Doc Aurlock, Grizzled Genius</a></td>
+      <td>7.96</td>
+      <td>UG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>71499</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>52.65</td>
+      <td>47.68</td>
+      <td>-4.97</td>
+      <td>151</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90610" target="_blank" rel="noopener noreferrer"><img src="img/Soured_Springs.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Soured Springs.html" target="_blank" rel="noopener noreferrer">Soured Springs</a></td>
+      <td>6.22</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>69060</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>52.55</td>
+      <td>47.56</td>
+      <td>-4.99</td>
+      <td>164</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90601" target="_blank" rel="noopener noreferrer"><img src="img/Creosote_Heath.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Creosote Heath.html" target="_blank" rel="noopener noreferrer">Creosote Heath</a></td>
+      <td>5.95</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>41147</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>53.25</td>
+      <td>48.08</td>
+      <td>-5.17</td>
+      <td>156</td>
+      <td>57.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90498" target="_blank" rel="noopener noreferrer"><img src="img/Aloe_Alchemist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Aloe Alchemist.html" target="_blank" rel="noopener noreferrer">Aloe Alchemist</a></td>
+      <td>3.51</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>58762</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>51.15</td>
+      <td>45.67</td>
+      <td>-5.48</td>
+      <td>127</td>
+      <td>53.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td>6.37</td>
+      <td>UR</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>34914</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>50.50</td>
+      <td>44.90</td>
+      <td>-5.60</td>
+      <td>147</td>
+      <td>52.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90475" target="_blank" rel="noopener noreferrer"><img src="img/Highway_Robbery.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Highway Robbery.html" target="_blank" rel="noopener noreferrer">Highway Robbery</a></td>
+      <td>10.66</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>70144</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>52.20</td>
+      <td>45.10</td>
+      <td>-7.10</td>
+      <td>153</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90605" target="_blank" rel="noopener noreferrer"><img src="img/Jagged_Barrens.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Jagged Barrens.html" target="_blank" rel="noopener noreferrer">Jagged Barrens</a></td>
+      <td>6.24</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>65537</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>50.80</td>
+      <td>43.48</td>
+      <td>-7.32</td>
+      <td>115</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90588" target="_blank" rel="noopener noreferrer"><img src="img/Gold_Pan.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Gold Pan.html" target="_blank" rel="noopener noreferrer">Gold Pan</a></td>
+      <td>10.95</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>45754</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>53.00</td>
+      <td>44.29</td>
+      <td>-8.71</td>
+      <td>140</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90515" target="_blank" rel="noopener noreferrer"><img src="img/Intrepid_Stablemaster.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Intrepid Stablemaster.html" target="_blank" rel="noopener noreferrer">Intrepid Stablemaster</a></td>
+      <td>3.63</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>12421</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>50.80</td>
+      <td>41.67</td>
+      <td>-9.13</td>
+      <td>108</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90392" target="_blank" rel="noopener noreferrer"><img src="img/Emergent_Haunting.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Emergent Haunting.html" target="_blank" rel="noopener noreferrer">Emergent Haunting</a></td>
+      <td>7.28</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>36540</th>
+      <td>rare</td>
+      <td>URG</td>
+      <td>8.15</td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.0</td>
+      <td>50.35</td>
+      <td>39.86</td>
+      <td>-10.49</td>
+      <td>138</td>
+      <td>51.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90481" target="_blank" rel="noopener noreferrer"><img src="img/Mine_Raider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mine Raider.html" target="_blank" rel="noopener noreferrer">Mine Raider</a></td>
+      <td>9.32</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+  </tbody>
+</table>

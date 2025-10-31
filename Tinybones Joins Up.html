@@ -1,0 +1,1192 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>15554</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>51.65</td>
+      <td>61.03</td>
+      <td>9.38</td>
+      <td>136</td>
+      <td>54.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90404" target="_blank" rel="noopener noreferrer"><img src="img/Nimble_Brigand.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nimble Brigand.html" target="_blank" rel="noopener noreferrer">Nimble Brigand</a></td>
+      <td>5.11</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>17180</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>51.40</td>
+      <td>55.91</td>
+      <td>4.51</td>
+      <td>186</td>
+      <td>53.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90410" target="_blank" rel="noopener noreferrer"><img src="img/Seize_the_Secrets.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Seize the Secrets.html" target="_blank" rel="noopener noreferrer">Seize the Secrets</a></td>
+      <td>10.49</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>25310</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.90</td>
+      <td>57.20</td>
+      <td>4.30</td>
+      <td>271</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90440" target="_blank" rel="noopener noreferrer"><img src="img/Mourner's_Surprise.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mourner's Surprise.html" target="_blank" rel="noopener noreferrer">Mourner's Surprise</a></td>
+      <td>8.03</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>58372</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.00</td>
+      <td>56.04</td>
+      <td>4.04</td>
+      <td>273</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90562" target="_blank" rel="noopener noreferrer"><img src="img/Lazav,_Familiar_Stranger.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lazav, Familiar Stranger.html" target="_blank" rel="noopener noreferrer">Lazav, Familiar Stranger</a></td>
+      <td>5.70</td>
+      <td>UB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>28291</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>53.05</td>
+      <td>57.07</td>
+      <td>4.02</td>
+      <td>191</td>
+      <td>56.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90451" target="_blank" rel="noopener noreferrer"><img src="img/Servant_of_the_Stinger.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Servant of the Stinger.html" target="_blank" rel="noopener noreferrer">Servant of the Stinger</a></td>
+      <td>4.64</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>19619</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.55</td>
+      <td>56.42</td>
+      <td>3.87</td>
+      <td>218</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90419" target="_blank" rel="noopener noreferrer"><img src="img/Take_the_Fall.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Take the Fall.html" target="_blank" rel="noopener noreferrer">Take the Fall</a></td>
+      <td>9.45</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>52139</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>49.95</td>
+      <td>53.68</td>
+      <td>3.73</td>
+      <td>136</td>
+      <td>50.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90539" target="_blank" rel="noopener noreferrer"><img src="img/At_Knifepoint.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//At Knifepoint.html" target="_blank" rel="noopener noreferrer">At Knifepoint</a></td>
+      <td>6.82</td>
+      <td>BR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>12573</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>51.40</td>
+      <td>54.84</td>
+      <td>3.44</td>
+      <td>124</td>
+      <td>53.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90393" target="_blank" rel="noopener noreferrer"><img src="img/Failed_Fording.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Failed Fording.html" target="_blank" rel="noopener noreferrer">Failed Fording</a></td>
+      <td>10.49</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>70838</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.00</td>
+      <td>55.25</td>
+      <td>3.25</td>
+      <td>219</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90608" target="_blank" rel="noopener noreferrer"><img src="img/Mirage_Mesa.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mirage Mesa.html" target="_blank" rel="noopener noreferrer">Mirage Mesa</a></td>
+      <td>5.99</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>16367</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>53.00</td>
+      <td>55.88</td>
+      <td>2.88</td>
+      <td>204</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90407" target="_blank" rel="noopener noreferrer"><img src="img/Phantom_Interference.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Phantom Interference.html" target="_blank" rel="noopener noreferrer">Phantom Interference</a></td>
+      <td>8.30</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27749</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.30</td>
+      <td>55.13</td>
+      <td>2.83</td>
+      <td>263</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90449" target="_blank" rel="noopener noreferrer"><img src="img/Rooftop_Assassin.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rooftop Assassin.html" target="_blank" rel="noopener noreferrer">Rooftop Assassin</a></td>
+      <td>8.45</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>23142</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>53.15</td>
+      <td>55.50</td>
+      <td>2.35</td>
+      <td>382</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90432" target="_blank" rel="noopener noreferrer"><img src="img/Desperate_Bloodseeker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Desperate Bloodseeker.html" target="_blank" rel="noopener noreferrer">Desperate Bloodseeker</a></td>
+      <td>6.27</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>24226</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>54.45</td>
+      <td>56.57</td>
+      <td>2.12</td>
+      <td>198</td>
+      <td>59.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90436" target="_blank" rel="noopener noreferrer"><img src="img/Hollow_Marauder.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hollow Marauder.html" target="_blank" rel="noopener noreferrer">Hollow Marauder</a></td>
+      <td>3.46</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>23413</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.30</td>
+      <td>54.41</td>
+      <td>2.11</td>
+      <td>136</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90433" target="_blank" rel="noopener noreferrer"><img src="img/Fake_Your_Own_Death.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fake Your Own Death.html" target="_blank" rel="noopener noreferrer">Fake Your Own Death</a></td>
+      <td>10.33</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>19348</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>51.35</td>
+      <td>53.44</td>
+      <td>2.09</td>
+      <td>131</td>
+      <td>53.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90418" target="_blank" rel="noopener noreferrer"><img src="img/Stop_Cold.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Stop Cold.html" target="_blank" rel="noopener noreferrer">Stop Cold</a></td>
+      <td>9.62</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>59456</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>51.75</td>
+      <td>53.70</td>
+      <td>1.95</td>
+      <td>108</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90566" target="_blank" rel="noopener noreferrer"><img src="img/Marchesa,_Dealer_of_Death.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Marchesa, Dealer of Death.html" target="_blank" rel="noopener noreferrer">Marchesa, Dealer of Death</a></td>
+      <td>4.06</td>
+      <td>UBR</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>69212</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.05</td>
+      <td>53.93</td>
+      <td>1.88</td>
+      <td>191</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90602" target="_blank" rel="noopener noreferrer"><img src="img/Eroded_Canyon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eroded Canyon.html" target="_blank" rel="noopener noreferrer">Eroded Canyon</a></td>
+      <td>7.18</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>30730</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>53.55</td>
+      <td>55.36</td>
+      <td>1.81</td>
+      <td>336</td>
+      <td>57.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90460" target="_blank" rel="noopener noreferrer"><img src="img/Vault_Plunderer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vault Plunderer.html" target="_blank" rel="noopener noreferrer">Vault Plunderer</a></td>
+      <td>5.40</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>70296</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.10</td>
+      <td>53.91</td>
+      <td>1.81</td>
+      <td>115</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90606" target="_blank" rel="noopener noreferrer"><img src="img/Lonely_Arroyo.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lonely Arroyo.html" target="_blank" rel="noopener noreferrer">Lonely Arroyo</a></td>
+      <td>7.28</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>13928</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>50.90</td>
+      <td>52.59</td>
+      <td>1.69</td>
+      <td>116</td>
+      <td>52.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90398" target="_blank" rel="noopener noreferrer"><img src="img/Harrier_Strix.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Harrier Strix.html" target="_blank" rel="noopener noreferrer">Harrier Strix</a></td>
+      <td>11.06</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>26936</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>51.95</td>
+      <td>53.63</td>
+      <td>1.68</td>
+      <td>179</td>
+      <td>54.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90446" target="_blank" rel="noopener noreferrer"><img src="img/Rattleback_Apothecary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rattleback Apothecary.html" target="_blank" rel="noopener noreferrer">Rattleback Apothecary</a></td>
+      <td>5.06</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>27207</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>51.75</td>
+      <td>53.06</td>
+      <td>1.31</td>
+      <td>441</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90447" target="_blank" rel="noopener noreferrer"><img src="img/Raven_of_Fell_Omens.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Raven of Fell Omens.html" target="_blank" rel="noopener noreferrer">Raven of Fell Omens</a></td>
+      <td>7.26</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>22329</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>53.60</td>
+      <td>54.81</td>
+      <td>1.21</td>
+      <td>343</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90429" target="_blank" rel="noopener noreferrer"><img src="img/Consuming_Ashes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Consuming Ashes.html" target="_blank" rel="noopener noreferrer">Consuming Ashes</a></td>
+      <td>4.32</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>25039</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.90</td>
+      <td>53.85</td>
+      <td>0.95</td>
+      <td>143</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90439" target="_blank" rel="noopener noreferrer"><img src="img/Lively_Dirge.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lively Dirge.html" target="_blank" rel="noopener noreferrer">Lively Dirge</a></td>
+      <td>7.07</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>11218</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>50.95</td>
+      <td>51.80</td>
+      <td>0.85</td>
+      <td>139</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90388" target="_blank" rel="noopener noreferrer"><img src="img/Deepmuck_Desperado.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deepmuck Desperado.html" target="_blank" rel="noopener noreferrer">Deepmuck Desperado</a></td>
+      <td>6.52</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>18535</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>49.75</td>
+      <td>50.50</td>
+      <td>0.75</td>
+      <td>101</td>
+      <td>50.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90415" target="_blank" rel="noopener noreferrer"><img src="img/Spring_Splasher.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Spring Splasher.html" target="_blank" rel="noopener noreferrer">Spring Splasher</a></td>
+      <td>10.92</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27478</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.05</td>
+      <td>52.67</td>
+      <td>0.62</td>
+      <td>131</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90448" target="_blank" rel="noopener noreferrer"><img src="img/Rictus_Robber.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rictus Robber.html" target="_blank" rel="noopener noreferrer">Rictus Robber</a></td>
+      <td>5.14</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>56204</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.05</td>
+      <td>51.82</td>
+      <td>-0.23</td>
+      <td>220</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90554" target="_blank" rel="noopener noreferrer"><img src="img/Intimidation_Campaign.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Intimidation Campaign.html" target="_blank" rel="noopener noreferrer">Intimidation Campaign</a></td>
+      <td>5.70</td>
+      <td>UB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>14741</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>51.80</td>
+      <td>51.54</td>
+      <td>-0.26</td>
+      <td>130</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90401" target="_blank" rel="noopener noreferrer"><img src="img/Loan_Shark.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Loan Shark.html" target="_blank" rel="noopener noreferrer">Loan Shark</a></td>
+      <td>7.98</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>29917</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>53.30</td>
+      <td>52.80</td>
+      <td>-0.50</td>
+      <td>161</td>
+      <td>57.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90457" target="_blank" rel="noopener noreferrer"><img src="img/Unfortunate_Accident.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Unfortunate Accident.html" target="_blank" rel="noopener noreferrer">Unfortunate Accident</a></td>
+      <td>3.63</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>70567</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.70</td>
+      <td>52.17</td>
+      <td>-0.53</td>
+      <td>115</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90607" target="_blank" rel="noopener noreferrer"><img src="img/Lush_Oasis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lush Oasis.html" target="_blank" rel="noopener noreferrer">Lush Oasis</a></td>
+      <td>6.45</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>55933</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>53.85</td>
+      <td>53.27</td>
+      <td>-0.58</td>
+      <td>107</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90553" target="_blank" rel="noopener noreferrer"><img src="img/Honest_Rutstein.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Honest Rutstein.html" target="_blank" rel="noopener noreferrer">Honest Rutstein</a></td>
+      <td>3.57</td>
+      <td>BG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>32085</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>50.30</td>
+      <td>49.69</td>
+      <td>-0.61</td>
+      <td>163</td>
+      <td>51.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90465" target="_blank" rel="noopener noreferrer"><img src="img/Deadeye_Duelist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deadeye Duelist.html" target="_blank" rel="noopener noreferrer">Deadeye Duelist</a></td>
+      <td>8.41</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>71380</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.80</td>
+      <td>51.96</td>
+      <td>-0.84</td>
+      <td>281</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90610" target="_blank" rel="noopener noreferrer"><img src="img/Soured_Springs.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Soured Springs.html" target="_blank" rel="noopener noreferrer">Soured Springs</a></td>
+      <td>6.22</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>29104</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>49.30</td>
+      <td>48.36</td>
+      <td>-0.94</td>
+      <td>1977</td>
+      <td>49.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td>8.29</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>22871</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>53.45</td>
+      <td>52.28</td>
+      <td>-1.17</td>
+      <td>394</td>
+      <td>57.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90431" target="_blank" rel="noopener noreferrer"><img src="img/Desert's_Due.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Desert's Due.html" target="_blank" rel="noopener noreferrer">Desert's Due</a></td>
+      <td>4.76</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>24768</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>50.65</td>
+      <td>48.84</td>
+      <td>-1.81</td>
+      <td>129</td>
+      <td>52.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90438" target="_blank" rel="noopener noreferrer"><img src="img/Kaervek,_the_Punisher.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kaervek, the Punisher.html" target="_blank" rel="noopener noreferrer">Kaervek, the Punisher</a></td>
+      <td>2.50</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>28833</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>51.20</td>
+      <td>49.38</td>
+      <td>-1.82</td>
+      <td>241</td>
+      <td>53.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90453" target="_blank" rel="noopener noreferrer"><img src="img/Skulduggery.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Skulduggery.html" target="_blank" rel="noopener noreferrer">Skulduggery</a></td>
+      <td>9.18</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>30459</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>53.60</td>
+      <td>51.52</td>
+      <td>-2.08</td>
+      <td>132</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90459" target="_blank" rel="noopener noreferrer"><img src="img/Vadmir,_New_Blood.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vadmir, New Blood.html" target="_blank" rel="noopener noreferrer">Vadmir, New Blood</a></td>
+      <td>1.84</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>70025</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.35</td>
+      <td>50.00</td>
+      <td>-2.35</td>
+      <td>310</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90605" target="_blank" rel="noopener noreferrer"><img src="img/Jagged_Barrens.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Jagged Barrens.html" target="_blank" rel="noopener noreferrer">Jagged Barrens</a></td>
+      <td>6.24</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>28562</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>53.55</td>
+      <td>50.93</td>
+      <td>-2.62</td>
+      <td>161</td>
+      <td>57.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90452" target="_blank" rel="noopener noreferrer"><img src="img/Shoot_the_Sheriff.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shoot the Sheriff.html" target="_blank" rel="noopener noreferrer">Shoot the Sheriff</a></td>
+      <td>3.53</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>69754</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.65</td>
+      <td>50.00</td>
+      <td>-2.65</td>
+      <td>184</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90604" target="_blank" rel="noopener noreferrer"><img src="img/Forlorn_Flats.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Forlorn Flats.html" target="_blank" rel="noopener noreferrer">Forlorn Flats</a></td>
+      <td>6.63</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>68670</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.65</td>
+      <td>50.00</td>
+      <td>-2.65</td>
+      <td>232</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90600" target="_blank" rel="noopener noreferrer"><img src="img/Conduit_Pylons.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Conduit Pylons.html" target="_blank" rel="noopener noreferrer">Conduit Pylons</a></td>
+      <td>7.05</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>20703</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>53.00</td>
+      <td>50.21</td>
+      <td>-2.79</td>
+      <td>237</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90423" target="_blank" rel="noopener noreferrer"><img src="img/Ambush_Gigapede.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ambush Gigapede.html" target="_blank" rel="noopener noreferrer">Ambush Gigapede</a></td>
+      <td>8.85</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>14199</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.70</td>
+      <td>49.62</td>
+      <td>-3.08</td>
+      <td>131</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90399" target="_blank" rel="noopener noreferrer"><img src="img/Jailbreak_Scheme.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Jailbreak Scheme.html" target="_blank" rel="noopener noreferrer">Jailbreak Scheme</a></td>
+      <td>9.98</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>30188</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>51.90</td>
+      <td>48.70</td>
+      <td>-3.20</td>
+      <td>115</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90458" target="_blank" rel="noopener noreferrer"><img src="img/Unscrupulous_Contractor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Unscrupulous Contractor.html" target="_blank" rel="noopener noreferrer">Unscrupulous Contractor</a></td>
+      <td>5.89</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>67044</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>49.85</td>
+      <td>46.61</td>
+      <td>-3.24</td>
+      <td>118</td>
+      <td>50.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90594" target="_blank" rel="noopener noreferrer"><img src="img/Silver_Deputy.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Silver Deputy.html" target="_blank" rel="noopener noreferrer">Silver Deputy</a></td>
+      <td>10.08</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>23684</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>51.85</td>
+      <td>48.50</td>
+      <td>-3.35</td>
+      <td>167</td>
+      <td>54.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90434" target="_blank" rel="noopener noreferrer"><img src="img/Forsaken_Miner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Forsaken Miner.html" target="_blank" rel="noopener noreferrer">Forsaken Miner</a></td>
+      <td>6.28</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>21516</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.65</td>
+      <td>49.21</td>
+      <td>-3.44</td>
+      <td>191</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90426" target="_blank" rel="noopener noreferrer"><img src="img/Blood_Hustler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Blood Hustler.html" target="_blank" rel="noopener noreferrer">Blood Hustler</a></td>
+      <td>3.32</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>21787</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>50.20</td>
+      <td>46.36</td>
+      <td>-3.84</td>
+      <td>110</td>
+      <td>51.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90427" target="_blank" rel="noopener noreferrer"><img src="img/Boneyard_Desecrator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Boneyard Desecrator.html" target="_blank" rel="noopener noreferrer">Boneyard Desecrator</a></td>
+      <td>10.70</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>69483</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.90</td>
+      <td>48.41</td>
+      <td>-4.49</td>
+      <td>157</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90603" target="_blank" rel="noopener noreferrer"><img src="img/Festering_Gulch.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Festering Gulch.html" target="_blank" rel="noopener noreferrer">Festering Gulch</a></td>
+      <td>5.84</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>20974</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.10</td>
+      <td>46.85</td>
+      <td>-5.25</td>
+      <td>143</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90424" target="_blank" rel="noopener noreferrer"><img src="img/Binding_Negotiation.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Binding Negotiation.html" target="_blank" rel="noopener noreferrer">Binding Negotiation</a></td>
+      <td>8.02</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>64876</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>51.80</td>
+      <td>46.21</td>
+      <td>-5.59</td>
+      <td>132</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90586" target="_blank" rel="noopener noreferrer"><img src="img/Bandit's_Haul.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bandit's Haul.html" target="_blank" rel="noopener noreferrer">Bandit's Haul</a></td>
+      <td>7.13</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>36963</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>51.90</td>
+      <td>46.09</td>
+      <td>-5.81</td>
+      <td>115</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90483" target="_blank" rel="noopener noreferrer"><img src="img/Prickly_Pair.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Prickly Pair.html" target="_blank" rel="noopener noreferrer">Prickly Pair</a></td>
+      <td>6.94</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>21245</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>49.95</td>
+      <td>44.04</td>
+      <td>-5.91</td>
+      <td>109</td>
+      <td>50.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90425" target="_blank" rel="noopener noreferrer"><img src="img/Blacksnag_Buzzard.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Blacksnag Buzzard.html" target="_blank" rel="noopener noreferrer">Blacksnag Buzzard</a></td>
+      <td>10.38</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>25852</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.35</td>
+      <td>46.24</td>
+      <td>-6.11</td>
+      <td>173</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90442" target="_blank" rel="noopener noreferrer"><img src="img/Nezumi_Linkbreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nezumi Linkbreaker.html" target="_blank" rel="noopener noreferrer">Nezumi Linkbreaker</a></td>
+      <td>9.89</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>32627</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>51.55</td>
+      <td>44.80</td>
+      <td>-6.75</td>
+      <td>125</td>
+      <td>53.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90467" target="_blank" rel="noopener noreferrer"><img src="img/Discerning_Peddler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Discerning Peddler.html" target="_blank" rel="noopener noreferrer">Discerning Peddler</a></td>
+      <td>9.29</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>29646</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>51.30</td>
+      <td>40.30</td>
+      <td>-11.00</td>
+      <td>134</td>
+      <td>53.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90456" target="_blank" rel="noopener noreferrer"><img src="img/Treasure_Dredger.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Treasure Dredger.html" target="_blank" rel="noopener noreferrer">Treasure Dredger</a></td>
+      <td>6.42</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>63521</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>8.29</td>
+      <td><a href=".//Tinybones Joins Up.html" target="_blank" rel="noopener noreferrer">Tinybones Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90454" target="_blank" rel="noopener noreferrer"><img src="img/Tinybones_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>51.80</td>
+      <td>39.29</td>
+      <td>-12.51</td>
+      <td>140</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90581" target="_blank" rel="noopener noreferrer"><img src="img/Vial_Smasher,_Gleeful_Grenadier.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vial Smasher, Gleeful Grenadier.html" target="_blank" rel="noopener noreferrer">Vial Smasher, Gleeful Grenadier</a></td>
+      <td>6.00</td>
+      <td>BR</td>
+      <td>uncommon</td>
+    </tr>
+  </tbody>
+</table>

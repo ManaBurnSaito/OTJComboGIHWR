@@ -1,0 +1,147 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>5962</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.62</td>
+      <td><a href=".//Another Round.html" target="_blank" rel="noopener noreferrer">Another Round</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90347" target="_blank" rel="noopener noreferrer"><img src="img/Another_Round.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>41.6</td>
+      <td>48.50</td>
+      <td>51.43</td>
+      <td>2.93</td>
+      <td>105</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90369" target="_blank" rel="noopener noreferrer"><img src="img/Outlaw_Medic.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Outlaw Medic.html" target="_blank" rel="noopener noreferrer">Outlaw Medic</a></td>
+      <td>8.54</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.62</td>
+      <td><a href=".//Another Round.html" target="_blank" rel="noopener noreferrer">Another Round</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90347" target="_blank" rel="noopener noreferrer"><img src="img/Another_Round.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>41.6</td>
+      <td>41.60</td>
+      <td>40.33</td>
+      <td>-1.27</td>
+      <td>662</td>
+      <td>41.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90347" target="_blank" rel="noopener noreferrer"><img src="img/Another_Round.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Another Round.html" target="_blank" rel="noopener noreferrer">Another Round</a></td>
+      <td>9.62</td>
+      <td>W</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>4065</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.62</td>
+      <td><a href=".//Another Round.html" target="_blank" rel="noopener noreferrer">Another Round</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90347" target="_blank" rel="noopener noreferrer"><img src="img/Another_Round.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>41.6</td>
+      <td>49.30</td>
+      <td>42.86</td>
+      <td>-6.44</td>
+      <td>147</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90362" target="_blank" rel="noopener noreferrer"><img src="img/Holy_Cow.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Holy Cow.html" target="_blank" rel="noopener noreferrer">Holy Cow</a></td>
+      <td>6.62</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>4878</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.62</td>
+      <td><a href=".//Another Round.html" target="_blank" rel="noopener noreferrer">Another Round</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90347" target="_blank" rel="noopener noreferrer"><img src="img/Another_Round.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>41.6</td>
+      <td>49.25</td>
+      <td>38.94</td>
+      <td>-10.31</td>
+      <td>113</td>
+      <td>56.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90365" target="_blank" rel="noopener noreferrer"><img src="img/Mystical_Tether.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mystical Tether.html" target="_blank" rel="noopener noreferrer">Mystical Tether</a></td>
+      <td>4.31</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+  </tbody>
+</table>

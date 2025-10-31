@@ -1,0 +1,3586 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>55576</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>57.10</td>
+      <td>67.41</td>
+      <td>10.31</td>
+      <td>135</td>
+      <td>59.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90552" target="_blank" rel="noopener noreferrer"><img src="img/The_Gitrog,_Ravenous_Ride.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//The Gitrog, Ravenous Ride.html" target="_blank" rel="noopener noreferrer">The Gitrog, Ravenous Ride</a></td>
+      <td>1.50</td>
+      <td>BG</td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>61538</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>59.20</td>
+      <td>68.48</td>
+      <td>9.28</td>
+      <td>184</td>
+      <td>64.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90574" target="_blank" rel="noopener noreferrer"><img src="img/Roxanne,_Starfall_Savant.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Roxanne, Starfall Savant.html" target="_blank" rel="noopener noreferrer">Roxanne, Starfall Savant</a></td>
+      <td>1.63</td>
+      <td>RG</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>21972</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>56.65</td>
+      <td>63.82</td>
+      <td>7.17</td>
+      <td>199</td>
+      <td>59.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90428" target="_blank" rel="noopener noreferrer"><img src="img/Caustic_Bronco.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Caustic Bronco.html" target="_blank" rel="noopener noreferrer">Caustic Bronco</a></td>
+      <td>1.88</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>72649</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.30</td>
+      <td>61.46</td>
+      <td>7.16</td>
+      <td>192</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90615" target="_blank" rel="noopener noreferrer"><img src="img/Concealed_Courtyard.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Concealed Courtyard.html" target="_blank" rel="noopener noreferrer">Concealed Courtyard</a></td>
+      <td>5.95</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>51240</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>56.90</td>
+      <td>63.98</td>
+      <td>7.08</td>
+      <td>186</td>
+      <td>59.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90536" target="_blank" rel="noopener noreferrer"><img src="img/Annie_Flash,_the_Veteran.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Annie Flash, the Veteran.html" target="_blank" rel="noopener noreferrer">Annie Flash, the Veteran</a></td>
+      <td>2.23</td>
+      <td>WRG</td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>52866</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>60.35</td>
+      <td>66.50</td>
+      <td>6.15</td>
+      <td>197</td>
+      <td>66.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90542" target="_blank" rel="noopener noreferrer"><img src="img/Bonny_Pall,_Clearcutter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bonny Pall, Clearcutter.html" target="_blank" rel="noopener noreferrer">Bonny Pall, Clearcutter</a></td>
+      <td>1.58</td>
+      <td>UG</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>6525</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>56.05</td>
+      <td>62.13</td>
+      <td>6.08</td>
+      <td>993</td>
+      <td>57.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90371" target="_blank" rel="noopener noreferrer"><img src="img/Prosperity_Tycoon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Prosperity Tycoon.html" target="_blank" rel="noopener noreferrer">Prosperity Tycoon</a></td>
+      <td>4.98</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>28205</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.55</td>
+      <td>61.18</td>
+      <td>5.63</td>
+      <td>152</td>
+      <td>56.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90451" target="_blank" rel="noopener noreferrer"><img src="img/Servant_of_the_Stinger.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Servant of the Stinger.html" target="_blank" rel="noopener noreferrer">Servant of the Stinger</a></td>
+      <td>4.64</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>68042</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>52.80</td>
+      <td>58.23</td>
+      <td>5.43</td>
+      <td>328</td>
+      <td>51.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90598" target="_blank" rel="noopener noreferrer"><img src="img/Arid_Archway.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Arid Archway.html" target="_blank" rel="noopener noreferrer">Arid Archway</a></td>
+      <td>8.89</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>53950</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>56.10</td>
+      <td>61.32</td>
+      <td>5.22</td>
+      <td>1378</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90546" target="_blank" rel="noopener noreferrer"><img src="img/Congregation_Gryff.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Congregation Gryff.html" target="_blank" rel="noopener noreferrer">Congregation Gryff</a></td>
+      <td>4.06</td>
+      <td>WG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>20346</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>53.45</td>
+      <td>58.65</td>
+      <td>5.20</td>
+      <td>104</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90422" target="_blank" rel="noopener noreferrer"><img src="img/Visage_Bandit.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Visage Bandit.html" target="_blank" rel="noopener noreferrer">Visage Bandit</a></td>
+      <td>6.85</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>49072</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>57.40</td>
+      <td>62.45</td>
+      <td>5.05</td>
+      <td>751</td>
+      <td>60.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90528" target="_blank" rel="noopener noreferrer"><img src="img/Spinewoods_Armadillo.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Spinewoods Armadillo.html" target="_blank" rel="noopener noreferrer">Spinewoods Armadillo</a></td>
+      <td>2.57</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>64519</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>57.05</td>
+      <td>62.03</td>
+      <td>4.98</td>
+      <td>632</td>
+      <td>59.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90585" target="_blank" rel="noopener noreferrer"><img src="img/Wylie_Duke,_Atiin_Hero.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wylie Duke, Atiin Hero.html" target="_blank" rel="noopener noreferrer">Wylie Duke, Atiin Hero</a></td>
+      <td>2.45</td>
+      <td>WG</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>30102</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.40</td>
+      <td>59.30</td>
+      <td>4.90</td>
+      <td>172</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90458" target="_blank" rel="noopener noreferrer"><img src="img/Unscrupulous_Contractor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Unscrupulous Contractor.html" target="_blank" rel="noopener noreferrer">Unscrupulous Contractor</a></td>
+      <td>5.89</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>14926</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>56.10</td>
+      <td>60.98</td>
+      <td>4.88</td>
+      <td>123</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90402" target="_blank" rel="noopener noreferrer"><img src="img/Marauding_Sphinx.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Marauding Sphinx.html" target="_blank" rel="noopener noreferrer">Marauding Sphinx</a></td>
+      <td>3.99</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>14655</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.30</td>
+      <td>59.11</td>
+      <td>4.81</td>
+      <td>247</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90401" target="_blank" rel="noopener noreferrer"><img src="img/Loan_Shark.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Loan Shark.html" target="_blank" rel="noopener noreferrer">Loan Shark</a></td>
+      <td>7.98</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>34709</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>53.15</td>
+      <td>57.82</td>
+      <td>4.67</td>
+      <td>147</td>
+      <td>52.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90475" target="_blank" rel="noopener noreferrer"><img src="img/Highway_Robbery.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Highway Robbery.html" target="_blank" rel="noopener noreferrer">Highway Robbery</a></td>
+      <td>10.66</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>58828</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.05</td>
+      <td>59.57</td>
+      <td>4.52</td>
+      <td>230</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90564" target="_blank" rel="noopener noreferrer"><img src="img/Make_Your_Own_Luck.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Make Your Own Luck.html" target="_blank" rel="noopener noreferrer">Make Your Own Luck</a></td>
+      <td>6.36</td>
+      <td>UG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>31186</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.90</td>
+      <td>59.18</td>
+      <td>4.28</td>
+      <td>147</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90462" target="_blank" rel="noopener noreferrer"><img src="img/Calamity,_Galloping_Inferno.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Calamity, Galloping Inferno.html" target="_blank" rel="noopener noreferrer">Calamity, Galloping Inferno</a></td>
+      <td>1.65</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>46904</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.50</td>
+      <td>59.64</td>
+      <td>4.14</td>
+      <td>1323</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90520" target="_blank" rel="noopener noreferrer"><img src="img/Patient_Naturalist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Patient Naturalist.html" target="_blank" rel="noopener noreferrer">Patient Naturalist</a></td>
+      <td>6.04</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>4628</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>57.70</td>
+      <td>61.61</td>
+      <td>3.91</td>
+      <td>1055</td>
+      <td>61.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90364" target="_blank" rel="noopener noreferrer"><img src="img/Lassoed_by_the_Law.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lassoed by the Law.html" target="_blank" rel="noopener noreferrer">Lassoed by the Law</a></td>
+      <td>2.76</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>52324</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.30</td>
+      <td>59.11</td>
+      <td>3.81</td>
+      <td>247</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90540" target="_blank" rel="noopener noreferrer"><img src="img/Badlands_Revival.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Badlands Revival.html" target="_blank" rel="noopener noreferrer">Badlands Revival</a></td>
+      <td>5.16</td>
+      <td>BG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>25766</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.85</td>
+      <td>58.65</td>
+      <td>3.80</td>
+      <td>266</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90442" target="_blank" rel="noopener noreferrer"><img src="img/Nezumi_Linkbreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nezumi Linkbreaker.html" target="_blank" rel="noopener noreferrer">Nezumi Linkbreaker</a></td>
+      <td>9.89</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>2731</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>57.50</td>
+      <td>61.26</td>
+      <td>3.76</td>
+      <td>222</td>
+      <td>60.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90357" target="_blank" rel="noopener noreferrer"><img src="img/Final_Showdown.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Final Showdown.html" target="_blank" rel="noopener noreferrer">Final Showdown</a></td>
+      <td>1.73</td>
+      <td>W</td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>40671</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>53.15</td>
+      <td>56.90</td>
+      <td>3.75</td>
+      <td>116</td>
+      <td>52.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90497" target="_blank" rel="noopener noreferrer"><img src="img/Trick_Shot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Trick Shot.html" target="_blank" rel="noopener noreferrer">Trick Shot</a></td>
+      <td>10.74</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>62622</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>58.50</td>
+      <td>62.23</td>
+      <td>3.73</td>
+      <td>699</td>
+      <td>62.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90578" target="_blank" rel="noopener noreferrer"><img src="img/Seraphic_Steed.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Seraphic Steed.html" target="_blank" rel="noopener noreferrer">Seraphic Steed</a></td>
+      <td>2.05</td>
+      <td>WG</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>46362</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>57.80</td>
+      <td>61.51</td>
+      <td>3.71</td>
+      <td>717</td>
+      <td>61.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90518" target="_blank" rel="noopener noreferrer"><img src="img/Outcaster_Greenblade.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Outcaster Greenblade.html" target="_blank" rel="noopener noreferrer">Outcaster Greenblade</a></td>
+      <td>2.69</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>45820</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>52.20</td>
+      <td>55.86</td>
+      <td>3.66</td>
+      <td>111</td>
+      <td>50.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90516" target="_blank" rel="noopener noreferrer"><img src="img/Map_the_Frontier.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Map the Frontier.html" target="_blank" rel="noopener noreferrer">Map the Frontier</a></td>
+      <td>9.67</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>68584</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.15</td>
+      <td>58.79</td>
+      <td>3.64</td>
+      <td>1434</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90600" target="_blank" rel="noopener noreferrer"><img src="img/Conduit_Pylons.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Conduit Pylons.html" target="_blank" rel="noopener noreferrer">Conduit Pylons</a></td>
+      <td>7.05</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>7338</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>56.75</td>
+      <td>60.28</td>
+      <td>3.53</td>
+      <td>1055</td>
+      <td>59.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90374" target="_blank" rel="noopener noreferrer"><img src="img/Shepherd_of_the_Clouds.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shepherd of the Clouds.html" target="_blank" rel="noopener noreferrer">Shepherd of the Clouds</a></td>
+      <td>2.97</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>3002</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>56.05</td>
+      <td>59.55</td>
+      <td>3.50</td>
+      <td>534</td>
+      <td>57.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90358" target="_blank" rel="noopener noreferrer"><img src="img/Fortune,_Loyal_Steed.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fortune, Loyal Steed.html" target="_blank" rel="noopener noreferrer">Fortune, Loyal Steed</a></td>
+      <td>2.12</td>
+      <td>W</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>44194</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.10</td>
+      <td>57.59</td>
+      <td>3.49</td>
+      <td>191</td>
+      <td>53.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90510" target="_blank" rel="noopener noreferrer"><img src="img/Full_Steam_Ahead.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Full Steam Ahead.html" target="_blank" rel="noopener noreferrer">Full Steam Ahead</a></td>
+      <td>9.57</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>39587</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>56.70</td>
+      <td>60.17</td>
+      <td>3.47</td>
+      <td>118</td>
+      <td>59.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90493" target="_blank" rel="noopener noreferrer"><img src="img/Stingerback_Terror.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Stingerback Terror.html" target="_blank" rel="noopener noreferrer">Stingerback Terror</a></td>
+      <td>1.70</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>3273</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>56.00</td>
+      <td>59.43</td>
+      <td>3.43</td>
+      <td>1326</td>
+      <td>57.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90359" target="_blank" rel="noopener noreferrer"><img src="img/Frontier_Seeker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Frontier Seeker.html" target="_blank" rel="noopener noreferrer">Frontier Seeker</a></td>
+      <td>4.62</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>49885</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>56.60</td>
+      <td>59.90</td>
+      <td>3.30</td>
+      <td>1803</td>
+      <td>58.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90531" target="_blank" rel="noopener noreferrer"><img src="img/Throw_from_the_Saddle.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Throw from the Saddle.html" target="_blank" rel="noopener noreferrer">Throw from the Saddle</a></td>
+      <td>3.96</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>42839</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>57.60</td>
+      <td>60.85</td>
+      <td>3.25</td>
+      <td>281</td>
+      <td>60.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90505" target="_blank" rel="noopener noreferrer"><img src="img/Colossal_Rattlewurm.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Colossal Rattlewurm.html" target="_blank" rel="noopener noreferrer">Colossal Rattlewurm</a></td>
+      <td>1.49</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>54763</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.15</td>
+      <td>58.31</td>
+      <td>3.16</td>
+      <td>391</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90549" target="_blank" rel="noopener noreferrer"><img src="img/Ertha_Jo,_Frontier_Mentor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ertha Jo, Frontier Mentor.html" target="_blank" rel="noopener noreferrer">Ertha Jo, Frontier Mentor</a></td>
+      <td>6.25</td>
+      <td>WR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>33354</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>53.90</td>
+      <td>57.02</td>
+      <td>3.12</td>
+      <td>242</td>
+      <td>53.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90470" target="_blank" rel="noopener noreferrer"><img src="img/Gila_Courser.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Gila Courser.html" target="_blank" rel="noopener noreferrer">Gila Courser</a></td>
+      <td>5.90</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>8964</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.90</td>
+      <td>58.99</td>
+      <td>3.09</td>
+      <td>2136</td>
+      <td>57.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90380" target="_blank" rel="noopener noreferrer"><img src="img/Take_Up_the_Shield.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Take Up the Shield.html" target="_blank" rel="noopener noreferrer">Take Up the Shield</a></td>
+      <td>7.41</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>2189</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>57.75</td>
+      <td>60.71</td>
+      <td>2.96</td>
+      <td>425</td>
+      <td>61.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90355" target="_blank" rel="noopener noreferrer"><img src="img/Dust_Animus.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Dust Animus.html" target="_blank" rel="noopener noreferrer">Dust Animus</a></td>
+      <td>1.49</td>
+      <td>W</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>11403</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>52.20</td>
+      <td>55.12</td>
+      <td>2.92</td>
+      <td>127</td>
+      <td>50.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90389" target="_blank" rel="noopener noreferrer"><img src="img/Djinn_of_Fool's_Fall.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Djinn of Fool's Fall.html" target="_blank" rel="noopener noreferrer">Djinn of Fool's Fall</a></td>
+      <td>10.85</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>47446</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.50</td>
+      <td>57.18</td>
+      <td>2.68</td>
+      <td>766</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90522" target="_blank" rel="noopener noreferrer"><img src="img/Rambling_Possum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rambling Possum.html" target="_blank" rel="noopener noreferrer">Rambling Possum</a></td>
+      <td>4.69</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>6254</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.65</td>
+      <td>58.25</td>
+      <td>2.60</td>
+      <td>927</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90370" target="_blank" rel="noopener noreferrer"><img src="img/Prairie_Dog.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Prairie Dog.html" target="_blank" rel="noopener noreferrer">Prairie Dog</a></td>
+      <td>3.60</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>50156</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>56.25</td>
+      <td>58.82</td>
+      <td>2.57</td>
+      <td>646</td>
+      <td>58.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90532" target="_blank" rel="noopener noreferrer"><img src="img/Trash_the_Town.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Trash the Town.html" target="_blank" rel="noopener noreferrer">Trash the Town</a></td>
+      <td>4.20</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>47988</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.90</td>
+      <td>57.45</td>
+      <td>2.55</td>
+      <td>517</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90524" target="_blank" rel="noopener noreferrer"><img src="img/Reach_for_the_Sky.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Reach for the Sky.html" target="_blank" rel="noopener noreferrer">Reach for the Sky</a></td>
+      <td>10.76</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>41484</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>56.45</td>
+      <td>58.84</td>
+      <td>2.39</td>
+      <td>690</td>
+      <td>58.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90500" target="_blank" rel="noopener noreferrer"><img src="img/Beastbond_Outcaster.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Beastbond Outcaster.html" target="_blank" rel="noopener noreferrer">Beastbond Outcaster</a></td>
+      <td>3.58</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>46633</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>56.85</td>
+      <td>59.20</td>
+      <td>2.35</td>
+      <td>250</td>
+      <td>59.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90519" target="_blank" rel="noopener noreferrer"><img src="img/Outcaster_Trailblazer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Outcaster Trailblazer.html" target="_blank" rel="noopener noreferrer">Outcaster Trailblazer</a></td>
+      <td>1.66</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>66145</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.30</td>
+      <td>57.60</td>
+      <td>2.30</td>
+      <td>809</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90591" target="_blank" rel="noopener noreferrer"><img src="img/Mobile_Homestead.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mobile Homestead.html" target="_blank" rel="noopener noreferrer">Mobile Homestead</a></td>
+      <td>6.26</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>23327</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.80</td>
+      <td>57.06</td>
+      <td>2.26</td>
+      <td>163</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90433" target="_blank" rel="noopener noreferrer"><img src="img/Fake_Your_Own_Death.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fake Your Own Death.html" target="_blank" rel="noopener noreferrer">Fake Your Own Death</a></td>
+      <td>10.33</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>46091</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>58.50</td>
+      <td>60.73</td>
+      <td>2.23</td>
+      <td>354</td>
+      <td>62.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90517" target="_blank" rel="noopener noreferrer"><img src="img/Ornery_Tumblewagg.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ornery Tumblewagg.html" target="_blank" rel="noopener noreferrer">Ornery Tumblewagg</a></td>
+      <td>1.40</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>49343</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.80</td>
+      <td>57.97</td>
+      <td>2.17</td>
+      <td>1456</td>
+      <td>57.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90529" target="_blank" rel="noopener noreferrer"><img src="img/Spinewoods_Paladin.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Spinewoods Paladin.html" target="_blank" rel="noopener noreferrer">Spinewoods Paladin</a></td>
+      <td>4.92</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>7609</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>53.25</td>
+      <td>55.33</td>
+      <td>2.08</td>
+      <td>403</td>
+      <td>52.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90375" target="_blank" rel="noopener noreferrer"><img src="img/Sheriff_of_Safe_Passage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sheriff of Safe Passage.html" target="_blank" rel="noopener noreferrer">Sheriff of Safe Passage</a></td>
+      <td>8.28</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>71836</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.20</td>
+      <td>57.25</td>
+      <td>2.05</td>
+      <td>814</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90612" target="_blank" rel="noopener noreferrer"><img src="img/Bucolic_Ranch.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bucolic Ranch.html" target="_blank" rel="noopener noreferrer">Bucolic Ranch</a></td>
+      <td>8.64</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>68855</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.20</td>
+      <td>57.17</td>
+      <td>1.97</td>
+      <td>1436</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90601" target="_blank" rel="noopener noreferrer"><img src="img/Creosote_Heath.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Creosote Heath.html" target="_blank" rel="noopener noreferrer">Creosote Heath</a></td>
+      <td>5.95</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>43110</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.50</td>
+      <td>57.45</td>
+      <td>1.95</td>
+      <td>1295</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90506" target="_blank" rel="noopener noreferrer"><img src="img/Dance_of_the_Tumbleweeds.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Dance of the Tumbleweeds.html" target="_blank" rel="noopener noreferrer">Dance of the Tumbleweeds</a></td>
+      <td>5.56</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>42568</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.45</td>
+      <td>57.39</td>
+      <td>1.94</td>
+      <td>1394</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90504" target="_blank" rel="noopener noreferrer"><img src="img/Cactarantula.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cactarantula.html" target="_blank" rel="noopener noreferrer">Cactarantula</a></td>
+      <td>4.82</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>1105</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.50</td>
+      <td>56.43</td>
+      <td>1.93</td>
+      <td>918</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90351" target="_blank" rel="noopener noreferrer"><img src="img/Bounding_Felidar.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bounding Felidar.html" target="_blank" rel="noopener noreferrer">Bounding Felidar</a></td>
+      <td>5.51</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>44736</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>53.50</td>
+      <td>55.31</td>
+      <td>1.81</td>
+      <td>273</td>
+      <td>52.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90512" target="_blank" rel="noopener noreferrer"><img src="img/Gold_Rush.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Gold Rush.html" target="_blank" rel="noopener noreferrer">Gold Rush</a></td>
+      <td>8.64</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>292</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.75</td>
+      <td>56.55</td>
+      <td>1.80</td>
+      <td>168</td>
+      <td>55.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90348" target="_blank" rel="noopener noreferrer"><img src="img/Archangel_of_Tithes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Archangel of Tithes.html" target="_blank" rel="noopener noreferrer">Archangel of Tithes</a></td>
+      <td>2.21</td>
+      <td>W</td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>42297</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>58.85</td>
+      <td>60.61</td>
+      <td>1.76</td>
+      <td>132</td>
+      <td>63.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90503" target="_blank" rel="noopener noreferrer"><img src="img/Bristly_Bill,_Spine_Sower.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bristly Bill, Spine Sower.html" target="_blank" rel="noopener noreferrer">Bristly Bill, Spine Sower</a></td>
+      <td>1.28</td>
+      <td>G</td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>32541</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.05</td>
+      <td>55.73</td>
+      <td>1.68</td>
+      <td>253</td>
+      <td>53.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90467" target="_blank" rel="noopener noreferrer"><img src="img/Discerning_Peddler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Discerning Peddler.html" target="_blank" rel="noopener noreferrer">Discerning Peddler</a></td>
+      <td>9.29</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>44465</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.00</td>
+      <td>56.65</td>
+      <td>1.65</td>
+      <td>1813</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90511" target="_blank" rel="noopener noreferrer"><img src="img/Giant_Beaver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Giant Beaver.html" target="_blank" rel="noopener noreferrer">Giant Beaver</a></td>
+      <td>5.48</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>45278</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.05</td>
+      <td>56.69</td>
+      <td>1.64</td>
+      <td>1203</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90514" target="_blank" rel="noopener noreferrer"><img src="img/Hardbristle_Bandit.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hardbristle Bandit.html" target="_blank" rel="noopener noreferrer">Hardbristle Bandit</a></td>
+      <td>4.54</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>51511</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>53.75</td>
+      <td>55.38</td>
+      <td>1.63</td>
+      <td>130</td>
+      <td>53.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90537" target="_blank" rel="noopener noreferrer"><img src="img/Annie_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Annie Joins Up.html" target="_blank" rel="noopener noreferrer">Annie Joins Up</a></td>
+      <td>7.40</td>
+      <td>WRG</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>68313</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.85</td>
+      <td>56.46</td>
+      <td>1.61</td>
+      <td>565</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90599" target="_blank" rel="noopener noreferrer"><img src="img/Bristling_Backwoods.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bristling Backwoods.html" target="_blank" rel="noopener noreferrer">Bristling Backwoods</a></td>
+      <td>6.39</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>41213</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.20</td>
+      <td>55.80</td>
+      <td>1.60</td>
+      <td>767</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90499" target="_blank" rel="noopener noreferrer"><img src="img/Ankle_Biter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ankle Biter.html" target="_blank" rel="noopener noreferrer">Ankle Biter</a></td>
+      <td>8.80</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>4086</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.65</td>
+      <td>57.19</td>
+      <td>1.54</td>
+      <td>1974</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90362" target="_blank" rel="noopener noreferrer"><img src="img/Holy_Cow.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Holy Cow.html" target="_blank" rel="noopener noreferrer">Holy Cow</a></td>
+      <td>6.62</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>1647</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.15</td>
+      <td>55.68</td>
+      <td>1.53</td>
+      <td>2060</td>
+      <td>54.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90353" target="_blank" rel="noopener noreferrer"><img src="img/Bridled_Bighorn.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bridled Bighorn.html" target="_blank" rel="noopener noreferrer">Bridled Bighorn</a></td>
+      <td>8.47</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>40942</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.90</td>
+      <td>57.30</td>
+      <td>1.40</td>
+      <td>630</td>
+      <td>57.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90498" target="_blank" rel="noopener noreferrer"><img src="img/Aloe_Alchemist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Aloe Alchemist.html" target="_blank" rel="noopener noreferrer">Aloe Alchemist</a></td>
+      <td>3.51</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>8151</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>53.95</td>
+      <td>55.33</td>
+      <td>1.38</td>
+      <td>1323</td>
+      <td>53.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90377" target="_blank" rel="noopener noreferrer"><img src="img/Steer_Clear.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Steer Clear.html" target="_blank" rel="noopener noreferrer">Steer Clear</a></td>
+      <td>9.61</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>49614</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>56.10</td>
+      <td>57.47</td>
+      <td>1.37</td>
+      <td>924</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90530" target="_blank" rel="noopener noreferrer"><img src="img/Stubborn_Burrowfiend.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Stubborn Burrowfiend.html" target="_blank" rel="noopener noreferrer">Stubborn Burrowfiend</a></td>
+      <td>3.75</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>48801</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.75</td>
+      <td>57.09</td>
+      <td>1.34</td>
+      <td>1559</td>
+      <td>57.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90527" target="_blank" rel="noopener noreferrer"><img src="img/Snakeskin_Veil.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Snakeskin Veil.html" target="_blank" rel="noopener noreferrer">Snakeskin Veil</a></td>
+      <td>6.64</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>32270</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>53.70</td>
+      <td>55.04</td>
+      <td>1.34</td>
+      <td>129</td>
+      <td>53.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90466" target="_blank" rel="noopener noreferrer"><img src="img/Demonic_Ruckus.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Demonic Ruckus.html" target="_blank" rel="noopener noreferrer">Demonic Ruckus</a></td>
+      <td>8.18</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>41755</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.35</td>
+      <td>56.68</td>
+      <td>1.33</td>
+      <td>494</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90501" target="_blank" rel="noopener noreferrer"><img src="img/Betrayal_at_the_Vault.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Betrayal at the Vault.html" target="_blank" rel="noopener noreferrer">Betrayal at the Vault</a></td>
+      <td>6.20</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>9506</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.80</td>
+      <td>57.12</td>
+      <td>1.32</td>
+      <td>2887</td>
+      <td>57.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90382" target="_blank" rel="noopener noreferrer"><img src="img/Trained_Arynx.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Trained Arynx.html" target="_blank" rel="noopener noreferrer">Trained Arynx</a></td>
+      <td>5.43</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>3544</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>56.45</td>
+      <td>57.76</td>
+      <td>1.31</td>
+      <td>999</td>
+      <td>58.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90360" target="_blank" rel="noopener noreferrer"><img src="img/Getaway_Glamer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Getaway Glamer.html" target="_blank" rel="noopener noreferrer">Getaway Glamer</a></td>
+      <td>4.78</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>36335</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>53.00</td>
+      <td>54.22</td>
+      <td>1.22</td>
+      <td>166</td>
+      <td>51.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90481" target="_blank" rel="noopener noreferrer"><img src="img/Mine_Raider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mine Raider.html" target="_blank" rel="noopener noreferrer">Mine Raider</a></td>
+      <td>9.32</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>66958</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>52.35</td>
+      <td>53.54</td>
+      <td>1.19</td>
+      <td>381</td>
+      <td>50.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90594" target="_blank" rel="noopener noreferrer"><img src="img/Silver_Deputy.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Silver Deputy.html" target="_blank" rel="noopener noreferrer">Silver Deputy</a></td>
+      <td>10.08</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>34980</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>53.25</td>
+      <td>54.44</td>
+      <td>1.19</td>
+      <td>259</td>
+      <td>52.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90476" target="_blank" rel="noopener noreferrer"><img src="img/Irascible_Wolverine.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Irascible Wolverine.html" target="_blank" rel="noopener noreferrer">Irascible Wolverine</a></td>
+      <td>8.71</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>70481</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.20</td>
+      <td>56.37</td>
+      <td>1.17</td>
+      <td>479</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90607" target="_blank" rel="noopener noreferrer"><img src="img/Lush_Oasis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lush Oasis.html" target="_blank" rel="noopener noreferrer">Lush Oasis</a></td>
+      <td>6.45</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>43381</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.65</td>
+      <td>55.71</td>
+      <td>1.06</td>
+      <td>1831</td>
+      <td>55.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90507" target="_blank" rel="noopener noreferrer"><img src="img/Drover_Grizzly.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Drover Grizzly.html" target="_blank" rel="noopener noreferrer">Drover Grizzly</a></td>
+      <td>6.84</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>59641</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>56.50</td>
+      <td>57.50</td>
+      <td>1.00</td>
+      <td>1306</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90567" target="_blank" rel="noopener noreferrer"><img src="img/Miriam,_Herd_Whisperer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Miriam, Herd Whisperer.html" target="_blank" rel="noopener noreferrer">Miriam, Herd Whisperer</a></td>
+      <td>4.12</td>
+      <td>WG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>53679</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.95</td>
+      <td>56.95</td>
+      <td>1.00</td>
+      <td>223</td>
+      <td>57.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90545" target="_blank" rel="noopener noreferrer"><img src="img/Cactusfolk_Sureshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cactusfolk Sureshot.html" target="_blank" rel="noopener noreferrer">Cactusfolk Sureshot</a></td>
+      <td>5.07</td>
+      <td>RG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>28476</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>56.05</td>
+      <td>57.00</td>
+      <td>0.95</td>
+      <td>200</td>
+      <td>57.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90452" target="_blank" rel="noopener noreferrer"><img src="img/Shoot_the_Sheriff.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shoot the Sheriff.html" target="_blank" rel="noopener noreferrer">Shoot the Sheriff</a></td>
+      <td>3.53</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>42026</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.70</td>
+      <td>55.63</td>
+      <td>0.93</td>
+      <td>1163</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90502" target="_blank" rel="noopener noreferrer"><img src="img/Bristlepack_Sentry.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bristlepack Sentry.html" target="_blank" rel="noopener noreferrer">Bristlepack Sentry</a></td>
+      <td>7.81</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>7880</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.00</td>
+      <td>55.80</td>
+      <td>0.80</td>
+      <td>1310</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90376" target="_blank" rel="noopener noreferrer"><img src="img/Stagecoach_Security.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Stagecoach Security.html" target="_blank" rel="noopener noreferrer">Stagecoach Security</a></td>
+      <td>9.54</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>4899</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.60</td>
+      <td>56.24</td>
+      <td>0.64</td>
+      <td>2178</td>
+      <td>56.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90365" target="_blank" rel="noopener noreferrer"><img src="img/Mystical_Tether.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mystical Tether.html" target="_blank" rel="noopener noreferrer">Mystical Tether</a></td>
+      <td>4.31</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>55034</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.20</td>
+      <td>54.76</td>
+      <td>0.56</td>
+      <td>347</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90550" target="_blank" rel="noopener noreferrer"><img src="img/Form_a_Posse.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Form a Posse.html" target="_blank" rel="noopener noreferrer">Form a Posse</a></td>
+      <td>7.80</td>
+      <td>WR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>67229</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.10</td>
+      <td>54.61</td>
+      <td>0.51</td>
+      <td>423</td>
+      <td>53.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90595" target="_blank" rel="noopener noreferrer"><img src="img/Sterling_Hound.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sterling Hound.html" target="_blank" rel="noopener noreferrer">Sterling Hound</a></td>
+      <td>10.69</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>8693</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.30</td>
+      <td>55.80</td>
+      <td>0.50</td>
+      <td>1457</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90379" target="_blank" rel="noopener noreferrer"><img src="img/Sterling_Supplier.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sterling Supplier.html" target="_blank" rel="noopener noreferrer">Sterling Supplier</a></td>
+      <td>9.13</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>45549</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.65</td>
+      <td>56.11</td>
+      <td>0.46</td>
+      <td>704</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90515" target="_blank" rel="noopener noreferrer"><img src="img/Intrepid_Stablemaster.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Intrepid Stablemaster.html" target="_blank" rel="noopener noreferrer">Intrepid Stablemaster</a></td>
+      <td>3.63</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>5983</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.85</td>
+      <td>55.30</td>
+      <td>0.45</td>
+      <td>1425</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90369" target="_blank" rel="noopener noreferrer"><img src="img/Outlaw_Medic.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Outlaw Medic.html" target="_blank" rel="noopener noreferrer">Outlaw Medic</a></td>
+      <td>8.54</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>8422</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.85</td>
+      <td>55.25</td>
+      <td>0.40</td>
+      <td>1770</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90378" target="_blank" rel="noopener noreferrer"><img src="img/Sterling_Keykeeper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sterling Keykeeper.html" target="_blank" rel="noopener noreferrer">Sterling Keykeeper</a></td>
+      <td>8.49</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>22785</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.95</td>
+      <td>56.34</td>
+      <td>0.39</td>
+      <td>497</td>
+      <td>57.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90431" target="_blank" rel="noopener noreferrer"><img src="img/Desert's_Due.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Desert's Due.html" target="_blank" rel="noopener noreferrer">Desert's Due</a></td>
+      <td>4.76</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>43923</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.30</td>
+      <td>55.66</td>
+      <td>0.36</td>
+      <td>221</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90509" target="_blank" rel="noopener noreferrer"><img src="img/Freestrider_Lookout.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Freestrider Lookout.html" target="_blank" rel="noopener noreferrer">Freestrider Lookout</a></td>
+      <td>1.92</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>71294</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.30</td>
+      <td>55.56</td>
+      <td>0.26</td>
+      <td>207</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90610" target="_blank" rel="noopener noreferrer"><img src="img/Soured_Springs.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Soured Springs.html" target="_blank" rel="noopener noreferrer">Soured Springs</a></td>
+      <td>6.22</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>28747</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>53.70</td>
+      <td>53.93</td>
+      <td>0.23</td>
+      <td>191</td>
+      <td>53.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90453" target="_blank" rel="noopener noreferrer"><img src="img/Skulduggery.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Skulduggery.html" target="_blank" rel="noopener noreferrer">Skulduggery</a></td>
+      <td>9.18</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>53408</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>57.75</td>
+      <td>57.89</td>
+      <td>0.14</td>
+      <td>304</td>
+      <td>61.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90544" target="_blank" rel="noopener noreferrer"><img src="img/Bruse_Tarl,_Roving_Rancher.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bruse Tarl, Roving Rancher.html" target="_blank" rel="noopener noreferrer">Bruse Tarl, Roving Rancher</a></td>
+      <td>2.14</td>
+      <td>WR</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>5712</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.30</td>
+      <td>54.37</td>
+      <td>0.07</td>
+      <td>11843</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td>4.51</td>
+      <td>W</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>62351</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>58.15</td>
+      <td>58.04</td>
+      <td>-0.11</td>
+      <td>255</td>
+      <td>62.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90577" target="_blank" rel="noopener noreferrer"><img src="img/Selvala,_Eager_Trailblazer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Selvala, Eager Trailblazer.html" target="_blank" rel="noopener noreferrer">Selvala, Eager Trailblazer</a></td>
+      <td>1.47</td>
+      <td>WG</td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>50698</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.55</td>
+      <td>54.28</td>
+      <td>-0.27</td>
+      <td>1286</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90534" target="_blank" rel="noopener noreferrer"><img src="img/Voracious_Varmint.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Voracious Varmint.html" target="_blank" rel="noopener noreferrer">Voracious Varmint</a></td>
+      <td>7.59</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>64248</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>52.55</td>
+      <td>52.24</td>
+      <td>-0.31</td>
+      <td>268</td>
+      <td>50.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90584" target="_blank" rel="noopener noreferrer"><img src="img/Wrangler_of_the_Damned.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wrangler of the Damned.html" target="_blank" rel="noopener noreferrer">Wrangler of the Damned</a></td>
+      <td>7.20</td>
+      <td>WU</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>24953</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.40</td>
+      <td>55.08</td>
+      <td>-0.32</td>
+      <td>187</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90439" target="_blank" rel="noopener noreferrer"><img src="img/Lively_Dirge.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lively Dirge.html" target="_blank" rel="noopener noreferrer">Lively Dirge</a></td>
+      <td>7.07</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>47717</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>53.40</td>
+      <td>53.01</td>
+      <td>-0.39</td>
+      <td>481</td>
+      <td>52.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90523" target="_blank" rel="noopener noreferrer"><img src="img/Raucous_Entertainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Raucous Entertainer.html" target="_blank" rel="noopener noreferrer">Raucous Entertainer</a></td>
+      <td>5.47</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>69668</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.15</td>
+      <td>54.75</td>
+      <td>-0.40</td>
+      <td>831</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90604" target="_blank" rel="noopener noreferrer"><img src="img/Forlorn_Flats.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Forlorn Flats.html" target="_blank" rel="noopener noreferrer">Forlorn Flats</a></td>
+      <td>6.63</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>70210</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.60</td>
+      <td>54.18</td>
+      <td>-0.42</td>
+      <td>646</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90606" target="_blank" rel="noopener noreferrer"><img src="img/Lonely_Arroyo.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lonely Arroyo.html" target="_blank" rel="noopener noreferrer">Lonely Arroyo</a></td>
+      <td>7.28</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>2460</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>53.70</td>
+      <td>53.20</td>
+      <td>-0.50</td>
+      <td>1171</td>
+      <td>53.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90356" target="_blank" rel="noopener noreferrer"><img src="img/Eriette's_Lullaby.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eriette's Lullaby.html" target="_blank" rel="noopener noreferrer">Eriette's Lullaby</a></td>
+      <td>8.64</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>21701</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>52.70</td>
+      <td>52.11</td>
+      <td>-0.59</td>
+      <td>142</td>
+      <td>51.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90427" target="_blank" rel="noopener noreferrer"><img src="img/Boneyard_Desecrator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Boneyard Desecrator.html" target="_blank" rel="noopener noreferrer">Boneyard Desecrator</a></td>
+      <td>10.70</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>13571</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>52.95</td>
+      <td>52.35</td>
+      <td>-0.60</td>
+      <td>149</td>
+      <td>51.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90397" target="_blank" rel="noopener noreferrer"><img src="img/Geyser_Drake.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Geyser Drake.html" target="_blank" rel="noopener noreferrer">Geyser Drake</a></td>
+      <td>9.51</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>37690</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>53.40</td>
+      <td>52.78</td>
+      <td>-0.62</td>
+      <td>144</td>
+      <td>52.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90486" target="_blank" rel="noopener noreferrer"><img src="img/Reckless_Lackey.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Reckless Lackey.html" target="_blank" rel="noopener noreferrer">Reckless Lackey</a></td>
+      <td>9.98</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>1376</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>51.70</td>
+      <td>51.00</td>
+      <td>-0.70</td>
+      <td>200</td>
+      <td>49.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90352" target="_blank" rel="noopener noreferrer"><img src="img/Bovine_Intervention.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bovine Intervention.html" target="_blank" rel="noopener noreferrer">Bovine Intervention</a></td>
+      <td>10.12</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>19262</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>53.85</td>
+      <td>53.15</td>
+      <td>-0.70</td>
+      <td>222</td>
+      <td>53.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90418" target="_blank" rel="noopener noreferrer"><img src="img/Stop_Cold.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Stop Cold.html" target="_blank" rel="noopener noreferrer">Stop Cold</a></td>
+      <td>9.62</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>22243</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>56.10</td>
+      <td>55.30</td>
+      <td>-0.80</td>
+      <td>387</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90429" target="_blank" rel="noopener noreferrer"><img src="img/Consuming_Ashes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Consuming Ashes.html" target="_blank" rel="noopener noreferrer">Consuming Ashes</a></td>
+      <td>4.32</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>67771</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.55</td>
+      <td>53.73</td>
+      <td>-0.82</td>
+      <td>830</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90597" target="_blank" rel="noopener noreferrer"><img src="img/Abraded_Bluffs.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Abraded Bluffs.html" target="_blank" rel="noopener noreferrer">Abraded Bluffs</a></td>
+      <td>7.04</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>56389</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>53.00</td>
+      <td>52.16</td>
+      <td>-0.84</td>
+      <td>255</td>
+      <td>51.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90555" target="_blank" rel="noopener noreferrer"><img src="img/Jem_Lightfoote,_Sky_Explorer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Jem Lightfoote, Sky Explorer.html" target="_blank" rel="noopener noreferrer">Jem Lightfoote, Sky Explorer</a></td>
+      <td>6.90</td>
+      <td>WU</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>47175</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>59.75</td>
+      <td>58.89</td>
+      <td>-0.86</td>
+      <td>180</td>
+      <td>65.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90521" target="_blank" rel="noopener noreferrer"><img src="img/Railway_Brawler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Railway Brawler.html" target="_blank" rel="noopener noreferrer">Railway Brawler</a></td>
+      <td>1.22</td>
+      <td>G</td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>25224</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.40</td>
+      <td>54.52</td>
+      <td>-0.88</td>
+      <td>376</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90440" target="_blank" rel="noopener noreferrer"><img src="img/Mourner's_Surprise.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mourner's Surprise.html" target="_blank" rel="noopener noreferrer">Mourner's Surprise</a></td>
+      <td>8.03</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>4357</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>52.45</td>
+      <td>51.53</td>
+      <td>-0.92</td>
+      <td>359</td>
+      <td>50.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90363" target="_blank" rel="noopener noreferrer"><img src="img/Inventive_Wingsmith.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Inventive Wingsmith.html" target="_blank" rel="noopener noreferrer">Inventive Wingsmith</a></td>
+      <td>11.23</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>51782</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.50</td>
+      <td>54.55</td>
+      <td>-0.95</td>
+      <td>143</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90538" target="_blank" rel="noopener noreferrer"><img src="img/Assimilation_Aegis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Assimilation Aegis.html" target="_blank" rel="noopener noreferrer">Assimilation Aegis</a></td>
+      <td>2.67</td>
+      <td>WU</td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>27392</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.55</td>
+      <td>53.55</td>
+      <td>-1.00</td>
+      <td>155</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90448" target="_blank" rel="noopener noreferrer"><img src="img/Rictus_Robber.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rictus Robber.html" target="_blank" rel="noopener noreferrer">Rictus Robber</a></td>
+      <td>5.14</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>50427</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.05</td>
+      <td>53.86</td>
+      <td>-1.19</td>
+      <td>700</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90533" target="_blank" rel="noopener noreferrer"><img src="img/Tumbleweed_Rising.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tumbleweed Rising.html" target="_blank" rel="noopener noreferrer">Tumbleweed Rising</a></td>
+      <td>8.67</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>70752</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.50</td>
+      <td>53.30</td>
+      <td>-1.20</td>
+      <td>1287</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90608" target="_blank" rel="noopener noreferrer"><img src="img/Mirage_Mesa.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mirage Mesa.html" target="_blank" rel="noopener noreferrer">Mirage Mesa</a></td>
+      <td>5.99</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>61809</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>56.25</td>
+      <td>55.04</td>
+      <td>-1.21</td>
+      <td>476</td>
+      <td>58.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90575" target="_blank" rel="noopener noreferrer"><img src="img/Ruthless_Lawbringer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ruthless Lawbringer.html" target="_blank" rel="noopener noreferrer">Ruthless Lawbringer</a></td>
+      <td>5.76</td>
+      <td>WB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>24140</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>56.95</td>
+      <td>55.59</td>
+      <td>-1.36</td>
+      <td>295</td>
+      <td>59.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90436" target="_blank" rel="noopener noreferrer"><img src="img/Hollow_Marauder.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hollow Marauder.html" target="_blank" rel="noopener noreferrer">Hollow Marauder</a></td>
+      <td>3.46</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>34167</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.25</td>
+      <td>52.85</td>
+      <td>-1.40</td>
+      <td>123</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90473" target="_blank" rel="noopener noreferrer"><img src="img/Hellspur_Brute.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hellspur Brute.html" target="_blank" rel="noopener noreferrer">Hellspur Brute</a></td>
+      <td>6.07</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>48530</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.75</td>
+      <td>54.19</td>
+      <td>-1.56</td>
+      <td>227</td>
+      <td>57.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90526" target="_blank" rel="noopener noreferrer"><img src="img/Smuggler's_Surprise.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Smuggler's Surprise.html" target="_blank" rel="noopener noreferrer">Smuggler's Surprise</a></td>
+      <td>3.46</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>5441</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.45</td>
+      <td>52.87</td>
+      <td>-1.58</td>
+      <td>645</td>
+      <td>54.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90367" target="_blank" rel="noopener noreferrer"><img src="img/Omenport_Vigilante.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Omenport Vigilante.html" target="_blank" rel="noopener noreferrer">Omenport Vigilante</a></td>
+      <td>6.63</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>30644</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>56.05</td>
+      <td>54.45</td>
+      <td>-1.60</td>
+      <td>494</td>
+      <td>57.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90460" target="_blank" rel="noopener noreferrer"><img src="img/Vault_Plunderer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vault Plunderer.html" target="_blank" rel="noopener noreferrer">Vault Plunderer</a></td>
+      <td>5.40</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>66416</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.30</td>
+      <td>52.69</td>
+      <td>-1.61</td>
+      <td>651</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90592" target="_blank" rel="noopener noreferrer"><img src="img/Oasis_Gardener.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Oasis Gardener.html" target="_blank" rel="noopener noreferrer">Oasis Gardener</a></td>
+      <td>8.85</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>563</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>52.35</td>
+      <td>50.51</td>
+      <td>-1.84</td>
+      <td>295</td>
+      <td>50.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90349" target="_blank" rel="noopener noreferrer"><img src="img/Armored_Armadillo.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Armored Armadillo.html" target="_blank" rel="noopener noreferrer">Armored Armadillo</a></td>
+      <td>11.63</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>15197</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.20</td>
+      <td>53.33</td>
+      <td>-1.87</td>
+      <td>105</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90403" target="_blank" rel="noopener noreferrer"><img src="img/Metamorphic_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Metamorphic Blast.html" target="_blank" rel="noopener noreferrer">Metamorphic Blast</a></td>
+      <td>7.07</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>37961</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.00</td>
+      <td>52.10</td>
+      <td>-1.90</td>
+      <td>119</td>
+      <td>53.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90487" target="_blank" rel="noopener noreferrer"><img src="img/Resilient_Roadrunner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Resilient Roadrunner.html" target="_blank" rel="noopener noreferrer">Resilient Roadrunner</a></td>
+      <td>7.24</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>9777</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.30</td>
+      <td>52.40</td>
+      <td>-1.90</td>
+      <td>1124</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90383" target="_blank" rel="noopener noreferrer"><img src="img/Vengeful_Townsfolk.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vengeful Townsfolk.html" target="_blank" rel="noopener noreferrer">Vengeful Townsfolk</a></td>
+      <td>9.35</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>37419</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>52.95</td>
+      <td>50.99</td>
+      <td>-1.96</td>
+      <td>304</td>
+      <td>51.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90485" target="_blank" rel="noopener noreferrer"><img src="img/Quilled_Charger.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Quilled Charger.html" target="_blank" rel="noopener noreferrer">Quilled Charger</a></td>
+      <td>10.31</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>20617</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.50</td>
+      <td>53.42</td>
+      <td>-2.08</td>
+      <td>292</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90423" target="_blank" rel="noopener noreferrer"><img src="img/Ambush_Gigapede.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ambush Gigapede.html" target="_blank" rel="noopener noreferrer">Ambush Gigapede</a></td>
+      <td>8.85</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>69397</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.40</td>
+      <td>53.31</td>
+      <td>-2.09</td>
+      <td>499</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90603" target="_blank" rel="noopener noreferrer"><img src="img/Festering_Gulch.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Festering Gulch.html" target="_blank" rel="noopener noreferrer">Festering Gulch</a></td>
+      <td>5.84</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>834</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.80</td>
+      <td>53.70</td>
+      <td>-2.10</td>
+      <td>324</td>
+      <td>57.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90350" target="_blank" rel="noopener noreferrer"><img src="img/Aven_Interrupter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Aven Interrupter.html" target="_blank" rel="noopener noreferrer">Aven Interrupter</a></td>
+      <td>2.71</td>
+      <td>W</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>69126</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.55</td>
+      <td>52.44</td>
+      <td>-2.11</td>
+      <td>164</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90602" target="_blank" rel="noopener noreferrer"><img src="img/Eroded_Canyon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eroded Canyon.html" target="_blank" rel="noopener noreferrer">Eroded Canyon</a></td>
+      <td>7.18</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>23056</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.65</td>
+      <td>53.51</td>
+      <td>-2.14</td>
+      <td>413</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90432" target="_blank" rel="noopener noreferrer"><img src="img/Desperate_Bloodseeker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Desperate Bloodseeker.html" target="_blank" rel="noopener noreferrer">Desperate Bloodseeker</a></td>
+      <td>6.27</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>56931</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.05</td>
+      <td>52.90</td>
+      <td>-2.15</td>
+      <td>155</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90557" target="_blank" rel="noopener noreferrer"><img src="img/Kambal,_Profiteering_Mayor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kambal, Profiteering Mayor.html" target="_blank" rel="noopener noreferrer">Kambal, Profiteering Mayor</a></td>
+      <td>4.36</td>
+      <td>WB</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>43652</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>53.70</td>
+      <td>51.50</td>
+      <td>-2.20</td>
+      <td>903</td>
+      <td>53.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90508" target="_blank" rel="noopener noreferrer"><img src="img/Freestrider_Commando.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Freestrider Commando.html" target="_blank" rel="noopener noreferrer">Freestrider Commando</a></td>
+      <td>7.43</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>65332</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>53.45</td>
+      <td>51.21</td>
+      <td>-2.24</td>
+      <td>330</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90588" target="_blank" rel="noopener noreferrer"><img src="img/Gold_Pan.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Gold Pan.html" target="_blank" rel="noopener noreferrer">Gold Pan</a></td>
+      <td>10.95</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>71023</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.45</td>
+      <td>52.21</td>
+      <td>-2.24</td>
+      <td>249</td>
+      <td>54.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90609" target="_blank" rel="noopener noreferrer"><img src="img/Sandstorm_Verge.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sandstorm Verge.html" target="_blank" rel="noopener noreferrer">Sandstorm Verge</a></td>
+      <td>10.25</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>69939</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.85</td>
+      <td>52.58</td>
+      <td>-2.27</td>
+      <td>194</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90605" target="_blank" rel="noopener noreferrer"><img src="img/Jagged_Barrens.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Jagged Barrens.html" target="_blank" rel="noopener noreferrer">Jagged Barrens</a></td>
+      <td>6.24</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>55847</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>56.35</td>
+      <td>54.04</td>
+      <td>-2.31</td>
+      <td>359</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90553" target="_blank" rel="noopener noreferrer"><img src="img/Honest_Rutstein.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Honest Rutstein.html" target="_blank" rel="noopener noreferrer">Honest Rutstein</a></td>
+      <td>3.57</td>
+      <td>BG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>1918</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.30</td>
+      <td>51.94</td>
+      <td>-2.36</td>
+      <td>335</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90354" target="_blank" rel="noopener noreferrer"><img src="img/Claim_Jumper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Claim Jumper.html" target="_blank" rel="noopener noreferrer">Claim Jumper</a></td>
+      <td>3.21</td>
+      <td>W</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>35522</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.60</td>
+      <td>53.14</td>
+      <td>-2.46</td>
+      <td>175</td>
+      <td>56.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90478" target="_blank" rel="noopener noreferrer"><img src="img/Longhorn_Sharpshooter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Longhorn Sharpshooter.html" target="_blank" rel="noopener noreferrer">Longhorn Sharpshooter</a></td>
+      <td>3.78</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>16281</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.50</td>
+      <td>52.79</td>
+      <td>-2.71</td>
+      <td>233</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90407" target="_blank" rel="noopener noreferrer"><img src="img/Phantom_Interference.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Phantom Interference.html" target="_blank" rel="noopener noreferrer">Phantom Interference</a></td>
+      <td>8.30</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>10048</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.60</td>
+      <td>51.65</td>
+      <td>-2.95</td>
+      <td>972</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90384" target="_blank" rel="noopener noreferrer"><img src="img/Wanted_Griffin.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wanted Griffin.html" target="_blank" rel="noopener noreferrer">Wanted Griffin</a></td>
+      <td>9.63</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>10590</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.40</td>
+      <td>51.43</td>
+      <td>-2.97</td>
+      <td>140</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90386" target="_blank" rel="noopener noreferrer"><img src="img/Canyon_Crab.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Canyon Crab.html" target="_blank" rel="noopener noreferrer">Canyon Crab</a></td>
+      <td>6.72</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>32812</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.55</td>
+      <td>51.57</td>
+      <td>-2.98</td>
+      <td>382</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90468" target="_blank" rel="noopener noreferrer"><img src="img/Explosive_Derailment.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Explosive Derailment.html" target="_blank" rel="noopener noreferrer">Explosive Derailment</a></td>
+      <td>5.80</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>52595</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.15</td>
+      <td>51.01</td>
+      <td>-3.14</td>
+      <td>347</td>
+      <td>54.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90541" target="_blank" rel="noopener noreferrer"><img src="img/Baron_Bertram_Graywater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Baron Bertram Graywater.html" target="_blank" rel="noopener noreferrer">Baron Bertram Graywater</a></td>
+      <td>6.93</td>
+      <td>WB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>64790</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.30</td>
+      <td>51.12</td>
+      <td>-3.18</td>
+      <td>178</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90586" target="_blank" rel="noopener noreferrer"><img src="img/Bandit's_Haul.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bandit's Haul.html" target="_blank" rel="noopener noreferrer">Bandit's Haul</a></td>
+      <td>7.13</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>36877</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.40</td>
+      <td>51.21</td>
+      <td>-3.19</td>
+      <td>373</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90483" target="_blank" rel="noopener noreferrer"><img src="img/Prickly_Pair.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Prickly Pair.html" target="_blank" rel="noopener noreferrer">Prickly Pair</a></td>
+      <td>6.94</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>31728</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.45</td>
+      <td>51.08</td>
+      <td>-3.37</td>
+      <td>139</td>
+      <td>54.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90464" target="_blank" rel="noopener noreferrer"><img src="img/Cunning_Coyote.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cunning Coyote.html" target="_blank" rel="noopener noreferrer">Cunning Coyote</a></td>
+      <td>5.82</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>22514</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>53.45</td>
+      <td>50.00</td>
+      <td>-3.45</td>
+      <td>106</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90430" target="_blank" rel="noopener noreferrer"><img src="img/Corrupted_Conviction.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Corrupted Conviction.html" target="_blank" rel="noopener noreferrer">Corrupted Conviction</a></td>
+      <td>11.38</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>9235</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.00</td>
+      <td>50.50</td>
+      <td>-3.50</td>
+      <td>400</td>
+      <td>53.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90381" target="_blank" rel="noopener noreferrer"><img src="img/Thunder_Lasso.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Thunder Lasso.html" target="_blank" rel="noopener noreferrer">Thunder Lasso</a></td>
+      <td>8.67</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>7067</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>53.10</td>
+      <td>49.35</td>
+      <td>-3.75</td>
+      <td>154</td>
+      <td>51.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90373" target="_blank" rel="noopener noreferrer"><img src="img/Rustler_Rampage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rustler Rampage.html" target="_blank" rel="noopener noreferrer">Rustler Rampage</a></td>
+      <td>10.60</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>6796</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.05</td>
+      <td>50.28</td>
+      <td>-3.77</td>
+      <td>356</td>
+      <td>53.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90372" target="_blank" rel="noopener noreferrer"><img src="img/Requisition_Raid.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Requisition Raid.html" target="_blank" rel="noopener noreferrer">Requisition Raid</a></td>
+      <td>8.21</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>21159</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>52.45</td>
+      <td>48.55</td>
+      <td>-3.90</td>
+      <td>138</td>
+      <td>50.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90425" target="_blank" rel="noopener noreferrer"><img src="img/Blacksnag_Buzzard.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Blacksnag Buzzard.html" target="_blank" rel="noopener noreferrer">Blacksnag Buzzard</a></td>
+      <td>10.38</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>21430</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.15</td>
+      <td>51.25</td>
+      <td>-3.90</td>
+      <td>160</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90426" target="_blank" rel="noopener noreferrer"><img src="img/Blood_Hustler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Blood Hustler.html" target="_blank" rel="noopener noreferrer">Blood Hustler</a></td>
+      <td>3.32</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>66687</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.65</td>
+      <td>50.70</td>
+      <td>-3.95</td>
+      <td>215</td>
+      <td>55.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90593" target="_blank" rel="noopener noreferrer"><img src="img/Redrock_Sentinel.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Redrock Sentinel.html" target="_blank" rel="noopener noreferrer">Redrock Sentinel</a></td>
+      <td>9.37</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>72920</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>53.45</td>
+      <td>49.35</td>
+      <td>-4.10</td>
+      <td>154</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90616" target="_blank" rel="noopener noreferrer"><img src="img/Inspiring_Vantage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Inspiring Vantage.html" target="_blank" rel="noopener noreferrer">Inspiring Vantage</a></td>
+      <td>5.96</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>5170</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.30</td>
+      <td>50.10</td>
+      <td>-4.20</td>
+      <td>501</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90366" target="_blank" rel="noopener noreferrer"><img src="img/Nurturing_Pixie.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nurturing Pixie.html" target="_blank" rel="noopener noreferrer">Nurturing Pixie</a></td>
+      <td>7.96</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>17907</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.00</td>
+      <td>50.75</td>
+      <td>-4.25</td>
+      <td>134</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90413" target="_blank" rel="noopener noreferrer"><img src="img/Slickshot_Lockpicker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Slickshot Lockpicker.html" target="_blank" rel="noopener noreferrer">Slickshot Lockpicker</a></td>
+      <td>4.70</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>56660</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.35</td>
+      <td>50.84</td>
+      <td>-4.51</td>
+      <td>179</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90556" target="_blank" rel="noopener noreferrer"><img src="img/Jolene,_Plundering_Pugilist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Jolene, Plundering Pugilist.html" target="_blank" rel="noopener noreferrer">Jolene, Plundering Pugilist</a></td>
+      <td>5.43</td>
+      <td>RG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>27121</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.25</td>
+      <td>49.35</td>
+      <td>-4.90</td>
+      <td>231</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90447" target="_blank" rel="noopener noreferrer"><img src="img/Raven_of_Fell_Omens.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Raven of Fell Omens.html" target="_blank" rel="noopener noreferrer">Raven of Fell Omens</a></td>
+      <td>7.26</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12487</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>53.90</td>
+      <td>48.48</td>
+      <td>-5.42</td>
+      <td>132</td>
+      <td>53.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90393" target="_blank" rel="noopener noreferrer"><img src="img/Failed_Fording.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Failed Fording.html" target="_blank" rel="noopener noreferrer">Failed Fording</a></td>
+      <td>10.49</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>65874</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>51.95</td>
+      <td>46.15</td>
+      <td>-5.80</td>
+      <td>182</td>
+      <td>49.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90590" target="_blank" rel="noopener noreferrer"><img src="img/Luxurious_Locomotive.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Luxurious Locomotive.html" target="_blank" rel="noopener noreferrer">Luxurious Locomotive</a></td>
+      <td>10.80</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>27663</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.80</td>
+      <td>48.91</td>
+      <td>-5.89</td>
+      <td>274</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90449" target="_blank" rel="noopener noreferrer"><img src="img/Rooftop_Assassin.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rooftop Assassin.html" target="_blank" rel="noopener noreferrer">Rooftop Assassin</a></td>
+      <td>8.45</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>16552</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.60</td>
+      <td>49.61</td>
+      <td>-5.99</td>
+      <td>129</td>
+      <td>56.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90408" target="_blank" rel="noopener noreferrer"><img src="img/Plan_the_Heist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Plan the Heist.html" target="_blank" rel="noopener noreferrer">Plan the Heist</a></td>
+      <td>7.88</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>29831</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.80</td>
+      <td>49.69</td>
+      <td>-6.11</td>
+      <td>159</td>
+      <td>57.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90457" target="_blank" rel="noopener noreferrer"><img src="img/Unfortunate_Accident.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Unfortunate Accident.html" target="_blank" rel="noopener noreferrer">Unfortunate Accident</a></td>
+      <td>3.63</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>40400</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>53.80</td>
+      <td>47.62</td>
+      <td>-6.18</td>
+      <td>231</td>
+      <td>53.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90496" target="_blank" rel="noopener noreferrer"><img src="img/Thunder_Salvo.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Thunder Salvo.html" target="_blank" rel="noopener noreferrer">Thunder Salvo</a></td>
+      <td>7.40</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>29560</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>53.80</td>
+      <td>47.22</td>
+      <td>-6.58</td>
+      <td>144</td>
+      <td>53.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90456" target="_blank" rel="noopener noreferrer"><img src="img/Treasure_Dredger.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Treasure Dredger.html" target="_blank" rel="noopener noreferrer">Treasure Dredger</a></td>
+      <td>6.42</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>63164</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>53.70</td>
+      <td>47.00</td>
+      <td>-6.70</td>
+      <td>100</td>
+      <td>53.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90580" target="_blank" rel="noopener noreferrer"><img src="img/Taii_Wakeen,_Perfect_Shot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Taii Wakeen, Perfect Shot.html" target="_blank" rel="noopener noreferrer">Taii Wakeen, Perfect Shot</a></td>
+      <td>6.39</td>
+      <td>WR</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>38774</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.95</td>
+      <td>47.95</td>
+      <td>-7.00</td>
+      <td>171</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90490" target="_blank" rel="noopener noreferrer"><img src="img/Scalestorm_Summoner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scalestorm Summoner.html" target="_blank" rel="noopener noreferrer">Scalestorm Summoner</a></td>
+      <td>4.94</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>19533</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.05</td>
+      <td>48.00</td>
+      <td>-7.05</td>
+      <td>125</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90419" target="_blank" rel="noopener noreferrer"><img src="img/Take_the_Fall.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Take the Fall.html" target="_blank" rel="noopener noreferrer">Take the Fall</a></td>
+      <td>9.45</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>48259</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.25</td>
+      <td>46.58</td>
+      <td>-7.67</td>
+      <td>234</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90525" target="_blank" rel="noopener noreferrer"><img src="img/Rise_of_the_Varmints.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rise of the Varmints.html" target="_blank" rel="noopener noreferrer">Rise of the Varmints</a></td>
+      <td>7.70</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>15739</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.05</td>
+      <td>46.32</td>
+      <td>-7.73</td>
+      <td>136</td>
+      <td>53.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90405" target="_blank" rel="noopener noreferrer"><img src="img/Outlaw_Stitcher.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Outlaw Stitcher.html" target="_blank" rel="noopener noreferrer">Outlaw Stitcher</a></td>
+      <td>4.85</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>26850</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.45</td>
+      <td>46.67</td>
+      <td>-7.78</td>
+      <td>120</td>
+      <td>54.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90446" target="_blank" rel="noopener noreferrer"><img src="img/Rattleback_Apothecary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rattleback Apothecary.html" target="_blank" rel="noopener noreferrer">Rattleback Apothecary</a></td>
+      <td>5.06</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>72107</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>53.95</td>
+      <td>46.03</td>
+      <td>-7.92</td>
+      <td>126</td>
+      <td>53.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90613" target="_blank" rel="noopener noreferrer"><img src="img/Blooming_Marsh.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Blooming Marsh.html" target="_blank" rel="noopener noreferrer">Blooming Marsh</a></td>
+      <td>5.37</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>31999</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>52.80</td>
+      <td>44.62</td>
+      <td>-8.18</td>
+      <td>186</td>
+      <td>51.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90465" target="_blank" rel="noopener noreferrer"><img src="img/Deadeye_Duelist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deadeye Duelist.html" target="_blank" rel="noopener noreferrer">Deadeye Duelist</a></td>
+      <td>8.41</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>14113</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>55.20</td>
+      <td>45.86</td>
+      <td>-9.34</td>
+      <td>133</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90399" target="_blank" rel="noopener noreferrer"><img src="img/Jailbreak_Scheme.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Jailbreak Scheme.html" target="_blank" rel="noopener noreferrer">Jailbreak Scheme</a></td>
+      <td>9.98</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>19804</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>54.35</td>
+      <td>44.64</td>
+      <td>-9.71</td>
+      <td>112</td>
+      <td>54.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90420" target="_blank" rel="noopener noreferrer"><img src="img/This_Town_Ain't_Big_Enough.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//This Town Ain't Big Enough.html" target="_blank" rel="noopener noreferrer">This Town Ain't Big Enough</a></td>
+      <td>7.26</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>12216</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>4.51</td>
+      <td><a href=".//One Last Job.html" target="_blank" rel="noopener noreferrer">One Last Job</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90368" target="_blank" rel="noopener noreferrer"><img src="img/One_Last_Job.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.3</td>
+      <td>53.45</td>
+      <td>43.64</td>
+      <td>-9.81</td>
+      <td>110</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90392" target="_blank" rel="noopener noreferrer"><img src="img/Emergent_Haunting.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Emergent Haunting.html" target="_blank" rel="noopener noreferrer">Emergent Haunting</a></td>
+      <td>7.28</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+  </tbody>
+</table>

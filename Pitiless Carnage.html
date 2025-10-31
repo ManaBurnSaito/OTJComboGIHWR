@@ -1,0 +1,394 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>20693</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>9.52</td>
+      <td><a href=".//Pitiless Carnage.html" target="_blank" rel="noopener noreferrer">Pitiless Carnage</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90444" target="_blank" rel="noopener noreferrer"><img src="img/Pitiless_Carnage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>45.1</td>
+      <td>50.90</td>
+      <td>59.81</td>
+      <td>8.91</td>
+      <td>107</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90423" target="_blank" rel="noopener noreferrer"><img src="img/Ambush_Gigapede.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ambush Gigapede.html" target="_blank" rel="noopener noreferrer">Ambush Gigapede</a></td>
+      <td>8.85</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>22861</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>9.52</td>
+      <td><a href=".//Pitiless Carnage.html" target="_blank" rel="noopener noreferrer">Pitiless Carnage</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90444" target="_blank" rel="noopener noreferrer"><img src="img/Pitiless_Carnage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>45.1</td>
+      <td>51.35</td>
+      <td>56.67</td>
+      <td>5.32</td>
+      <td>180</td>
+      <td>57.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90431" target="_blank" rel="noopener noreferrer"><img src="img/Desert's_Due.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Desert's Due.html" target="_blank" rel="noopener noreferrer">Desert's Due</a></td>
+      <td>4.76</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>25842</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>9.52</td>
+      <td><a href=".//Pitiless Carnage.html" target="_blank" rel="noopener noreferrer">Pitiless Carnage</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90444" target="_blank" rel="noopener noreferrer"><img src="img/Pitiless_Carnage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>45.1</td>
+      <td>50.25</td>
+      <td>52.61</td>
+      <td>2.36</td>
+      <td>211</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90442" target="_blank" rel="noopener noreferrer"><img src="img/Nezumi_Linkbreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nezumi Linkbreaker.html" target="_blank" rel="noopener noreferrer">Nezumi Linkbreaker</a></td>
+      <td>9.89</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>22590</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>9.52</td>
+      <td><a href=".//Pitiless Carnage.html" target="_blank" rel="noopener noreferrer">Pitiless Carnage</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90444" target="_blank" rel="noopener noreferrer"><img src="img/Pitiless_Carnage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>45.1</td>
+      <td>48.85</td>
+      <td>50.79</td>
+      <td>1.94</td>
+      <td>126</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90430" target="_blank" rel="noopener noreferrer"><img src="img/Corrupted_Conviction.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Corrupted Conviction.html" target="_blank" rel="noopener noreferrer">Corrupted Conviction</a></td>
+      <td>11.38</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>21235</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>9.52</td>
+      <td><a href=".//Pitiless Carnage.html" target="_blank" rel="noopener noreferrer">Pitiless Carnage</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90444" target="_blank" rel="noopener noreferrer"><img src="img/Pitiless_Carnage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>45.1</td>
+      <td>47.85</td>
+      <td>49.59</td>
+      <td>1.74</td>
+      <td>121</td>
+      <td>50.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90425" target="_blank" rel="noopener noreferrer"><img src="img/Blacksnag_Buzzard.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Blacksnag Buzzard.html" target="_blank" rel="noopener noreferrer">Blacksnag Buzzard</a></td>
+      <td>10.38</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>69744</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>9.52</td>
+      <td><a href=".//Pitiless Carnage.html" target="_blank" rel="noopener noreferrer">Pitiless Carnage</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90444" target="_blank" rel="noopener noreferrer"><img src="img/Pitiless_Carnage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>45.1</td>
+      <td>50.55</td>
+      <td>50.47</td>
+      <td>-0.08</td>
+      <td>107</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90604" target="_blank" rel="noopener noreferrer"><img src="img/Forlorn_Flats.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Forlorn Flats.html" target="_blank" rel="noopener noreferrer">Forlorn Flats</a></td>
+      <td>6.63</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>26384</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>9.52</td>
+      <td><a href=".//Pitiless Carnage.html" target="_blank" rel="noopener noreferrer">Pitiless Carnage</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90444" target="_blank" rel="noopener noreferrer"><img src="img/Pitiless_Carnage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>45.1</td>
+      <td>45.10</td>
+      <td>44.99</td>
+      <td>-0.11</td>
+      <td>889</td>
+      <td>45.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90444" target="_blank" rel="noopener noreferrer"><img src="img/Pitiless_Carnage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Pitiless Carnage.html" target="_blank" rel="noopener noreferrer">Pitiless Carnage</a></td>
+      <td>9.52</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>30720</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>9.52</td>
+      <td><a href=".//Pitiless Carnage.html" target="_blank" rel="noopener noreferrer">Pitiless Carnage</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90444" target="_blank" rel="noopener noreferrer"><img src="img/Pitiless_Carnage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>45.1</td>
+      <td>51.45</td>
+      <td>51.00</td>
+      <td>-0.45</td>
+      <td>200</td>
+      <td>57.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90460" target="_blank" rel="noopener noreferrer"><img src="img/Vault_Plunderer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vault Plunderer.html" target="_blank" rel="noopener noreferrer">Vault Plunderer</a></td>
+      <td>5.40</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>23132</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>9.52</td>
+      <td><a href=".//Pitiless Carnage.html" target="_blank" rel="noopener noreferrer">Pitiless Carnage</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90444" target="_blank" rel="noopener noreferrer"><img src="img/Pitiless_Carnage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>45.1</td>
+      <td>51.05</td>
+      <td>50.60</td>
+      <td>-0.45</td>
+      <td>168</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90432" target="_blank" rel="noopener noreferrer"><img src="img/Desperate_Bloodseeker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Desperate Bloodseeker.html" target="_blank" rel="noopener noreferrer">Desperate Bloodseeker</a></td>
+      <td>6.27</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27197</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>9.52</td>
+      <td><a href=".//Pitiless Carnage.html" target="_blank" rel="noopener noreferrer">Pitiless Carnage</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90444" target="_blank" rel="noopener noreferrer"><img src="img/Pitiless_Carnage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>45.1</td>
+      <td>49.65</td>
+      <td>48.41</td>
+      <td>-1.24</td>
+      <td>157</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90447" target="_blank" rel="noopener noreferrer"><img src="img/Raven_of_Fell_Omens.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Raven of Fell Omens.html" target="_blank" rel="noopener noreferrer">Raven of Fell Omens</a></td>
+      <td>7.26</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>32075</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>9.52</td>
+      <td><a href=".//Pitiless Carnage.html" target="_blank" rel="noopener noreferrer">Pitiless Carnage</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90444" target="_blank" rel="noopener noreferrer"><img src="img/Pitiless_Carnage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>45.1</td>
+      <td>48.20</td>
+      <td>46.60</td>
+      <td>-1.60</td>
+      <td>103</td>
+      <td>51.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90465" target="_blank" rel="noopener noreferrer"><img src="img/Deadeye_Duelist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deadeye Duelist.html" target="_blank" rel="noopener noreferrer">Deadeye Duelist</a></td>
+      <td>8.41</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>22319</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>9.52</td>
+      <td><a href=".//Pitiless Carnage.html" target="_blank" rel="noopener noreferrer">Pitiless Carnage</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90444" target="_blank" rel="noopener noreferrer"><img src="img/Pitiless_Carnage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>45.1</td>
+      <td>51.50</td>
+      <td>49.49</td>
+      <td>-2.01</td>
+      <td>196</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90429" target="_blank" rel="noopener noreferrer"><img src="img/Consuming_Ashes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Consuming Ashes.html" target="_blank" rel="noopener noreferrer">Consuming Ashes</a></td>
+      <td>4.32</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>21777</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>9.52</td>
+      <td><a href=".//Pitiless Carnage.html" target="_blank" rel="noopener noreferrer">Pitiless Carnage</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90444" target="_blank" rel="noopener noreferrer"><img src="img/Pitiless_Carnage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>45.1</td>
+      <td>48.10</td>
+      <td>44.54</td>
+      <td>-3.56</td>
+      <td>119</td>
+      <td>51.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90427" target="_blank" rel="noopener noreferrer"><img src="img/Boneyard_Desecrator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Boneyard Desecrator.html" target="_blank" rel="noopener noreferrer">Boneyard Desecrator</a></td>
+      <td>10.70</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>25300</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>9.52</td>
+      <td><a href=".//Pitiless Carnage.html" target="_blank" rel="noopener noreferrer">Pitiless Carnage</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90444" target="_blank" rel="noopener noreferrer"><img src="img/Pitiless_Carnage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>45.1</td>
+      <td>50.80</td>
+      <td>47.06</td>
+      <td>-3.74</td>
+      <td>119</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90440" target="_blank" rel="noopener noreferrer"><img src="img/Mourner's_Surprise.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mourner's Surprise.html" target="_blank" rel="noopener noreferrer">Mourner's Surprise</a></td>
+      <td>8.03</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>70015</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>9.52</td>
+      <td><a href=".//Pitiless Carnage.html" target="_blank" rel="noopener noreferrer">Pitiless Carnage</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90444" target="_blank" rel="noopener noreferrer"><img src="img/Pitiless_Carnage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>45.1</td>
+      <td>50.25</td>
+      <td>46.36</td>
+      <td>-3.89</td>
+      <td>110</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90605" target="_blank" rel="noopener noreferrer"><img src="img/Jagged_Barrens.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Jagged Barrens.html" target="_blank" rel="noopener noreferrer">Jagged Barrens</a></td>
+      <td>6.24</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27739</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>9.52</td>
+      <td><a href=".//Pitiless Carnage.html" target="_blank" rel="noopener noreferrer">Pitiless Carnage</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90444" target="_blank" rel="noopener noreferrer"><img src="img/Pitiless_Carnage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>45.1</td>
+      <td>50.20</td>
+      <td>45.90</td>
+      <td>-4.30</td>
+      <td>122</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90449" target="_blank" rel="noopener noreferrer"><img src="img/Rooftop_Assassin.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rooftop Assassin.html" target="_blank" rel="noopener noreferrer">Rooftop Assassin</a></td>
+      <td>8.45</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>28823</th>
+      <td>rare</td>
+      <td>B</td>
+      <td>9.52</td>
+      <td><a href=".//Pitiless Carnage.html" target="_blank" rel="noopener noreferrer">Pitiless Carnage</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90444" target="_blank" rel="noopener noreferrer"><img src="img/Pitiless_Carnage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>45.1</td>
+      <td>49.10</td>
+      <td>41.38</td>
+      <td>-7.72</td>
+      <td>116</td>
+      <td>53.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90453" target="_blank" rel="noopener noreferrer"><img src="img/Skulduggery.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Skulduggery.html" target="_blank" rel="noopener noreferrer">Skulduggery</a></td>
+      <td>9.18</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+  </tbody>
+</table>

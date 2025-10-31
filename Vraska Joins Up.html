@@ -1,0 +1,660 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>21373</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>8.95</td>
+      <td><a href=".//Vraska Joins Up.html" target="_blank" rel="noopener noreferrer">Vraska Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90582" target="_blank" rel="noopener noreferrer"><img src="img/Vraska_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>43.1</td>
+      <td>46.85</td>
+      <td>54.46</td>
+      <td>7.61</td>
+      <td>112</td>
+      <td>50.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90425" target="_blank" rel="noopener noreferrer"><img src="img/Blacksnag_Buzzard.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Blacksnag Buzzard.html" target="_blank" rel="noopener noreferrer">Blacksnag Buzzard</a></td>
+      <td>10.38</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>30858</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>8.95</td>
+      <td><a href=".//Vraska Joins Up.html" target="_blank" rel="noopener noreferrer">Vraska Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90582" target="_blank" rel="noopener noreferrer"><img src="img/Vraska_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>43.1</td>
+      <td>50.45</td>
+      <td>56.25</td>
+      <td>5.80</td>
+      <td>160</td>
+      <td>57.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90460" target="_blank" rel="noopener noreferrer"><img src="img/Vault_Plunderer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vault Plunderer.html" target="_blank" rel="noopener noreferrer">Vault Plunderer</a></td>
+      <td>5.40</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>42782</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>8.95</td>
+      <td><a href=".//Vraska Joins Up.html" target="_blank" rel="noopener noreferrer">Vraska Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90582" target="_blank" rel="noopener noreferrer"><img src="img/Vraska_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>43.1</td>
+      <td>49.85</td>
+      <td>53.98</td>
+      <td>4.13</td>
+      <td>176</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90504" target="_blank" rel="noopener noreferrer"><img src="img/Cactarantula.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cactarantula.html" target="_blank" rel="noopener noreferrer">Cactarantula</a></td>
+      <td>4.82</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>52538</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>8.95</td>
+      <td><a href=".//Vraska Joins Up.html" target="_blank" rel="noopener noreferrer">Vraska Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90582" target="_blank" rel="noopener noreferrer"><img src="img/Vraska_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>43.1</td>
+      <td>49.70</td>
+      <td>52.23</td>
+      <td>2.53</td>
+      <td>157</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90540" target="_blank" rel="noopener noreferrer"><img src="img/Badlands_Revival.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Badlands Revival.html" target="_blank" rel="noopener noreferrer">Badlands Revival</a></td>
+      <td>5.16</td>
+      <td>BG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>50099</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>8.95</td>
+      <td><a href=".//Vraska Joins Up.html" target="_blank" rel="noopener noreferrer">Vraska Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90582" target="_blank" rel="noopener noreferrer"><img src="img/Vraska_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>43.1</td>
+      <td>51.00</td>
+      <td>52.83</td>
+      <td>1.83</td>
+      <td>159</td>
+      <td>58.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90531" target="_blank" rel="noopener noreferrer"><img src="img/Throw_from_the_Saddle.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Throw from the Saddle.html" target="_blank" rel="noopener noreferrer">Throw from the Saddle</a></td>
+      <td>3.96</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>22999</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>8.95</td>
+      <td><a href=".//Vraska Joins Up.html" target="_blank" rel="noopener noreferrer">Vraska Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90582" target="_blank" rel="noopener noreferrer"><img src="img/Vraska_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>43.1</td>
+      <td>50.35</td>
+      <td>52.12</td>
+      <td>1.77</td>
+      <td>165</td>
+      <td>57.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90431" target="_blank" rel="noopener noreferrer"><img src="img/Desert's_Due.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Desert's Due.html" target="_blank" rel="noopener noreferrer">Desert's Due</a></td>
+      <td>4.76</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>47118</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>8.95</td>
+      <td><a href=".//Vraska Joins Up.html" target="_blank" rel="noopener noreferrer">Vraska Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90582" target="_blank" rel="noopener noreferrer"><img src="img/Vraska_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>43.1</td>
+      <td>49.90</td>
+      <td>51.31</td>
+      <td>1.41</td>
+      <td>191</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90520" target="_blank" rel="noopener noreferrer"><img src="img/Patient_Naturalist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Patient Naturalist.html" target="_blank" rel="noopener noreferrer">Patient Naturalist</a></td>
+      <td>6.04</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>56061</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>8.95</td>
+      <td><a href=".//Vraska Joins Up.html" target="_blank" rel="noopener noreferrer">Vraska Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90582" target="_blank" rel="noopener noreferrer"><img src="img/Vraska_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>43.1</td>
+      <td>50.75</td>
+      <td>51.79</td>
+      <td>1.04</td>
+      <td>251</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90553" target="_blank" rel="noopener noreferrer"><img src="img/Honest_Rutstein.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Honest Rutstein.html" target="_blank" rel="noopener noreferrer">Honest Rutstein</a></td>
+      <td>3.57</td>
+      <td>BG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>43866</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>8.95</td>
+      <td><a href=".//Vraska Joins Up.html" target="_blank" rel="noopener noreferrer">Vraska Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90582" target="_blank" rel="noopener noreferrer"><img src="img/Vraska_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>43.1</td>
+      <td>48.10</td>
+      <td>48.48</td>
+      <td>0.38</td>
+      <td>165</td>
+      <td>53.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90508" target="_blank" rel="noopener noreferrer"><img src="img/Freestrider_Commando.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Freestrider Commando.html" target="_blank" rel="noopener noreferrer">Freestrider Commando</a></td>
+      <td>7.43</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>63920</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>8.95</td>
+      <td><a href=".//Vraska Joins Up.html" target="_blank" rel="noopener noreferrer">Vraska Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90582" target="_blank" rel="noopener noreferrer"><img src="img/Vraska_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>43.1</td>
+      <td>43.10</td>
+      <td>43.47</td>
+      <td>0.37</td>
+      <td>1249</td>
+      <td>43.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90582" target="_blank" rel="noopener noreferrer"><img src="img/Vraska_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vraska Joins Up.html" target="_blank" rel="noopener noreferrer">Vraska Joins Up</a></td>
+      <td>8.95</td>
+      <td>BG</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>50912</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>8.95</td>
+      <td><a href=".//Vraska Joins Up.html" target="_blank" rel="noopener noreferrer">Vraska Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90582" target="_blank" rel="noopener noreferrer"><img src="img/Vraska_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>43.1</td>
+      <td>48.95</td>
+      <td>49.09</td>
+      <td>0.14</td>
+      <td>165</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90534" target="_blank" rel="noopener noreferrer"><img src="img/Voracious_Varmint.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Voracious Varmint.html" target="_blank" rel="noopener noreferrer">Voracious Varmint</a></td>
+      <td>7.59</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27877</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>8.95</td>
+      <td><a href=".//Vraska Joins Up.html" target="_blank" rel="noopener noreferrer">Vraska Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90582" target="_blank" rel="noopener noreferrer"><img src="img/Vraska_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>43.1</td>
+      <td>49.20</td>
+      <td>49.07</td>
+      <td>-0.13</td>
+      <td>161</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90449" target="_blank" rel="noopener noreferrer"><img src="img/Rooftop_Assassin.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rooftop Assassin.html" target="_blank" rel="noopener noreferrer">Rooftop Assassin</a></td>
+      <td>8.45</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>23270</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>8.95</td>
+      <td><a href=".//Vraska Joins Up.html" target="_blank" rel="noopener noreferrer">Vraska Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90582" target="_blank" rel="noopener noreferrer"><img src="img/Vraska_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>43.1</td>
+      <td>50.05</td>
+      <td>49.37</td>
+      <td>-0.68</td>
+      <td>237</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90432" target="_blank" rel="noopener noreferrer"><img src="img/Desperate_Bloodseeker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Desperate Bloodseeker.html" target="_blank" rel="noopener noreferrer">Desperate Bloodseeker</a></td>
+      <td>6.27</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>44679</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>8.95</td>
+      <td><a href=".//Vraska Joins Up.html" target="_blank" rel="noopener noreferrer">Vraska Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90582" target="_blank" rel="noopener noreferrer"><img src="img/Vraska_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>43.1</td>
+      <td>49.40</td>
+      <td>48.28</td>
+      <td>-1.12</td>
+      <td>145</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90511" target="_blank" rel="noopener noreferrer"><img src="img/Giant_Beaver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Giant Beaver.html" target="_blank" rel="noopener noreferrer">Giant Beaver</a></td>
+      <td>5.48</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>66630</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>8.95</td>
+      <td><a href=".//Vraska Joins Up.html" target="_blank" rel="noopener noreferrer">Vraska Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90582" target="_blank" rel="noopener noreferrer"><img src="img/Vraska_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>43.1</td>
+      <td>48.70</td>
+      <td>47.57</td>
+      <td>-1.13</td>
+      <td>103</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90592" target="_blank" rel="noopener noreferrer"><img src="img/Oasis_Gardener.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Oasis Gardener.html" target="_blank" rel="noopener noreferrer">Oasis Gardener</a></td>
+      <td>8.85</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>68798</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>8.95</td>
+      <td><a href=".//Vraska Joins Up.html" target="_blank" rel="noopener noreferrer">Vraska Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90582" target="_blank" rel="noopener noreferrer"><img src="img/Vraska_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>43.1</td>
+      <td>49.55</td>
+      <td>47.65</td>
+      <td>-1.90</td>
+      <td>170</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90600" target="_blank" rel="noopener noreferrer"><img src="img/Conduit_Pylons.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Conduit Pylons.html" target="_blank" rel="noopener noreferrer">Conduit Pylons</a></td>
+      <td>7.05</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>68527</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>8.95</td>
+      <td><a href=".//Vraska Joins Up.html" target="_blank" rel="noopener noreferrer">Vraska Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90582" target="_blank" rel="noopener noreferrer"><img src="img/Vraska_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>43.1</td>
+      <td>49.25</td>
+      <td>47.00</td>
+      <td>-2.25</td>
+      <td>100</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90599" target="_blank" rel="noopener noreferrer"><img src="img/Bristling_Backwoods.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bristling Backwoods.html" target="_blank" rel="noopener noreferrer">Bristling Backwoods</a></td>
+      <td>6.39</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>69611</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>8.95</td>
+      <td><a href=".//Vraska Joins Up.html" target="_blank" rel="noopener noreferrer">Vraska Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90582" target="_blank" rel="noopener noreferrer"><img src="img/Vraska_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>43.1</td>
+      <td>49.80</td>
+      <td>47.37</td>
+      <td>-2.43</td>
+      <td>209</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90603" target="_blank" rel="noopener noreferrer"><img src="img/Festering_Gulch.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Festering Gulch.html" target="_blank" rel="noopener noreferrer">Festering Gulch</a></td>
+      <td>5.84</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>45492</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>8.95</td>
+      <td><a href=".//Vraska Joins Up.html" target="_blank" rel="noopener noreferrer">Vraska Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90582" target="_blank" rel="noopener noreferrer"><img src="img/Vraska_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>43.1</td>
+      <td>49.45</td>
+      <td>46.43</td>
+      <td>-3.02</td>
+      <td>196</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90514" target="_blank" rel="noopener noreferrer"><img src="img/Hardbristle_Bandit.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hardbristle Bandit.html" target="_blank" rel="noopener noreferrer">Hardbristle Bandit</a></td>
+      <td>4.54</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>22457</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>8.95</td>
+      <td><a href=".//Vraska Joins Up.html" target="_blank" rel="noopener noreferrer">Vraska Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90582" target="_blank" rel="noopener noreferrer"><img src="img/Vraska_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>43.1</td>
+      <td>50.50</td>
+      <td>47.24</td>
+      <td>-3.26</td>
+      <td>163</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90429" target="_blank" rel="noopener noreferrer"><img src="img/Consuming_Ashes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Consuming Ashes.html" target="_blank" rel="noopener noreferrer">Consuming Ashes</a></td>
+      <td>4.32</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>49557</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>8.95</td>
+      <td><a href=".//Vraska Joins Up.html" target="_blank" rel="noopener noreferrer">Vraska Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90582" target="_blank" rel="noopener noreferrer"><img src="img/Vraska_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>43.1</td>
+      <td>50.20</td>
+      <td>46.52</td>
+      <td>-3.68</td>
+      <td>187</td>
+      <td>57.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90529" target="_blank" rel="noopener noreferrer"><img src="img/Spinewoods_Paladin.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Spinewoods Paladin.html" target="_blank" rel="noopener noreferrer">Spinewoods Paladin</a></td>
+      <td>4.92</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>49828</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>8.95</td>
+      <td><a href=".//Vraska Joins Up.html" target="_blank" rel="noopener noreferrer">Vraska Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90582" target="_blank" rel="noopener noreferrer"><img src="img/Vraska_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>43.1</td>
+      <td>50.50</td>
+      <td>46.67</td>
+      <td>-3.83</td>
+      <td>105</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90530" target="_blank" rel="noopener noreferrer"><img src="img/Stubborn_Burrowfiend.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Stubborn Burrowfiend.html" target="_blank" rel="noopener noreferrer">Stubborn Burrowfiend</a></td>
+      <td>3.75</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>70966</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>8.95</td>
+      <td><a href=".//Vraska Joins Up.html" target="_blank" rel="noopener noreferrer">Vraska Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90582" target="_blank" rel="noopener noreferrer"><img src="img/Vraska_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>43.1</td>
+      <td>48.90</td>
+      <td>44.96</td>
+      <td>-3.94</td>
+      <td>129</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90608" target="_blank" rel="noopener noreferrer"><img src="img/Mirage_Mesa.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mirage Mesa.html" target="_blank" rel="noopener noreferrer">Mirage Mesa</a></td>
+      <td>5.99</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>42240</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>8.95</td>
+      <td><a href=".//Vraska Joins Up.html" target="_blank" rel="noopener noreferrer">Vraska Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90582" target="_blank" rel="noopener noreferrer"><img src="img/Vraska_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>43.1</td>
+      <td>49.10</td>
+      <td>44.34</td>
+      <td>-4.76</td>
+      <td>106</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90502" target="_blank" rel="noopener noreferrer"><img src="img/Bristlepack_Sentry.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bristlepack Sentry.html" target="_blank" rel="noopener noreferrer">Bristlepack Sentry</a></td>
+      <td>7.81</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>49015</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>8.95</td>
+      <td><a href=".//Vraska Joins Up.html" target="_blank" rel="noopener noreferrer">Vraska Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90582" target="_blank" rel="noopener noreferrer"><img src="img/Vraska_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>43.1</td>
+      <td>50.15</td>
+      <td>44.59</td>
+      <td>-5.56</td>
+      <td>157</td>
+      <td>57.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90527" target="_blank" rel="noopener noreferrer"><img src="img/Snakeskin_Veil.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Snakeskin Veil.html" target="_blank" rel="noopener noreferrer">Snakeskin Veil</a></td>
+      <td>6.64</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27335</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>8.95</td>
+      <td><a href=".//Vraska Joins Up.html" target="_blank" rel="noopener noreferrer">Vraska Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90582" target="_blank" rel="noopener noreferrer"><img src="img/Vraska_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>43.1</td>
+      <td>48.65</td>
+      <td>42.86</td>
+      <td>-5.79</td>
+      <td>119</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90447" target="_blank" rel="noopener noreferrer"><img src="img/Raven_of_Fell_Omens.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Raven of Fell Omens.html" target="_blank" rel="noopener noreferrer">Raven of Fell Omens</a></td>
+      <td>7.26</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>20831</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>8.95</td>
+      <td><a href=".//Vraska Joins Up.html" target="_blank" rel="noopener noreferrer">Vraska Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90582" target="_blank" rel="noopener noreferrer"><img src="img/Vraska_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>43.1</td>
+      <td>49.90</td>
+      <td>43.17</td>
+      <td>-6.73</td>
+      <td>139</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90423" target="_blank" rel="noopener noreferrer"><img src="img/Ambush_Gigapede.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ambush Gigapede.html" target="_blank" rel="noopener noreferrer">Ambush Gigapede</a></td>
+      <td>8.85</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>43324</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>8.95</td>
+      <td><a href=".//Vraska Joins Up.html" target="_blank" rel="noopener noreferrer">Vraska Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90582" target="_blank" rel="noopener noreferrer"><img src="img/Vraska_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>43.1</td>
+      <td>49.90</td>
+      <td>41.83</td>
+      <td>-8.07</td>
+      <td>153</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90506" target="_blank" rel="noopener noreferrer"><img src="img/Dance_of_the_Tumbleweeds.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Dance of the Tumbleweeds.html" target="_blank" rel="noopener noreferrer">Dance of the Tumbleweeds</a></td>
+      <td>5.56</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>25438</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>8.95</td>
+      <td><a href=".//Vraska Joins Up.html" target="_blank" rel="noopener noreferrer">Vraska Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90582" target="_blank" rel="noopener noreferrer"><img src="img/Vraska_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>43.1</td>
+      <td>49.80</td>
+      <td>41.73</td>
+      <td>-8.07</td>
+      <td>139</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90440" target="_blank" rel="noopener noreferrer"><img src="img/Mourner's_Surprise.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mourner's Surprise.html" target="_blank" rel="noopener noreferrer">Mourner's Surprise</a></td>
+      <td>8.03</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>43595</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>8.95</td>
+      <td><a href=".//Vraska Joins Up.html" target="_blank" rel="noopener noreferrer">Vraska Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90582" target="_blank" rel="noopener noreferrer"><img src="img/Vraska_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>43.1</td>
+      <td>49.05</td>
+      <td>39.26</td>
+      <td>-9.79</td>
+      <td>135</td>
+      <td>55.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90507" target="_blank" rel="noopener noreferrer"><img src="img/Drover_Grizzly.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Drover Grizzly.html" target="_blank" rel="noopener noreferrer">Drover Grizzly</a></td>
+      <td>6.84</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>41427</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>8.95</td>
+      <td><a href=".//Vraska Joins Up.html" target="_blank" rel="noopener noreferrer">Vraska Joins Up</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90582" target="_blank" rel="noopener noreferrer"><img src="img/Vraska_Joins_Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>43.1</td>
+      <td>48.60</td>
+      <td>35.86</td>
+      <td>-12.74</td>
+      <td>145</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90499" target="_blank" rel="noopener noreferrer"><img src="img/Ankle_Biter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ankle Biter.html" target="_blank" rel="noopener noreferrer">Ankle Biter</a></td>
+      <td>8.80</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+  </tbody>
+</table>

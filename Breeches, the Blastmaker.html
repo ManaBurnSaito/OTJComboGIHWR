@@ -1,0 +1,2446 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>24315</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>54.80</td>
+      <td>63.56</td>
+      <td>8.76</td>
+      <td>118</td>
+      <td>59.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90436" target="_blank" rel="noopener noreferrer"><img src="img/Hollow_Marauder.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hollow Marauder.html" target="_blank" rel="noopener noreferrer">Hollow Marauder</a></td>
+      <td>3.46</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>34613</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>55.85</td>
+      <td>61.61</td>
+      <td>5.76</td>
+      <td>211</td>
+      <td>61.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90474" target="_blank" rel="noopener noreferrer"><img src="img/Hellspur_Posse_Boss.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hellspur Posse Boss.html" target="_blank" rel="noopener noreferrer">Hellspur Posse Boss</a></td>
+      <td>1.95</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>59274</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>53.15</td>
+      <td>58.59</td>
+      <td>5.44</td>
+      <td>768</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90565" target="_blank" rel="noopener noreferrer"><img src="img/Malcolm,_the_Eyes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Malcolm, the Eyes.html" target="_blank" rel="noopener noreferrer">Malcolm, the Eyes</a></td>
+      <td>4.88</td>
+      <td>UR</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>15101</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>53.95</td>
+      <td>58.95</td>
+      <td>5.00</td>
+      <td>648</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90402" target="_blank" rel="noopener noreferrer"><img src="img/Marauding_Sphinx.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Marauding Sphinx.html" target="_blank" rel="noopener noreferrer">Marauding Sphinx</a></td>
+      <td>3.99</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>39762</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>54.55</td>
+      <td>58.85</td>
+      <td>4.30</td>
+      <td>243</td>
+      <td>59.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90493" target="_blank" rel="noopener noreferrer"><img src="img/Stingerback_Terror.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Stingerback Terror.html" target="_blank" rel="noopener noreferrer">Stingerback Terror</a></td>
+      <td>1.70</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>57919</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>52.15</td>
+      <td>56.13</td>
+      <td>3.98</td>
+      <td>1281</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90560" target="_blank" rel="noopener noreferrer"><img src="img/Kraum,_Violent_Cacophony.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kraum, Violent Cacophony.html" target="_blank" rel="noopener noreferrer">Kraum, Violent Cacophony</a></td>
+      <td>6.74</td>
+      <td>UR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>5074</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>53.45</td>
+      <td>56.91</td>
+      <td>3.46</td>
+      <td>123</td>
+      <td>56.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90365" target="_blank" rel="noopener noreferrer"><img src="img/Mystical_Tether.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mystical Tether.html" target="_blank" rel="noopener noreferrer">Mystical Tether</a></td>
+      <td>4.31</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>64965</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>52.15</td>
+      <td>55.30</td>
+      <td>3.15</td>
+      <td>302</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90586" target="_blank" rel="noopener noreferrer"><img src="img/Bandit's_Haul.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bandit's Haul.html" target="_blank" rel="noopener noreferrer">Bandit's Haul</a></td>
+      <td>7.13</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>10765</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>52.25</td>
+      <td>55.39</td>
+      <td>3.14</td>
+      <td>538</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90386" target="_blank" rel="noopener noreferrer"><img src="img/Canyon_Crab.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Canyon Crab.html" target="_blank" rel="noopener noreferrer">Canyon Crab</a></td>
+      <td>6.72</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>63068</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>52.80</td>
+      <td>55.62</td>
+      <td>2.82</td>
+      <td>1280</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90579" target="_blank" rel="noopener noreferrer"><img src="img/Slick_Sequence.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Slick Sequence.html" target="_blank" rel="noopener noreferrer">Slick Sequence</a></td>
+      <td>8.14</td>
+      <td>UR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>58190</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>54.30</td>
+      <td>57.04</td>
+      <td>2.74</td>
+      <td>142</td>
+      <td>58.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90561" target="_blank" rel="noopener noreferrer"><img src="img/Laughing_Jasper_Flint.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Laughing Jasper Flint.html" target="_blank" rel="noopener noreferrer">Laughing Jasper Flint</a></td>
+      <td>1.80</td>
+      <td>BR</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>39220</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>52.35</td>
+      <td>55.01</td>
+      <td>2.66</td>
+      <td>629</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90491" target="_blank" rel="noopener noreferrer"><img src="img/Scorching_Shot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scorching Shot.html" target="_blank" rel="noopener noreferrer">Scorching Shot</a></td>
+      <td>5.04</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>59003</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>52.90</td>
+      <td>55.49</td>
+      <td>2.59</td>
+      <td>182</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90564" target="_blank" rel="noopener noreferrer"><img src="img/Make_Your_Own_Luck.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Make Your Own Luck.html" target="_blank" rel="noopener noreferrer">Make Your Own Luck</a></td>
+      <td>6.36</td>
+      <td>UG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>65507</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>51.30</td>
+      <td>53.85</td>
+      <td>2.55</td>
+      <td>338</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90588" target="_blank" rel="noopener noreferrer"><img src="img/Gold_Pan.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Gold Pan.html" target="_blank" rel="noopener noreferrer">Gold Pan</a></td>
+      <td>10.95</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>61442</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>49.50</td>
+      <td>51.96</td>
+      <td>2.46</td>
+      <td>102</td>
+      <td>49.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90573" target="_blank" rel="noopener noreferrer"><img src="img/Riku_of_Many_Paths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Riku of Many Paths.html" target="_blank" rel="noopener noreferrer">Riku of Many Paths</a></td>
+      <td>8.15</td>
+      <td>URG</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>18082</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>52.85</td>
+      <td>55.19</td>
+      <td>2.34</td>
+      <td>703</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90413" target="_blank" rel="noopener noreferrer"><img src="img/Slickshot_Lockpicker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Slickshot Lockpicker.html" target="_blank" rel="noopener noreferrer">Slickshot Lockpicker</a></td>
+      <td>4.70</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>64423</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>50.40</td>
+      <td>52.73</td>
+      <td>2.33</td>
+      <td>110</td>
+      <td>50.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90584" target="_blank" rel="noopener noreferrer"><img src="img/Wrangler_of_the_Damned.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wrangler of the Damned.html" target="_blank" rel="noopener noreferrer">Wrangler of the Damned</a></td>
+      <td>7.20</td>
+      <td>WU</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>67404</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>51.95</td>
+      <td>54.23</td>
+      <td>2.28</td>
+      <td>142</td>
+      <td>53.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90595" target="_blank" rel="noopener noreferrer"><img src="img/Sterling_Hound.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sterling Hound.html" target="_blank" rel="noopener noreferrer">Sterling Hound</a></td>
+      <td>10.69</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>29735</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>51.65</td>
+      <td>53.89</td>
+      <td>2.24</td>
+      <td>180</td>
+      <td>53.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90456" target="_blank" rel="noopener noreferrer"><img src="img/Treasure_Dredger.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Treasure Dredger.html" target="_blank" rel="noopener noreferrer">Treasure Dredger</a></td>
+      <td>6.42</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>34071</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>50.80</td>
+      <td>53.02</td>
+      <td>2.22</td>
+      <td>281</td>
+      <td>51.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90472" target="_blank" rel="noopener noreferrer"><img src="img/Hell_to_Pay.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hell to Pay.html" target="_blank" rel="noopener noreferrer">Hell to Pay</a></td>
+      <td>3.64</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>35968</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>52.80</td>
+      <td>55.00</td>
+      <td>2.20</td>
+      <td>360</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90479" target="_blank" rel="noopener noreferrer"><img src="img/Magda,_the_Hoardmaster.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Magda, the Hoardmaster.html" target="_blank" rel="noopener noreferrer">Magda, the Hoardmaster</a></td>
+      <td>1.89</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>56564</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>50.85</td>
+      <td>52.83</td>
+      <td>1.98</td>
+      <td>106</td>
+      <td>51.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90555" target="_blank" rel="noopener noreferrer"><img src="img/Jem_Lightfoote,_Sky_Explorer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Jem Lightfoote, Sky Explorer.html" target="_blank" rel="noopener noreferrer">Jem Lightfoote, Sky Explorer</a></td>
+      <td>6.90</td>
+      <td>WU</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>35155</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>51.10</td>
+      <td>53.06</td>
+      <td>1.96</td>
+      <td>1061</td>
+      <td>52.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90476" target="_blank" rel="noopener noreferrer"><img src="img/Irascible_Wolverine.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Irascible Wolverine.html" target="_blank" rel="noopener noreferrer">Irascible Wolverine</a></td>
+      <td>8.71</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>38678</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>48.90</td>
+      <td>50.76</td>
+      <td>1.86</td>
+      <td>394</td>
+      <td>47.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90489" target="_blank" rel="noopener noreferrer"><img src="img/Rodeo_Pyromancers.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rodeo Pyromancers.html" target="_blank" rel="noopener noreferrer">Rodeo Pyromancers</a></td>
+      <td>11.59</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>25399</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>53.25</td>
+      <td>55.00</td>
+      <td>1.75</td>
+      <td>120</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90440" target="_blank" rel="noopener noreferrer"><img src="img/Mourner's_Surprise.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mourner's Surprise.html" target="_blank" rel="noopener noreferrer">Mourner's Surprise</a></td>
+      <td>8.03</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12662</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>51.75</td>
+      <td>53.45</td>
+      <td>1.70</td>
+      <td>623</td>
+      <td>53.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90393" target="_blank" rel="noopener noreferrer"><img src="img/Failed_Fording.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Failed Fording.html" target="_blank" rel="noopener noreferrer">Failed Fording</a></td>
+      <td>10.49</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>56293</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>52.40</td>
+      <td>54.08</td>
+      <td>1.68</td>
+      <td>233</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90554" target="_blank" rel="noopener noreferrer"><img src="img/Intimidation_Campaign.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Intimidation Campaign.html" target="_blank" rel="noopener noreferrer">Intimidation Campaign</a></td>
+      <td>5.70</td>
+      <td>UB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>31903</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>52.30</td>
+      <td>53.92</td>
+      <td>1.62</td>
+      <td>434</td>
+      <td>54.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90464" target="_blank" rel="noopener noreferrer"><img src="img/Cunning_Coyote.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cunning Coyote.html" target="_blank" rel="noopener noreferrer">Cunning Coyote</a></td>
+      <td>5.82</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>19437</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>51.70</td>
+      <td>53.22</td>
+      <td>1.52</td>
+      <td>637</td>
+      <td>53.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90418" target="_blank" rel="noopener noreferrer"><img src="img/Stop_Cold.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Stop Cold.html" target="_blank" rel="noopener noreferrer">Stop Cold</a></td>
+      <td>9.62</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12120</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>54.20</td>
+      <td>55.65</td>
+      <td>1.45</td>
+      <td>336</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90391" target="_blank" rel="noopener noreferrer"><img src="img/Duelist_of_the_Mind.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Duelist of the Mind.html" target="_blank" rel="noopener noreferrer">Duelist of the Mind</a></td>
+      <td>2.84</td>
+      <td>U</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>58732</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>51.65</td>
+      <td>53.04</td>
+      <td>1.39</td>
+      <td>460</td>
+      <td>53.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90563" target="_blank" rel="noopener noreferrer"><img src="img/Lilah,_Undefeated_Slickshot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lilah, Undefeated Slickshot.html" target="_blank" rel="noopener noreferrer">Lilah, Undefeated Slickshot</a></td>
+      <td>6.37</td>
+      <td>UR</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>19708</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>52.90</td>
+      <td>54.27</td>
+      <td>1.37</td>
+      <td>1347</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90419" target="_blank" rel="noopener noreferrer"><img src="img/Take_the_Fall.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Take the Fall.html" target="_blank" rel="noopener noreferrer">Take the Fall</a></td>
+      <td>9.45</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>73366</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>51.20</td>
+      <td>52.54</td>
+      <td>1.34</td>
+      <td>354</td>
+      <td>52.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90617" target="_blank" rel="noopener noreferrer"><img src="img/Spirebluff_Canal.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Spirebluff Canal.html" target="_blank" rel="noopener noreferrer">Spirebluff Canal</a></td>
+      <td>6.27</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>22960</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>53.80</td>
+      <td>55.06</td>
+      <td>1.26</td>
+      <td>316</td>
+      <td>57.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90431" target="_blank" rel="noopener noreferrer"><img src="img/Desert's_Due.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Desert's Due.html" target="_blank" rel="noopener noreferrer">Desert's Due</a></td>
+      <td>4.76</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>14830</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>52.15</td>
+      <td>53.37</td>
+      <td>1.22</td>
+      <td>1306</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90401" target="_blank" rel="noopener noreferrer"><img src="img/Loan_Shark.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Loan Shark.html" target="_blank" rel="noopener noreferrer">Loan Shark</a></td>
+      <td>7.98</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>66862</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>52.50</td>
+      <td>53.66</td>
+      <td>1.16</td>
+      <td>246</td>
+      <td>55.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90593" target="_blank" rel="noopener noreferrer"><img src="img/Redrock_Sentinel.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Redrock Sentinel.html" target="_blank" rel="noopener noreferrer">Redrock Sentinel</a></td>
+      <td>9.37</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>32987</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>52.40</td>
+      <td>53.54</td>
+      <td>1.14</td>
+      <td>1343</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90468" target="_blank" rel="noopener noreferrer"><img src="img/Explosive_Derailment.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Explosive Derailment.html" target="_blank" rel="noopener noreferrer">Explosive Derailment</a></td>
+      <td>5.80</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>34884</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>51.00</td>
+      <td>52.14</td>
+      <td>1.14</td>
+      <td>911</td>
+      <td>52.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90475" target="_blank" rel="noopener noreferrer"><img src="img/Highway_Robbery.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Highway Robbery.html" target="_blank" rel="noopener noreferrer">Highway Robbery</a></td>
+      <td>10.66</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>40575</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>51.65</td>
+      <td>52.75</td>
+      <td>1.10</td>
+      <td>1420</td>
+      <td>53.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90496" target="_blank" rel="noopener noreferrer"><img src="img/Thunder_Salvo.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Thunder Salvo.html" target="_blank" rel="noopener noreferrer">Thunder Salvo</a></td>
+      <td>7.40</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>61713</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>57.05</td>
+      <td>57.86</td>
+      <td>0.81</td>
+      <td>140</td>
+      <td>64.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90574" target="_blank" rel="noopener noreferrer"><img src="img/Roxanne,_Starfall_Savant.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Roxanne, Starfall Savant.html" target="_blank" rel="noopener noreferrer">Roxanne, Starfall Savant</a></td>
+      <td>1.63</td>
+      <td>RG</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>14288</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>53.05</td>
+      <td>53.81</td>
+      <td>0.76</td>
+      <td>749</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90399" target="_blank" rel="noopener noreferrer"><img src="img/Jailbreak_Scheme.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Jailbreak Scheme.html" target="_blank" rel="noopener noreferrer">Jailbreak Scheme</a></td>
+      <td>9.98</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>15643</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>52.00</td>
+      <td>52.72</td>
+      <td>0.72</td>
+      <td>662</td>
+      <td>54.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90404" target="_blank" rel="noopener noreferrer"><img src="img/Nimble_Brigand.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nimble Brigand.html" target="_blank" rel="noopener noreferrer">Nimble Brigand</a></td>
+      <td>5.11</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>40304</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>54.95</td>
+      <td>55.65</td>
+      <td>0.70</td>
+      <td>115</td>
+      <td>59.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90495" target="_blank" rel="noopener noreferrer"><img src="img/Terror_of_the_Peaks.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Terror of the Peaks.html" target="_blank" rel="noopener noreferrer">Terror of the Peaks</a></td>
+      <td>1.27</td>
+      <td>R</td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>35426</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>51.00</td>
+      <td>51.47</td>
+      <td>0.47</td>
+      <td>544</td>
+      <td>52.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90477" target="_blank" rel="noopener noreferrer"><img src="img/Iron-Fist_Pulverizer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Iron-Fist Pulverizer.html" target="_blank" rel="noopener noreferrer">Iron-Fist Pulverizer</a></td>
+      <td>10.79</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12933</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>48.80</td>
+      <td>49.21</td>
+      <td>0.41</td>
+      <td>191</td>
+      <td>47.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90394" target="_blank" rel="noopener noreferrer"><img src="img/Fblthp,_Lost_on_the_Range.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fblthp, Lost on the Range.html" target="_blank" rel="noopener noreferrer">Fblthp, Lost on the Range</a></td>
+      <td>4.63</td>
+      <td>U</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>53041</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>58.20</td>
+      <td>58.60</td>
+      <td>0.40</td>
+      <td>157</td>
+      <td>66.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90542" target="_blank" rel="noopener noreferrer"><img src="img/Bonny_Pall,_Clearcutter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bonny Pall, Clearcutter.html" target="_blank" rel="noopener noreferrer">Bonny Pall, Clearcutter</a></td>
+      <td>1.58</td>
+      <td>UG</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>16456</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>53.35</td>
+      <td>53.69</td>
+      <td>0.34</td>
+      <td>1017</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90407" target="_blank" rel="noopener noreferrer"><img src="img/Phantom_Interference.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Phantom Interference.html" target="_blank" rel="noopener noreferrer">Phantom Interference</a></td>
+      <td>8.30</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>59545</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>52.10</td>
+      <td>52.38</td>
+      <td>0.28</td>
+      <td>294</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90566" target="_blank" rel="noopener noreferrer"><img src="img/Marchesa,_Dealer_of_Death.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Marchesa, Dealer of Death.html" target="_blank" rel="noopener noreferrer">Marchesa, Dealer of Death</a></td>
+      <td>4.06</td>
+      <td>UBR</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>67133</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>50.20</td>
+      <td>50.46</td>
+      <td>0.26</td>
+      <td>436</td>
+      <td>50.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90594" target="_blank" rel="noopener noreferrer"><img src="img/Silver_Deputy.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Silver Deputy.html" target="_blank" rel="noopener noreferrer">Silver Deputy</a></td>
+      <td>10.08</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>66591</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>52.15</td>
+      <td>52.38</td>
+      <td>0.23</td>
+      <td>462</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90592" target="_blank" rel="noopener noreferrer"><img src="img/Oasis_Gardener.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Oasis Gardener.html" target="_blank" rel="noopener noreferrer">Oasis Gardener</a></td>
+      <td>8.85</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>37052</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>52.25</td>
+      <td>52.47</td>
+      <td>0.22</td>
+      <td>869</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90483" target="_blank" rel="noopener noreferrer"><img src="img/Prickly_Pair.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Prickly Pair.html" target="_blank" rel="noopener noreferrer">Prickly Pair</a></td>
+      <td>6.94</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>13475</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>53.45</td>
+      <td>53.57</td>
+      <td>0.12</td>
+      <td>168</td>
+      <td>56.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90396" target="_blank" rel="noopener noreferrer"><img src="img/Geralf,_the_Fleshwright.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Geralf, the Fleshwright.html" target="_blank" rel="noopener noreferrer">Geralf, the Fleshwright</a></td>
+      <td>1.69</td>
+      <td>U</td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>16998</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>50.35</td>
+      <td>50.36</td>
+      <td>0.01</td>
+      <td>1233</td>
+      <td>50.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90409" target="_blank" rel="noopener noreferrer"><img src="img/Razzle-Dazzler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Razzle-Dazzler.html" target="_blank" rel="noopener noreferrer">Razzle-Dazzler</a></td>
+      <td>10.16</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>31361</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>52.75</td>
+      <td>52.68</td>
+      <td>-0.07</td>
+      <td>205</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90462" target="_blank" rel="noopener noreferrer"><img src="img/Calamity,_Galloping_Inferno.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Calamity, Galloping Inferno.html" target="_blank" rel="noopener noreferrer">Calamity, Galloping Inferno</a></td>
+      <td>1.65</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>31090</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>48.90</td>
+      <td>48.83</td>
+      <td>-0.07</td>
+      <td>383</td>
+      <td>47.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90461" target="_blank" rel="noopener noreferrer"><img src="img/Brimstone_Roundup.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Brimstone Roundup.html" target="_blank" rel="noopener noreferrer">Brimstone Roundup</a></td>
+      <td>9.62</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>15914</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>51.90</td>
+      <td>51.77</td>
+      <td>-0.13</td>
+      <td>678</td>
+      <td>53.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90405" target="_blank" rel="noopener noreferrer"><img src="img/Outlaw_Stitcher.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Outlaw Stitcher.html" target="_blank" rel="noopener noreferrer">Outlaw Stitcher</a></td>
+      <td>4.85</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>34342</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>52.10</td>
+      <td>51.95</td>
+      <td>-0.15</td>
+      <td>256</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90473" target="_blank" rel="noopener noreferrer"><img src="img/Hellspur_Brute.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hellspur Brute.html" target="_blank" rel="noopener noreferrer">Hellspur Brute</a></td>
+      <td>6.07</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>27838</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>52.65</td>
+      <td>52.43</td>
+      <td>-0.22</td>
+      <td>103</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90449" target="_blank" rel="noopener noreferrer"><img src="img/Rooftop_Assassin.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rooftop Assassin.html" target="_blank" rel="noopener noreferrer">Rooftop Assassin</a></td>
+      <td>8.45</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>33529</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>51.75</td>
+      <td>51.46</td>
+      <td>-0.29</td>
+      <td>342</td>
+      <td>53.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90470" target="_blank" rel="noopener noreferrer"><img src="img/Gila_Courser.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Gila Courser.html" target="_blank" rel="noopener noreferrer">Gila Courser</a></td>
+      <td>5.90</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>18624</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>50.10</td>
+      <td>49.80</td>
+      <td>-0.30</td>
+      <td>492</td>
+      <td>50.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90415" target="_blank" rel="noopener noreferrer"><img src="img/Spring_Splasher.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Spring Splasher.html" target="_blank" rel="noopener noreferrer">Spring Splasher</a></td>
+      <td>10.92</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>15372</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>53.05</td>
+      <td>52.71</td>
+      <td>-0.34</td>
+      <td>480</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90403" target="_blank" rel="noopener noreferrer"><img src="img/Metamorphic_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Metamorphic Blast.html" target="_blank" rel="noopener noreferrer">Metamorphic Blast</a></td>
+      <td>7.07</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>28922</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>51.55</td>
+      <td>51.20</td>
+      <td>-0.35</td>
+      <td>125</td>
+      <td>53.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90453" target="_blank" rel="noopener noreferrer"><img src="img/Skulduggery.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Skulduggery.html" target="_blank" rel="noopener noreferrer">Skulduggery</a></td>
+      <td>9.18</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>71469</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>53.15</td>
+      <td>52.72</td>
+      <td>-0.43</td>
+      <td>552</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90610" target="_blank" rel="noopener noreferrer"><img src="img/Soured_Springs.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Soured Springs.html" target="_blank" rel="noopener noreferrer">Soured Springs</a></td>
+      <td>6.22</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>53312</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>50.00</td>
+      <td>49.55</td>
+      <td>-0.45</td>
+      <td>6236</td>
+      <td>50.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td>6.95</td>
+      <td>UR</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>36510</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>50.85</td>
+      <td>50.38</td>
+      <td>-0.47</td>
+      <td>800</td>
+      <td>51.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90481" target="_blank" rel="noopener noreferrer"><img src="img/Mine_Raider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mine Raider.html" target="_blank" rel="noopener noreferrer">Mine Raider</a></td>
+      <td>9.32</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>32174</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>50.65</td>
+      <td>50.16</td>
+      <td>-0.49</td>
+      <td>955</td>
+      <td>51.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90465" target="_blank" rel="noopener noreferrer"><img src="img/Deadeye_Duelist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deadeye Duelist.html" target="_blank" rel="noopener noreferrer">Deadeye Duelist</a></td>
+      <td>8.41</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>39491</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>51.05</td>
+      <td>50.56</td>
+      <td>-0.49</td>
+      <td>267</td>
+      <td>52.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90492" target="_blank" rel="noopener noreferrer"><img src="img/Slickshot_Show-Off.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Slickshot Show-Off.html" target="_blank" rel="noopener noreferrer">Slickshot Show-Off</a></td>
+      <td>2.92</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>12391</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>51.30</td>
+      <td>50.70</td>
+      <td>-0.60</td>
+      <td>428</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90392" target="_blank" rel="noopener noreferrer"><img src="img/Emergent_Haunting.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Emergent Haunting.html" target="_blank" rel="noopener noreferrer">Emergent Haunting</a></td>
+      <td>7.28</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>69301</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>52.40</td>
+      <td>51.74</td>
+      <td>-0.66</td>
+      <td>1467</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90602" target="_blank" rel="noopener noreferrer"><img src="img/Eroded_Canyon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eroded Canyon.html" target="_blank" rel="noopener noreferrer">Eroded Canyon</a></td>
+      <td>7.18</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>13746</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>50.80</td>
+      <td>50.07</td>
+      <td>-0.73</td>
+      <td>749</td>
+      <td>51.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90397" target="_blank" rel="noopener noreferrer"><img src="img/Geyser_Drake.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Geyser Drake.html" target="_blank" rel="noopener noreferrer">Geyser Drake</a></td>
+      <td>9.51</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>19979</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>52.20</td>
+      <td>51.45</td>
+      <td>-0.75</td>
+      <td>552</td>
+      <td>54.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90420" target="_blank" rel="noopener noreferrer"><img src="img/This_Town_Ain't_Big_Enough.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//This Town Ain't Big Enough.html" target="_blank" rel="noopener noreferrer">This Town Ain't Big Enough</a></td>
+      <td>7.26</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>31632</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>49.30</td>
+      <td>48.47</td>
+      <td>-0.83</td>
+      <td>196</td>
+      <td>48.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90463" target="_blank" rel="noopener noreferrer"><img src="img/Caught_in_the_Crossfire.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Caught in the Crossfire.html" target="_blank" rel="noopener noreferrer">Caught in the Crossfire</a></td>
+      <td>10.17</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>19166</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>55.20</td>
+      <td>54.32</td>
+      <td>-0.88</td>
+      <td>278</td>
+      <td>60.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90417" target="_blank" rel="noopener noreferrer"><img src="img/Stoic_Sphinx.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Stoic Sphinx.html" target="_blank" rel="noopener noreferrer">Stoic Sphinx</a></td>
+      <td>1.99</td>
+      <td>U</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>32445</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>51.55</td>
+      <td>50.60</td>
+      <td>-0.95</td>
+      <td>332</td>
+      <td>53.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90466" target="_blank" rel="noopener noreferrer"><img src="img/Demonic_Ruckus.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Demonic Ruckus.html" target="_blank" rel="noopener noreferrer">Demonic Ruckus</a></td>
+      <td>8.18</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>38407</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>49.15</td>
+      <td>48.12</td>
+      <td>-1.03</td>
+      <td>160</td>
+      <td>48.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90488" target="_blank" rel="noopener noreferrer"><img src="img/Return_the_Favor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Return the Favor.html" target="_blank" rel="noopener noreferrer">Return the Favor</a></td>
+      <td>10.60</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>70927</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>52.35</td>
+      <td>51.30</td>
+      <td>-1.05</td>
+      <td>768</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90608" target="_blank" rel="noopener noreferrer"><img src="img/Mirage_Mesa.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mirage Mesa.html" target="_blank" rel="noopener noreferrer">Mirage Mesa</a></td>
+      <td>5.99</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>38949</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>52.80</td>
+      <td>51.67</td>
+      <td>-1.13</td>
+      <td>209</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90490" target="_blank" rel="noopener noreferrer"><img src="img/Scalestorm_Summoner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scalestorm Summoner.html" target="_blank" rel="noopener noreferrer">Scalestorm Summoner</a></td>
+      <td>4.94</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>16185</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>52.45</td>
+      <td>50.85</td>
+      <td>-1.60</td>
+      <td>234</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90406" target="_blank" rel="noopener noreferrer"><img src="img/Peerless_Ropemaster.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Peerless Ropemaster.html" target="_blank" rel="noopener noreferrer">Peerless Ropemaster</a></td>
+      <td>11.43</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>68759</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>53.00</td>
+      <td>51.30</td>
+      <td>-1.70</td>
+      <td>690</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90600" target="_blank" rel="noopener noreferrer"><img src="img/Conduit_Pylons.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Conduit Pylons.html" target="_blank" rel="noopener noreferrer">Conduit Pylons</a></td>
+      <td>7.05</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>70385</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>52.45</td>
+      <td>50.72</td>
+      <td>-1.73</td>
+      <td>345</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90606" target="_blank" rel="noopener noreferrer"><img src="img/Lonely_Arroyo.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lonely Arroyo.html" target="_blank" rel="noopener noreferrer">Lonely Arroyo</a></td>
+      <td>7.28</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>20250</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>54.15</td>
+      <td>52.31</td>
+      <td>-1.84</td>
+      <td>346</td>
+      <td>58.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90421" target="_blank" rel="noopener noreferrer"><img src="img/Three_Steps_Ahead.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Three Steps Ahead.html" target="_blank" rel="noopener noreferrer">Three Steps Ahead</a></td>
+      <td>2.87</td>
+      <td>U</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>38136</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>51.85</td>
+      <td>50.00</td>
+      <td>-1.85</td>
+      <td>314</td>
+      <td>53.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90487" target="_blank" rel="noopener noreferrer"><img src="img/Resilient_Roadrunner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Resilient Roadrunner.html" target="_blank" rel="noopener noreferrer">Resilient Roadrunner</a></td>
+      <td>7.24</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>23231</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>53.50</td>
+      <td>51.40</td>
+      <td>-2.10</td>
+      <td>179</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90432" target="_blank" rel="noopener noreferrer"><img src="img/Desperate_Bloodseeker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Desperate Bloodseeker.html" target="_blank" rel="noopener noreferrer">Desperate Bloodseeker</a></td>
+      <td>6.27</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>68488</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>52.70</td>
+      <td>50.44</td>
+      <td>-2.26</td>
+      <td>343</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90599" target="_blank" rel="noopener noreferrer"><img src="img/Bristling_Backwoods.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bristling Backwoods.html" target="_blank" rel="noopener noreferrer">Bristling Backwoods</a></td>
+      <td>6.39</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>70656</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>53.05</td>
+      <td>50.63</td>
+      <td>-2.42</td>
+      <td>399</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90607" target="_blank" rel="noopener noreferrer"><img src="img/Lush_Oasis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lush Oasis.html" target="_blank" rel="noopener noreferrer">Lush Oasis</a></td>
+      <td>6.45</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>22418</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>53.95</td>
+      <td>51.49</td>
+      <td>-2.46</td>
+      <td>235</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90429" target="_blank" rel="noopener noreferrer"><img src="img/Consuming_Ashes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Consuming Ashes.html" target="_blank" rel="noopener noreferrer">Consuming Ashes</a></td>
+      <td>4.32</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>17269</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>51.75</td>
+      <td>49.21</td>
+      <td>-2.54</td>
+      <td>693</td>
+      <td>53.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90410" target="_blank" rel="noopener noreferrer"><img src="img/Seize_the_Secrets.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Seize the Secrets.html" target="_blank" rel="noopener noreferrer">Seize the Secrets</a></td>
+      <td>10.49</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>68217</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>50.65</td>
+      <td>48.10</td>
+      <td>-2.55</td>
+      <td>158</td>
+      <td>51.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90598" target="_blank" rel="noopener noreferrer"><img src="img/Arid_Archway.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Arid Archway.html" target="_blank" rel="noopener noreferrer">Arid Archway</a></td>
+      <td>8.89</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>70114</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>52.70</td>
+      <td>50.10</td>
+      <td>-2.60</td>
+      <td>489</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90605" target="_blank" rel="noopener noreferrer"><img src="img/Jagged_Barrens.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Jagged Barrens.html" target="_blank" rel="noopener noreferrer">Jagged Barrens</a></td>
+      <td>6.24</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>20521</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>51.30</td>
+      <td>48.42</td>
+      <td>-2.88</td>
+      <td>380</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90422" target="_blank" rel="noopener noreferrer"><img src="img/Visage_Bandit.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Visage Bandit.html" target="_blank" rel="noopener noreferrer">Visage Bandit</a></td>
+      <td>6.85</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>71740</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>50.60</td>
+      <td>47.71</td>
+      <td>-2.89</td>
+      <td>153</td>
+      <td>51.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90611" target="_blank" rel="noopener noreferrer"><img src="img/Jace_Reawakened.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Jace Reawakened.html" target="_blank" rel="noopener noreferrer">Jace Reawakened</a></td>
+      <td>2.34</td>
+      <td>U</td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>35697</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>53.45</td>
+      <td>50.50</td>
+      <td>-2.95</td>
+      <td>606</td>
+      <td>56.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90478" target="_blank" rel="noopener noreferrer"><img src="img/Longhorn_Sharpshooter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Longhorn Sharpshooter.html" target="_blank" rel="noopener noreferrer">Longhorn Sharpshooter</a></td>
+      <td>3.78</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>58461</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>52.35</td>
+      <td>49.25</td>
+      <td>-3.10</td>
+      <td>201</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90562" target="_blank" rel="noopener noreferrer"><img src="img/Lazav,_Familiar_Stranger.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lazav, Familiar Stranger.html" target="_blank" rel="noopener noreferrer">Lazav, Familiar Stranger</a></td>
+      <td>5.70</td>
+      <td>UB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>16727</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>53.45</td>
+      <td>50.33</td>
+      <td>-3.12</td>
+      <td>455</td>
+      <td>56.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90408" target="_blank" rel="noopener noreferrer"><img src="img/Plan_the_Heist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Plan the Heist.html" target="_blank" rel="noopener noreferrer">Plan the Heist</a></td>
+      <td>7.88</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>67946</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>52.40</td>
+      <td>49.14</td>
+      <td>-3.26</td>
+      <td>405</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90597" target="_blank" rel="noopener noreferrer"><img src="img/Abraded_Bluffs.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Abraded Bluffs.html" target="_blank" rel="noopener noreferrer">Abraded Bluffs</a></td>
+      <td>7.04</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>14017</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>51.25</td>
+      <td>47.97</td>
+      <td>-3.28</td>
+      <td>492</td>
+      <td>52.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90398" target="_blank" rel="noopener noreferrer"><img src="img/Harrier_Strix.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Harrier Strix.html" target="_blank" rel="noopener noreferrer">Harrier Strix</a></td>
+      <td>11.06</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>11307</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>51.30</td>
+      <td>47.78</td>
+      <td>-3.52</td>
+      <td>316</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90388" target="_blank" rel="noopener noreferrer"><img src="img/Deepmuck_Desperado.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deepmuck Desperado.html" target="_blank" rel="noopener noreferrer">Deepmuck Desperado</a></td>
+      <td>6.52</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>30819</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>53.90</td>
+      <td>50.25</td>
+      <td>-3.65</td>
+      <td>201</td>
+      <td>57.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90460" target="_blank" rel="noopener noreferrer"><img src="img/Vault_Plunderer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vault Plunderer.html" target="_blank" rel="noopener noreferrer">Vault Plunderer</a></td>
+      <td>5.40</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>32716</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>51.90</td>
+      <td>48.23</td>
+      <td>-3.67</td>
+      <td>763</td>
+      <td>53.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90467" target="_blank" rel="noopener noreferrer"><img src="img/Discerning_Peddler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Discerning Peddler.html" target="_blank" rel="noopener noreferrer">Discerning Peddler</a></td>
+      <td>9.29</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>45453</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>52.90</td>
+      <td>49.14</td>
+      <td>-3.76</td>
+      <td>116</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90514" target="_blank" rel="noopener noreferrer"><img src="img/Hardbristle_Bandit.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hardbristle Bandit.html" target="_blank" rel="noopener noreferrer">Hardbristle Bandit</a></td>
+      <td>4.54</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>17540</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>50.05</td>
+      <td>45.86</td>
+      <td>-4.19</td>
+      <td>399</td>
+      <td>50.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90411" target="_blank" rel="noopener noreferrer"><img src="img/Shackle_Slinger.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shackle Slinger.html" target="_blank" rel="noopener noreferrer">Shackle Slinger</a></td>
+      <td>9.47</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>11036</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>50.30</td>
+      <td>46.07</td>
+      <td>-4.23</td>
+      <td>191</td>
+      <td>50.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90387" target="_blank" rel="noopener noreferrer"><img src="img/Daring_Thunder-Thief.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Daring Thunder-Thief.html" target="_blank" rel="noopener noreferrer">Daring Thunder-Thief</a></td>
+      <td>11.53</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>10494</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>51.20</td>
+      <td>46.96</td>
+      <td>-4.24</td>
+      <td>247</td>
+      <td>52.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90385" target="_blank" rel="noopener noreferrer"><img src="img/Archmage's_Newt.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Archmage's Newt.html" target="_blank" rel="noopener noreferrer">Archmage's Newt</a></td>
+      <td>5.45</td>
+      <td>U</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>33800</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>51.95</td>
+      <td>47.69</td>
+      <td>-4.26</td>
+      <td>130</td>
+      <td>53.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90471" target="_blank" rel="noopener noreferrer"><img src="img/Great_Train_Heist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Great Train Heist.html" target="_blank" rel="noopener noreferrer">Great Train Heist</a></td>
+      <td>3.52</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>18353</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>49.50</td>
+      <td>45.16</td>
+      <td>-4.34</td>
+      <td>217</td>
+      <td>49.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90414" target="_blank" rel="noopener noreferrer"><img src="img/Slickshot_Vault-Buster.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Slickshot Vault-Buster.html" target="_blank" rel="noopener noreferrer">Slickshot Vault-Buster</a></td>
+      <td>11.83</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>28651</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>53.90</td>
+      <td>49.52</td>
+      <td>-4.38</td>
+      <td>105</td>
+      <td>57.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90452" target="_blank" rel="noopener noreferrer"><img src="img/Shoot_the_Sheriff.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shoot the Sheriff.html" target="_blank" rel="noopener noreferrer">Shoot the Sheriff</a></td>
+      <td>3.53</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>63610</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>52.15</td>
+      <td>47.76</td>
+      <td>-4.39</td>
+      <td>134</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90581" target="_blank" rel="noopener noreferrer"><img src="img/Vial_Smasher,_Gleeful_Grenadier.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vial Smasher, Gleeful Grenadier.html" target="_blank" rel="noopener noreferrer">Vial Smasher, Gleeful Grenadier</a></td>
+      <td>6.00</td>
+      <td>BR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>40033</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>50.60</td>
+      <td>45.93</td>
+      <td>-4.67</td>
+      <td>172</td>
+      <td>51.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90494" target="_blank" rel="noopener noreferrer"><img src="img/Take_for_a_Ride.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Take for a Ride.html" target="_blank" rel="noopener noreferrer">Take for a Ride</a></td>
+      <td>9.69</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>21605</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>53.00</td>
+      <td>48.11</td>
+      <td>-4.89</td>
+      <td>106</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90426" target="_blank" rel="noopener noreferrer"><img src="img/Blood_Hustler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Blood Hustler.html" target="_blank" rel="noopener noreferrer">Blood Hustler</a></td>
+      <td>3.32</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>37865</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>51.25</td>
+      <td>46.31</td>
+      <td>-4.94</td>
+      <td>732</td>
+      <td>52.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90486" target="_blank" rel="noopener noreferrer"><img src="img/Reckless_Lackey.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Reckless Lackey.html" target="_blank" rel="noopener noreferrer">Reckless Lackey</a></td>
+      <td>9.98</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>40846</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>51.00</td>
+      <td>45.66</td>
+      <td>-5.34</td>
+      <td>311</td>
+      <td>52.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90497" target="_blank" rel="noopener noreferrer"><img src="img/Trick_Shot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Trick Shot.html" target="_blank" rel="noopener noreferrer">Trick Shot</a></td>
+      <td>10.74</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>37323</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>49.85</td>
+      <td>44.22</td>
+      <td>-5.63</td>
+      <td>147</td>
+      <td>49.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90484" target="_blank" rel="noopener noreferrer"><img src="img/Quick_Draw.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Quick Draw.html" target="_blank" rel="noopener noreferrer">Quick Draw</a></td>
+      <td>12.13</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>69572</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>53.25</td>
+      <td>47.33</td>
+      <td>-5.92</td>
+      <td>131</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90603" target="_blank" rel="noopener noreferrer"><img src="img/Festering_Gulch.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Festering Gulch.html" target="_blank" rel="noopener noreferrer">Festering Gulch</a></td>
+      <td>5.84</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>11578</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>50.05</td>
+      <td>43.87</td>
+      <td>-6.18</td>
+      <td>465</td>
+      <td>50.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90389" target="_blank" rel="noopener noreferrer"><img src="img/Djinn_of_Fool's_Fall.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Djinn of Fool's Fall.html" target="_blank" rel="noopener noreferrer">Djinn of Fool's Fall</a></td>
+      <td>10.85</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>42743</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>53.30</td>
+      <td>47.06</td>
+      <td>-6.24</td>
+      <td>102</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90504" target="_blank" rel="noopener noreferrer"><img src="img/Cactarantula.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cactarantula.html" target="_blank" rel="noopener noreferrer">Cactarantula</a></td>
+      <td>4.82</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>28380</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>53.40</td>
+      <td>47.12</td>
+      <td>-6.28</td>
+      <td>104</td>
+      <td>56.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90451" target="_blank" rel="noopener noreferrer"><img src="img/Servant_of_the_Stinger.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Servant of the Stinger.html" target="_blank" rel="noopener noreferrer">Servant of the Stinger</a></td>
+      <td>4.64</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>47079</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>53.35</td>
+      <td>46.60</td>
+      <td>-6.75</td>
+      <td>103</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90520" target="_blank" rel="noopener noreferrer"><img src="img/Patient_Naturalist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Patient Naturalist.html" target="_blank" rel="noopener noreferrer">Patient Naturalist</a></td>
+      <td>6.04</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>66320</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>53.15</td>
+      <td>45.83</td>
+      <td>-7.32</td>
+      <td>120</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90591" target="_blank" rel="noopener noreferrer"><img src="img/Mobile_Homestead.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mobile Homestead.html" target="_blank" rel="noopener noreferrer">Mobile Homestead</a></td>
+      <td>6.26</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>53583</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>55.60</td>
+      <td>48.25</td>
+      <td>-7.35</td>
+      <td>114</td>
+      <td>61.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90544" target="_blank" rel="noopener noreferrer"><img src="img/Bruse_Tarl,_Roving_Rancher.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bruse Tarl, Roving Rancher.html" target="_blank" rel="noopener noreferrer">Bruse Tarl, Roving Rancher</a></td>
+      <td>2.14</td>
+      <td>WR</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>56835</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>53.20</td>
+      <td>44.85</td>
+      <td>-8.35</td>
+      <td>136</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90556" target="_blank" rel="noopener noreferrer"><img src="img/Jolene,_Plundering_Pugilist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Jolene, Plundering Pugilist.html" target="_blank" rel="noopener noreferrer">Jolene, Plundering Pugilist</a></td>
+      <td>5.43</td>
+      <td>RG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>52228</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>50.30</td>
+      <td>40.98</td>
+      <td>-9.32</td>
+      <td>122</td>
+      <td>50.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90539" target="_blank" rel="noopener noreferrer"><img src="img/At_Knifepoint.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//At Knifepoint.html" target="_blank" rel="noopener noreferrer">At Knifepoint</a></td>
+      <td>6.82</td>
+      <td>BR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>49518</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>53.65</td>
+      <td>44.23</td>
+      <td>-9.42</td>
+      <td>104</td>
+      <td>57.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90529" target="_blank" rel="noopener noreferrer"><img src="img/Spinewoods_Paladin.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Spinewoods Paladin.html" target="_blank" rel="noopener noreferrer">Spinewoods Paladin</a></td>
+      <td>4.92</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>43285</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>53.35</td>
+      <td>43.48</td>
+      <td>-9.87</td>
+      <td>138</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90506" target="_blank" rel="noopener noreferrer"><img src="img/Dance_of_the_Tumbleweeds.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Dance of the Tumbleweeds.html" target="_blank" rel="noopener noreferrer">Dance of the Tumbleweeds</a></td>
+      <td>5.56</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27296</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>52.10</td>
+      <td>41.82</td>
+      <td>-10.28</td>
+      <td>165</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90447" target="_blank" rel="noopener noreferrer"><img src="img/Raven_of_Fell_Omens.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Raven of Fell Omens.html" target="_blank" rel="noopener noreferrer">Raven of Fell Omens</a></td>
+      <td>7.26</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>37594</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>6.95</td>
+      <td><a href=".//Breeches, the Blastmaker.html" target="_blank" rel="noopener noreferrer">Breeches, the Blastmaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90543" target="_blank" rel="noopener noreferrer"><img src="img/Breeches,_the_Blastmaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.0</td>
+      <td>50.80</td>
+      <td>38.67</td>
+      <td>-12.13</td>
+      <td>150</td>
+      <td>51.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90485" target="_blank" rel="noopener noreferrer"><img src="img/Quilled_Charger.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Quilled Charger.html" target="_blank" rel="noopener noreferrer">Quilled Charger</a></td>
+      <td>10.31</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+  </tbody>
+</table>

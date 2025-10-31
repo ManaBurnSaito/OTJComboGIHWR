@@ -1,0 +1,546 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>54756</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.12</td>
+      <td><a href=".//High Noon.html" target="_blank" rel="noopener noreferrer">High Noon</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90361" target="_blank" rel="noopener noreferrer"><img src="img/High_Noon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.8</td>
+      <td>51.90</td>
+      <td>54.86</td>
+      <td>2.96</td>
+      <td>175</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90549" target="_blank" rel="noopener noreferrer"><img src="img/Ertha_Jo,_Frontier_Mentor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ertha Jo, Frontier Mentor.html" target="_blank" rel="noopener noreferrer">Ertha Jo, Frontier Mentor</a></td>
+      <td>6.25</td>
+      <td>WR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>5976</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.12</td>
+      <td><a href=".//High Noon.html" target="_blank" rel="noopener noreferrer">High Noon</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90361" target="_blank" rel="noopener noreferrer"><img src="img/High_Noon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.8</td>
+      <td>51.60</td>
+      <td>54.55</td>
+      <td>2.95</td>
+      <td>154</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90369" target="_blank" rel="noopener noreferrer"><img src="img/Outlaw_Medic.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Outlaw Medic.html" target="_blank" rel="noopener noreferrer">Outlaw Medic</a></td>
+      <td>8.54</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>36870</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.12</td>
+      <td><a href=".//High Noon.html" target="_blank" rel="noopener noreferrer">High Noon</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90361" target="_blank" rel="noopener noreferrer"><img src="img/High_Noon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.8</td>
+      <td>51.15</td>
+      <td>53.73</td>
+      <td>2.58</td>
+      <td>134</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90483" target="_blank" rel="noopener noreferrer"><img src="img/Prickly_Pair.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Prickly Pair.html" target="_blank" rel="noopener noreferrer">Prickly Pair</a></td>
+      <td>6.94</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>4079</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.12</td>
+      <td><a href=".//High Noon.html" target="_blank" rel="noopener noreferrer">High Noon</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90361" target="_blank" rel="noopener noreferrer"><img src="img/High_Noon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.8</td>
+      <td>52.40</td>
+      <td>54.36</td>
+      <td>1.96</td>
+      <td>195</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90362" target="_blank" rel="noopener noreferrer"><img src="img/Holy_Cow.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Holy Cow.html" target="_blank" rel="noopener noreferrer">Holy Cow</a></td>
+      <td>6.62</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>1640</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.12</td>
+      <td><a href=".//High Noon.html" target="_blank" rel="noopener noreferrer">High Noon</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90361" target="_blank" rel="noopener noreferrer"><img src="img/High_Noon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.8</td>
+      <td>50.90</td>
+      <td>51.97</td>
+      <td>1.07</td>
+      <td>127</td>
+      <td>54.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90353" target="_blank" rel="noopener noreferrer"><img src="img/Bridled_Bighorn.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bridled Bighorn.html" target="_blank" rel="noopener noreferrer">Bridled Bighorn</a></td>
+      <td>8.47</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>7873</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.12</td>
+      <td><a href=".//High Noon.html" target="_blank" rel="noopener noreferrer">High Noon</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90361" target="_blank" rel="noopener noreferrer"><img src="img/High_Noon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.8</td>
+      <td>51.75</td>
+      <td>52.59</td>
+      <td>0.84</td>
+      <td>135</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90376" target="_blank" rel="noopener noreferrer"><img src="img/Stagecoach_Security.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Stagecoach Security.html" target="_blank" rel="noopener noreferrer">Stagecoach Security</a></td>
+      <td>9.54</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>32805</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.12</td>
+      <td><a href=".//High Noon.html" target="_blank" rel="noopener noreferrer">High Noon</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90361" target="_blank" rel="noopener noreferrer"><img src="img/High_Noon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.8</td>
+      <td>51.30</td>
+      <td>51.82</td>
+      <td>0.52</td>
+      <td>137</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90468" target="_blank" rel="noopener noreferrer"><img src="img/Explosive_Derailment.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Explosive Derailment.html" target="_blank" rel="noopener noreferrer">Explosive Derailment</a></td>
+      <td>5.80</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>67764</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.12</td>
+      <td><a href=".//High Noon.html" target="_blank" rel="noopener noreferrer">High Noon</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90361" target="_blank" rel="noopener noreferrer"><img src="img/High_Noon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.8</td>
+      <td>51.30</td>
+      <td>51.58</td>
+      <td>0.28</td>
+      <td>190</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90597" target="_blank" rel="noopener noreferrer"><img src="img/Abraded_Bluffs.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Abraded Bluffs.html" target="_blank" rel="noopener noreferrer">Abraded Bluffs</a></td>
+      <td>7.04</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>8415</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.12</td>
+      <td><a href=".//High Noon.html" target="_blank" rel="noopener noreferrer">High Noon</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90361" target="_blank" rel="noopener noreferrer"><img src="img/High_Noon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.8</td>
+      <td>51.60</td>
+      <td>51.81</td>
+      <td>0.21</td>
+      <td>193</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90378" target="_blank" rel="noopener noreferrer"><img src="img/Sterling_Keykeeper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sterling Keykeeper.html" target="_blank" rel="noopener noreferrer">Sterling Keykeeper</a></td>
+      <td>8.49</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>3808</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.12</td>
+      <td><a href=".//High Noon.html" target="_blank" rel="noopener noreferrer">High Noon</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90361" target="_blank" rel="noopener noreferrer"><img src="img/High_Noon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.8</td>
+      <td>47.80</td>
+      <td>47.68</td>
+      <td>-0.12</td>
+      <td>1252</td>
+      <td>47.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90361" target="_blank" rel="noopener noreferrer"><img src="img/High_Noon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//High Noon.html" target="_blank" rel="noopener noreferrer">High Noon</a></td>
+      <td>9.12</td>
+      <td>W</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>70745</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.12</td>
+      <td><a href=".//High Noon.html" target="_blank" rel="noopener noreferrer">High Noon</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90361" target="_blank" rel="noopener noreferrer"><img src="img/High_Noon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.8</td>
+      <td>51.25</td>
+      <td>50.82</td>
+      <td>-0.43</td>
+      <td>122</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90608" target="_blank" rel="noopener noreferrer"><img src="img/Mirage_Mesa.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mirage Mesa.html" target="_blank" rel="noopener noreferrer">Mirage Mesa</a></td>
+      <td>5.99</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>2453</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.12</td>
+      <td><a href=".//High Noon.html" target="_blank" rel="noopener noreferrer">High Noon</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90361" target="_blank" rel="noopener noreferrer"><img src="img/High_Noon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.8</td>
+      <td>50.45</td>
+      <td>50.00</td>
+      <td>-0.45</td>
+      <td>106</td>
+      <td>53.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90356" target="_blank" rel="noopener noreferrer"><img src="img/Eriette's_Lullaby.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eriette's Lullaby.html" target="_blank" rel="noopener noreferrer">Eriette's Lullaby</a></td>
+      <td>8.64</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>9770</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.12</td>
+      <td><a href=".//High Noon.html" target="_blank" rel="noopener noreferrer">High Noon</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90361" target="_blank" rel="noopener noreferrer"><img src="img/High_Noon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.8</td>
+      <td>51.05</td>
+      <td>50.30</td>
+      <td>-0.75</td>
+      <td>167</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90383" target="_blank" rel="noopener noreferrer"><img src="img/Vengeful_Townsfolk.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vengeful Townsfolk.html" target="_blank" rel="noopener noreferrer">Vengeful Townsfolk</a></td>
+      <td>9.35</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>40393</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.12</td>
+      <td><a href=".//High Noon.html" target="_blank" rel="noopener noreferrer">High Noon</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90361" target="_blank" rel="noopener noreferrer"><img src="img/High_Noon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.8</td>
+      <td>50.55</td>
+      <td>49.57</td>
+      <td>-0.98</td>
+      <td>117</td>
+      <td>53.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90496" target="_blank" rel="noopener noreferrer"><img src="img/Thunder_Salvo.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Thunder Salvo.html" target="_blank" rel="noopener noreferrer">Thunder Salvo</a></td>
+      <td>7.40</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>55027</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.12</td>
+      <td><a href=".//High Noon.html" target="_blank" rel="noopener noreferrer">High Noon</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90361" target="_blank" rel="noopener noreferrer"><img src="img/High_Noon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.8</td>
+      <td>50.95</td>
+      <td>49.29</td>
+      <td>-1.66</td>
+      <td>140</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90550" target="_blank" rel="noopener noreferrer"><img src="img/Form_a_Posse.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Form a Posse.html" target="_blank" rel="noopener noreferrer">Form a Posse</a></td>
+      <td>7.80</td>
+      <td>WR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>32534</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.12</td>
+      <td><a href=".//High Noon.html" target="_blank" rel="noopener noreferrer">High Noon</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90361" target="_blank" rel="noopener noreferrer"><img src="img/High_Noon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.8</td>
+      <td>50.80</td>
+      <td>48.00</td>
+      <td>-2.80</td>
+      <td>125</td>
+      <td>53.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90467" target="_blank" rel="noopener noreferrer"><img src="img/Discerning_Peddler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Discerning Peddler.html" target="_blank" rel="noopener noreferrer">Discerning Peddler</a></td>
+      <td>9.29</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>68577</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.12</td>
+      <td><a href=".//High Noon.html" target="_blank" rel="noopener noreferrer">High Noon</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90361" target="_blank" rel="noopener noreferrer"><img src="img/High_Noon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.8</td>
+      <td>51.90</td>
+      <td>48.62</td>
+      <td>-3.28</td>
+      <td>109</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90600" target="_blank" rel="noopener noreferrer"><img src="img/Conduit_Pylons.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Conduit Pylons.html" target="_blank" rel="noopener noreferrer">Conduit Pylons</a></td>
+      <td>7.05</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>9499</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.12</td>
+      <td><a href=".//High Noon.html" target="_blank" rel="noopener noreferrer">High Noon</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90361" target="_blank" rel="noopener noreferrer"><img src="img/High_Noon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.8</td>
+      <td>52.55</td>
+      <td>49.22</td>
+      <td>-3.33</td>
+      <td>193</td>
+      <td>57.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90382" target="_blank" rel="noopener noreferrer"><img src="img/Trained_Arynx.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Trained Arynx.html" target="_blank" rel="noopener noreferrer">Trained Arynx</a></td>
+      <td>5.43</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>4892</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.12</td>
+      <td><a href=".//High Noon.html" target="_blank" rel="noopener noreferrer">High Noon</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90361" target="_blank" rel="noopener noreferrer"><img src="img/High_Noon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.8</td>
+      <td>52.35</td>
+      <td>48.96</td>
+      <td>-3.39</td>
+      <td>241</td>
+      <td>56.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90365" target="_blank" rel="noopener noreferrer"><img src="img/Mystical_Tether.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mystical Tether.html" target="_blank" rel="noopener noreferrer">Mystical Tether</a></td>
+      <td>4.31</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>8686</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.12</td>
+      <td><a href=".//High Noon.html" target="_blank" rel="noopener noreferrer">High Noon</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90361" target="_blank" rel="noopener noreferrer"><img src="img/High_Noon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.8</td>
+      <td>52.05</td>
+      <td>47.79</td>
+      <td>-4.26</td>
+      <td>113</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90379" target="_blank" rel="noopener noreferrer"><img src="img/Sterling_Supplier.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sterling Supplier.html" target="_blank" rel="noopener noreferrer">Sterling Supplier</a></td>
+      <td>9.13</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>31992</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.12</td>
+      <td><a href=".//High Noon.html" target="_blank" rel="noopener noreferrer">High Noon</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90361" target="_blank" rel="noopener noreferrer"><img src="img/High_Noon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.8</td>
+      <td>49.55</td>
+      <td>44.25</td>
+      <td>-5.30</td>
+      <td>113</td>
+      <td>51.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90465" target="_blank" rel="noopener noreferrer"><img src="img/Deadeye_Duelist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deadeye Duelist.html" target="_blank" rel="noopener noreferrer">Deadeye Duelist</a></td>
+      <td>8.41</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>34973</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.12</td>
+      <td><a href=".//High Noon.html" target="_blank" rel="noopener noreferrer">High Noon</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90361" target="_blank" rel="noopener noreferrer"><img src="img/High_Noon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.8</td>
+      <td>50.00</td>
+      <td>42.86</td>
+      <td>-7.14</td>
+      <td>105</td>
+      <td>52.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90476" target="_blank" rel="noopener noreferrer"><img src="img/Irascible_Wolverine.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Irascible Wolverine.html" target="_blank" rel="noopener noreferrer">Irascible Wolverine</a></td>
+      <td>8.71</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>8957</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.12</td>
+      <td><a href=".//High Noon.html" target="_blank" rel="noopener noreferrer">High Noon</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90361" target="_blank" rel="noopener noreferrer"><img src="img/High_Noon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.8</td>
+      <td>52.65</td>
+      <td>44.83</td>
+      <td>-7.82</td>
+      <td>145</td>
+      <td>57.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90380" target="_blank" rel="noopener noreferrer"><img src="img/Take_Up_the_Shield.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Take Up the Shield.html" target="_blank" rel="noopener noreferrer">Take Up the Shield</a></td>
+      <td>7.41</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>10041</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.12</td>
+      <td><a href=".//High Noon.html" target="_blank" rel="noopener noreferrer">High Noon</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90361" target="_blank" rel="noopener noreferrer"><img src="img/High_Noon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.8</td>
+      <td>51.35</td>
+      <td>43.22</td>
+      <td>-8.13</td>
+      <td>118</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90384" target="_blank" rel="noopener noreferrer"><img src="img/Wanted_Griffin.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wanted Griffin.html" target="_blank" rel="noopener noreferrer">Wanted Griffin</a></td>
+      <td>9.63</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>8144</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.12</td>
+      <td><a href=".//High Noon.html" target="_blank" rel="noopener noreferrer">High Noon</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90361" target="_blank" rel="noopener noreferrer"><img src="img/High_Noon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.8</td>
+      <td>50.70</td>
+      <td>41.51</td>
+      <td>-9.19</td>
+      <td>106</td>
+      <td>53.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90377" target="_blank" rel="noopener noreferrer"><img src="img/Steer_Clear.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Steer Clear.html" target="_blank" rel="noopener noreferrer">Steer Clear</a></td>
+      <td>9.61</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+  </tbody>
+</table>

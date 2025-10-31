@@ -1,0 +1,242 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>14703</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>9.66</td>
+      <td><a href=".//Step Between Worlds.html" target="_blank" rel="noopener noreferrer">Step Between Worlds</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90416" target="_blank" rel="noopener noreferrer"><img src="img/Step_Between_Worlds.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.4</td>
+      <td>50.85</td>
+      <td>56.42</td>
+      <td>5.57</td>
+      <td>179</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90401" target="_blank" rel="noopener noreferrer"><img src="img/Loan_Shark.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Loan Shark.html" target="_blank" rel="noopener noreferrer">Loan Shark</a></td>
+      <td>7.98</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>16329</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>9.66</td>
+      <td><a href=".//Step Between Worlds.html" target="_blank" rel="noopener noreferrer">Step Between Worlds</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90416" target="_blank" rel="noopener noreferrer"><img src="img/Step_Between_Worlds.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.4</td>
+      <td>52.05</td>
+      <td>55.86</td>
+      <td>3.81</td>
+      <td>145</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90407" target="_blank" rel="noopener noreferrer"><img src="img/Phantom_Interference.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Phantom Interference.html" target="_blank" rel="noopener noreferrer">Phantom Interference</a></td>
+      <td>8.30</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12535</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>9.66</td>
+      <td><a href=".//Step Between Worlds.html" target="_blank" rel="noopener noreferrer">Step Between Worlds</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90416" target="_blank" rel="noopener noreferrer"><img src="img/Step_Between_Worlds.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.4</td>
+      <td>50.45</td>
+      <td>53.28</td>
+      <td>2.83</td>
+      <td>122</td>
+      <td>53.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90393" target="_blank" rel="noopener noreferrer"><img src="img/Failed_Fording.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Failed Fording.html" target="_blank" rel="noopener noreferrer">Failed Fording</a></td>
+      <td>10.49</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>13619</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>9.66</td>
+      <td><a href=".//Step Between Worlds.html" target="_blank" rel="noopener noreferrer">Step Between Worlds</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90416" target="_blank" rel="noopener noreferrer"><img src="img/Step_Between_Worlds.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.4</td>
+      <td>49.50</td>
+      <td>50.48</td>
+      <td>0.98</td>
+      <td>105</td>
+      <td>51.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90397" target="_blank" rel="noopener noreferrer"><img src="img/Geyser_Drake.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Geyser Drake.html" target="_blank" rel="noopener noreferrer">Geyser Drake</a></td>
+      <td>9.51</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>18768</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>9.66</td>
+      <td><a href=".//Step Between Worlds.html" target="_blank" rel="noopener noreferrer">Step Between Worlds</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90416" target="_blank" rel="noopener noreferrer"><img src="img/Step_Between_Worlds.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.4</td>
+      <td>47.40</td>
+      <td>46.94</td>
+      <td>-0.46</td>
+      <td>703</td>
+      <td>47.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90416" target="_blank" rel="noopener noreferrer"><img src="img/Step_Between_Worlds.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Step Between Worlds.html" target="_blank" rel="noopener noreferrer">Step Between Worlds</a></td>
+      <td>9.66</td>
+      <td>U</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>69174</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>9.66</td>
+      <td><a href=".//Step Between Worlds.html" target="_blank" rel="noopener noreferrer">Step Between Worlds</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90416" target="_blank" rel="noopener noreferrer"><img src="img/Step_Between_Worlds.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.4</td>
+      <td>51.10</td>
+      <td>49.50</td>
+      <td>-1.60</td>
+      <td>101</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90602" target="_blank" rel="noopener noreferrer"><img src="img/Eroded_Canyon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eroded Canyon.html" target="_blank" rel="noopener noreferrer">Eroded Canyon</a></td>
+      <td>7.18</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>19581</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>9.66</td>
+      <td><a href=".//Step Between Worlds.html" target="_blank" rel="noopener noreferrer">Step Between Worlds</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90416" target="_blank" rel="noopener noreferrer"><img src="img/Step_Between_Worlds.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.4</td>
+      <td>51.60</td>
+      <td>49.59</td>
+      <td>-2.01</td>
+      <td>121</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90419" target="_blank" rel="noopener noreferrer"><img src="img/Take_the_Fall.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Take the Fall.html" target="_blank" rel="noopener noreferrer">Take the Fall</a></td>
+      <td>9.45</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>16871</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>9.66</td>
+      <td><a href=".//Step Between Worlds.html" target="_blank" rel="noopener noreferrer">Step Between Worlds</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90416" target="_blank" rel="noopener noreferrer"><img src="img/Step_Between_Worlds.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.4</td>
+      <td>49.05</td>
+      <td>46.85</td>
+      <td>-2.20</td>
+      <td>111</td>
+      <td>50.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90409" target="_blank" rel="noopener noreferrer"><img src="img/Razzle-Dazzler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Razzle-Dazzler.html" target="_blank" rel="noopener noreferrer">Razzle-Dazzler</a></td>
+      <td>10.16</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>17142</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>9.66</td>
+      <td><a href=".//Step Between Worlds.html" target="_blank" rel="noopener noreferrer">Step Between Worlds</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90416" target="_blank" rel="noopener noreferrer"><img src="img/Step_Between_Worlds.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.4</td>
+      <td>50.45</td>
+      <td>43.24</td>
+      <td>-7.21</td>
+      <td>111</td>
+      <td>53.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OTJ&format=PremierDraft&start=2025-07-30&card_id=90410" target="_blank" rel="noopener noreferrer"><img src="img/Seize_the_Secrets.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Seize the Secrets.html" target="_blank" rel="noopener noreferrer">Seize the Secrets</a></td>
+      <td>10.49</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+  </tbody>
+</table>
